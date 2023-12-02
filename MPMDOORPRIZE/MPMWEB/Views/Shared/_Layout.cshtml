@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <style>
+        html, body {
+            background: url('../../Content/Template-PPT.jpg') no-repeat center center fixed;
+          /*  background-repeat: no-repeat;*/
+            background-size: contain;
+        }
+
+        .divBorder {
+            background-color: #7e552d;
+            opacity: 1;
+            filter: alpha(opacity=10);
+            border-radius: 25px;
+            color: white
+        }
+
+        .divall {
+            background-color: #d5d4b7;
+            box-shadow: 10px 10px 10px 5px grey;
+        }
+    </style>
+
+@*<script src="../Scripts/bootstrap.js"></script>*@
+
+</head>
+<body onclick="myFunction()">
+    
+    <div class="container" style="padding-top:150px">
+        @RenderBody()
+       
+    </div>
+
+    
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

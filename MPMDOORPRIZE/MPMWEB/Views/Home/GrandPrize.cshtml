@@ -1,0 +1,251 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#stop').prop('disabled', true);
+        $('#next').prop('disabled', true);
+        $('#grand').hide();
+
+        getData();
+        getHadiah();
+    });
+    var myArray = [];
+    var Hadiah = [];
+    var Pemenang = [];
+    var setPemanang = [];
+    var clickier = 1;
+
+    function myFunction() {
+        if (clickier == 1) {
+            AniDice();
+            clickier = 2;
+        } else if (clickier == 2) {
+            stopDice();
+            clickier = 3;
+        } else {
+            nextHadiah();
+            clickier = 1;
+        }
+    }
+    function AniDice() {
+        getPemanang()
+        MyVar = setInterval(rolldice, 5)
+
+    }
+
+    function rolldice() {
+        $('#RD').prop('disabled', true);
+        $('#stop').prop('disabled', false);
+        $('#next').prop('disabled', true);
+
+        for (var a = 1; a <= Hadiah[0].jumlah; a++) {
+            var ranNum = myArray[Math.floor(Math.random() * myArray.length)];
+            document.getElementById("npk" + a.toString()).innerHTML = ranNum;
+        }
+
+
+    }
+    function stopDice() {
+        $('#RD').prop('disabled', false);
+        $('#stop').prop('disabled', true);
+        $('#next').prop('disabled', false);
+        clearInterval(MyVar);
+        var i = 1;
+        for (var a = 0; a <= Pemenang.length; a++) {
+            var data = Pemenang[a]
+            $("#npk" + i.toString()).text(data);
+            i++;
+        }
+        setWin();
+    }
+    function nextHadiah() {
+        Hadiah.splice(0, 1);
+        $('.pemenang').empty();
+        sethadiah();
+    }
+
+    function sethadiah() {
+
+        console.log(Hadiah);
+        document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
+        if (Hadiah[0].jumlah < 10 && Hadiah[0].jumlah > 3) {
+            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:300px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:100px;'>.........</label> </div></div></div>")
+            }
+        } else if (Hadiah[0].jumlah < 3) {
+            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:300px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:100px;'>.........</label> </div></div></div>")
+            }
+        } else {
+            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:300px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:100px;'>.........</label> </div></div></div>")
+            }
+        }
+
+
+    }
+    function setWin() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/setPemanangGR",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ 'data': setPemanang, 'hadiah': Hadiah[0].id}),
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == "1") { }
+                else {
+                    alert(result.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+    function getPemanang() {
+        Pemenang = [];
+        setPemanang = [];
+        var data = Hadiah[0].jumlah;
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetPemanangGR",
+            contentType: "application/json; charset=utf-8",
+            data: '{"maxData":"' + data + '","maxData":"' + data + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == "1") {
+                    for (var i = 0; i < result.data.length; i++) {
+                        setPemanang.push({ NPK: result.data[i].NPK, NAMA: result.data[i].NAMA });
+                        Pemenang.push(result.data[i].NPK + " - " + result.data[i].NAMA)
+
+                    }
+                    console.log(Pemenang);
+                } else {
+                    alert(result.message);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    function getHadiah() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetHadiahGR",
+            contentType: "application/json; charset=utf-8",
+            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log("Hadiah");
+
+                console.log(result);
+                if (result.status == "1") {
+                    for (var i = 0; i < result.data.length; i++) {
+                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
+                    }
+                    sethadiah();
+                }
+                else {
+                    alert(result.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    function getData() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetDataGR",
+            contentType: "application/json; charset=utf-8",
+            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == "1") {
+                    for (var i = 0; i < result.data.length; i++) {
+                        myArray.push(result.data[i].NPK + " - " + result.data[i].NAMA)
+                    }
+                } else {
+                    alert(result.message);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+</script>
+
+<div id="door" class="divall" style="padding-top:10px;padding-bottom:10px">
+    <div class="w-75 p-3 divBorder text-center">
+        <h1 id="hadiahNama"></h1>
+    </div>
+
+    <div class="col-md-12 pemenang divall" style="margin-top:15px;padding-top:10px" id="listPemenang">
+        @*@for (var a = 1; a <= 20; a++)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-md-4 offset-md-4 divBorder text-center" style="height:80px;margin-bottom:10px" >
+                            <label id="@a" class="col-md-12" style="font-size:30px;">.........</label>
+                        </div>
+                    </div>
+                </div>
+             }*@
+    </div>
+    @*<div class="w-50 p-3 " style="top:95%;position:fixed">
+            <button onclick="AniDice()" id="RD">Roll Dice</button>
+            <button onclick="stopDice()" id="stop">Stop</button>
+            <button onclick="nextHadiah()" id="next">Next</button>
+        </div>*@
+</div>
+<div id="grand">
+    <div class="w-75 p-3 divBorder text-center">
+        <h1 id="hadiahGrandPrize">MOTOR BEAT</h1>
+    </div>
+    <div class="col-md-12 pemenangGR " id="listPemenangGR">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-2 offset-md-2 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+                    <label id="a" class="col-md-12" style="font-size:50px;">.........</label>
+                </div>
+                <div class="col-md-2 offset-md-2 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px">
+                    <label id="b" class="col-md-12" style="font-size:50px;">.........</label>
+                </div>
+                <div class="col-md-2 offset-md-2 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px">
+                    <label id="c" class="col-md-12" style="font-size:50px;">.........</label>
+                </div>
+                <div class="col-md-2 offset-md-2 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px">
+                    <label id="d" class="col-md-12" style="font-size:50px;">.........</label>
+                </div>
+                <div class="col-md-2 offset-md-2 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px">
+                    <label id="e" class="col-md-12" style="font-size:50px;">.........</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 divBorder text-center">
+        <h1 id="nomor">.........</h1>
+        <h1 id="nama">.........</h1>
+    </div>
+
+    @*<div class="w-50 p-3 " style="top:95%;position:fixed">
+            <button onclick="GRAniDice()" id="RD">Roll Dice</button>
+            <button onclick="GRstopDice()" id="stop">Stop</button>
+            <button onclick="nextHadiah()" id="next">Next</button>
+        </div>*@
+</div>
+
+
+

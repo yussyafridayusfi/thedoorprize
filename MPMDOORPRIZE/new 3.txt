@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+.tab {border-collapse: collapse;} 
+.tab { border: 1px solid black;} 
+</style> 
+</head> 
+<body> 
+<p>Salam Satu Hati,</p> 
+<br /> 
+<br /> 
+<p>Dengan bangga kami mengundang Bpk/Ibu/Sdr. untuk ikut serta menghadiri kegiatan MPM End Year Party 2019 yang diadakan pada : </p>               
+<table> 
+<tr> 
+<td>Hari,tanggal</td> 
+<td>:</td> 
+<td>Senin, 16 Desember 2019</td> 
+</tr> 
+<tr> 
+<td>Waktu</td> 
+<td>:</td> 
+<td>pk. 16.30 Wib  – selesai</td> 
+</tr> 
+<tr> 
+<td>Tempat</td> 
+<td>:</td> 
+<td>Dyandra Convention Center</td> 
+</tr> 
+<tr> 
+<td></td> 
+<td></td> 
+<td>Jl. Basuki Rahmat 105 Surabaya</td> 
+</tr> 
+</table> 
+<p>Demikian undangan disampaikan, terima kasih atas perhatiannya. </p> 
+<p><b>Nb: <br /> 1. Email undangan ini (Barcode) wajib ditunjukkan ke panitia saat registrasi nanti. (bisa dipindahkan ke email yang ada di HP, atau juga bisa di print dulu). <br /> 2. Registrasi bisa dilakukan juga menggunakan QR Code yang ada pada My Tok Apps. <br />3. Undangan tidak bisa dipindahtangankan dan hanya berlaku untuk 1 (satu) orang (khusus karyawan ber-NPK).  </b></p> 
+<p><i>Informasi tambahan (ketentuan souvenir, doorprize, & grandprize) :</i></p> 
+<table class="tab"> 
+<tr class="tab"> 
+<th class="tab">NO.</th> 
+<th class="tab">KETERANGAN</th> 
+<th class="tab">SOUVENIR</th> 
+<th class="tab">DOORPRIZE</th> 
+<th class="tab">GRANDPRIZE</th> 
+</tr> 
+<tr class="tab"> 
+<td class="tab">1</td> 
+<td class="tab">Karyawan dengan masa kerja <3 bulan </td> 
+<td class="tab" style="background-color:grey;text-align: center;">X</td> 
+<td class="tab" style="background-color:grey;text-align: center;">X</td> 
+<td class="tab" style="background-color:grey;text-align: center;">X</td> 
+</tr> 
+<tr class="tab"> 
+<td class="tab">2</td> 
+<td class="tab">Karyawan dengan masa kerja >  1 tahun  </td> 
+<td class="tab" style="text-align: center;">V</td> 
+<td class="tab" style="background-color:grey;text-align: center;">X</td> 
+<td class="tab" style="background-color:grey;text-align: center;">X</td> 
+</tr> 
+<tr class="tab"> 
+<td class="tab">3</td> 
+<td class="tab">Karyawan dengan masa kerja > 1 tahun <br />(posisi div. head down) </td> 
+<td class="tab" style="text-align: center;">V</td> 
+<td class="tab" style="text-align: center;">V</td> 
+<td class="tab" style="background-color:grey;text-align: center;">X</td> 
+</tr> 
+<tr class="tab"> 
+<td class="tab">4</td> 
+<td class="tab">Karyawan dengan masa kerja > 1 tahun <br />(Grade 1 - 6) 
+</td> 
+<td class="tab" style="text-align: center;">V</td> 
+<td class="tab" style="text-align: center;">V</td> 
+<td class="tab" style="text-align: center;">V</td> 
+</tr> 
+</table> 
+<p>Regards,</p> 
+<p>Panitia </p> 
+<p>CP Panitia : </p> 
+<p>Ilham - 082230006776 </p> 
+<p> Dony / HRD - 081217175622 </p> 
+</body> 
+</html>;

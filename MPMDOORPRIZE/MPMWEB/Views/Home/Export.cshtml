@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Export";
+}
+<script>
+    $(document).ready(function () {
+        $('#hadiah').focus();
+
+        $('#hadiah').keyup(function (e) {
+            if (e.keyCode == 13) {
+                dll()
+            }
+        });
+    });
+    function myFunction  (){
+
+    }
+    function dll(){
+        window.location.href = '@Url.Action("ExportToExcel", "Home")' + '?hadiah='+ $("#hadiah").val();
+    }
+    @*function log(){
+        window.location.href = '@Url.Action("ExportToExcelLogin", "Home")' + '?log='+ $("#data").val();
+    }*@
+    function final() {
+        window.location.href = '@Url.Action("ExportDataFinal", "Home")';
+    }
+</script>
+
+<div class="col-md-12 offset-md-12 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+    <input type="text" id="hadiah" placeholder="input kode hadiah" class="col-md-12" style="background: transparent;border: none;font-size:50px;" />
+    
+</div>
+
+
+@*<br />
+<input type="text" id="data" placeholder="input login" />
+<a href="#" onclick="log()"> Download login </a>*@
+
+<div class="col-md-12 offset-md-12 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+    <a href="#" onclick="final()" class="col-md-12" style="background: transparent;border: none;font-size:50px;"> Download Final </a>
+</div>
+

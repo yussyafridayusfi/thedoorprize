@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Register6";
+}
+
+<script>
+    var dataHadir = [];
+    $(document).ready(function () {
+        $('#scan').focus();
+
+        $('#scan').keyup(function (e) {
+            if (e.keyCode == 13) {
+                var dscan = $('#scan').val()
+                if (dscan.length > 4) {
+                    dscan= dscan.substring(0, 4);
+                }
+                CekAbsen(dscan)
+            }
+        });
+    });
+
+    function CekAbsen(npk) {
+        $.ajax({
+            type: "POST",
+            url: "/Home/setabsen",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: '{"npk":"' + npk + '"}',
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == 1) {
+                    getData(npk);
+                } else {
+                    $('#scan').val("");
+                    $('#scan').focus();
+                    alert(result.message);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    function getData(npk) {
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetDataRegister6",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: '{"npk":"' + npk + '"}',
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == 1) {
+                    dataHadir = result.data
+                    $('#NPK').text(dataHadir[0].NPK);
+                    $('#NAMA').text(dataHadir[0].NAMA);
+                    $('#KODEWARNA').text(dataHadir[0].KETERANGAN); 
+                    $('#COMPANY').text(dataHadir[0].COMPANYOFFICE);
+                } else {
+                    alert(result.message);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+</script>
+
+<div>
+    <div class="col-md-12 offset-md-12 divBorder text-center" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+        <input type="text" id="scan" class="col-md-12" style="background: transparent;border: none;font-size:50px;">
+    </div>
+    <div class="col-md-12 offset-md-12 divBorder" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+        <label id="NPK" class="col-md-12" style="font-size:50px;">.........</label>
+    </div>
+    <div class="col-md-12 offset-md-12 divBorder" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+        <label id="NAMA" class="col-md-12" style="font-size:50px;">.........</label>
+    </div>
+    <div class="col-md-12 offset-md-12 divBorder" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+        <label id="COMPANY" class="col-md-12" style="font-size:50px;">.........</label>
+    </div>
+    <div class="col-md-12 offset-md-12 divBorder" style="height:80px;margin-bottom:10px;margin-right:10px;margin-left:7%">
+        <label id="KODEWARNA" class="col-md-12" style="font-size:50px;">.........</label>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script>
+    var myArray = ["7951 - AAAA", "7952 - bbbb", "7953 - ccccc", "7954 - dddd"]
+
+    function AniDice() {
+        MyVar = setInterval(rolldice, 20)
+    }
+
+    function rolldice() {
+        var ranNum = myArray[Math.floor(Math.random() * myArray.length)];
+        document.getElementById("rollNpk").innerHTML = ranNum;
+
+    }
+    function stopDice() { clearInterval(MyVar); }
+</script>
+
+<div class="divBorder text-center">
+    <label style="font-size:40px;font-weight: bold;color: #000000;">Payung</label>
+</div>
+<div class="divBorder text-center">
+    <label style="font-size:40px;font-weight: bold;color: #000000;" id="rollNpk">7956 - AAAA</label>
+</div>
+<button onclick="AniDice()">Roll Dice</button>
+<button onclick="stopDice()">Stop</button>

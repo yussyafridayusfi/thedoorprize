@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBModuleWeb">
+  <DataContextMoniker Name="/DBModuleWebDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0aeb6d4b-4812-4570-842a-4fb5f1a2a5e1" absoluteBounds="1.25, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/DBModuleWebDataContext/MPM_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb81c1ba-2ab3-44f3-be3a-681e8f2c8c34" absoluteBounds="1.2649999999999997, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7374871-5ac0-4608-ae64-c9ab3bad4466" absoluteBounds="4, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DBModuleWebDataContext/MPM_DOORPRIZE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf5873d1-9e58-4909-b0f3-9c5f2caa271b" absoluteBounds="4.015, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51b73da7-202a-40da-9ebd-c3937ac5e881" absoluteBounds="6.625, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DBModuleWebDataContext/MPM_DOORPRIZE_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a18e701-2fe4-4c5f-a0a4-3754d0a27030" absoluteBounds="6.64, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MML_AX_LIVE" Class="DBModuleWebDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.101.11;Initial Catalog=MML_AX_LIVE;Persist Security Info=True;User ID=sa" SettingsObjectName="MPMMODELWEB.Properties.Settings" SettingsPropertyName="MML_AX_LIVEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MPM_USER" Member="MPM_USERs">
+    <Type Name="MPM_USER">
+      <Column Name="NPK" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOMAIN" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="USER_ID" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DATAAREA_ID" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="MAIN_DEALER_ID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SITE_ID_MAPPING" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IS_ACTIVE" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIF_BY" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MODIF_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MPM_DOORPRIZE" Member="MPM_DOORPRIZEs">
+    <Type Name="MPM_DOORPRIZE">
+      <Column Name="IDDOORPRIZE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="JUMLAH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CREATEBY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFBY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MPM_DOORPRIZE_USER" Member="MPM_DOORPRIZE_USERs">
+    <Type Name="MPM_DOORPRIZE_USER">
+      <Column Name="IDUSER" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NPK" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIVISI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="COMPANYOFFICE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WORKLOCATION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KETENTUANWARNA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUSHADIR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUSPEMENANG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KODEHADIAH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
