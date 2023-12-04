@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.98.0">
+  <title>StudioPick</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link href="./style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- Page section example for content below the video header -->
+  <section class="my-5">
+    <div class="container">
+       <!--Studio List-->
+      <div class="row">
+        <!--Studio One-->
+        <div class="stuOne mx-auto">
+          <div class="stucontainer">
+        </div>
+    </div>
+    <!--Studio One-->
+    <button class="buttons prev" style="display: none;"><</button>
+    <button class="buttons next" id="btn-next" style="display: none;" ></button>
+        
+        <!--Studio Two-->
+        <div class="stuTwo mx-auto">
+          <div class="stucontainer">
+            <div class="card2-stack">
+              <!---Button for scroll-->
+              <!-- <button class="buttons prev"><</button> -->
+              <!---Button for scroll-->
+              <ul class="card2-list">
+
+                <!--Studio Room 2-->
+                <li class="card2 text-white card-has-bg click-col" style="background-image:url('https://hr.mpm-motor.com/MPM/uploaded/EmployeePersonalInfo/8418.png');">
+                  <div class="card2-img-overlay d-flex flex-column">
+                    <div class="card2-body">
+                      <div class="media">
+                        <div class="media-body">
+                          <h6 class="roomC mb-2"><strong>Room C</strong></h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Studio Room 2-->
+
+                <!--Studio Room 1-->
+                <li class="card2 text-white card-has-bg click-col" style="background-image:url('https://hr.mpm-motor.com/MPM/uploaded/EmployeePersonalInfo/8440.png');">
+                  <div class="card2-img-overlay d-flex flex-column">
+                    <div class="card2-body">
+                      <div class="media">
+                        <div class="media-body">
+                          <h6 class="roomB mb-2"><strong>Room B</strong></h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Studio Room 1-->
+
+                <!--Studio Front Page-->
+
+                <!--Studio Front Page-->
+                <li class="card2 text-white card-has-bg click-col" style="background-image:url('https://hr.mpm-motor.com/MPM/uploaded/EmployeePersonalInfo/8450.png');">
+                  <div class="card2-img-overlay d-flex flex-column">
+                    <div class="card2-body">
+                      <div class="media">
+                        <img class="mr-3 rounded-circle" id="stuImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUXsEFPioqCqDqgp7MeLNpM7iZYL6mt97ElI3LwCnuFoarwmSWbJquoEwbi1AJSRzXBs&usqp=CAU" alt="Generic placeholder image" style="max-width:50px; position: relative; top: 50px; left: -150px;">
+                        <div class="media-body">
+                          <h6 class="card2-meta mb-2"><strong>CC Studios</strong></h6>
+                          <small class="stuLocation2">Bethesda, MD</small>
+                        </div>
+                      </div>
+                      <!--Heart Button--->
+                      <div class="btns1">
+                        <Button style="font-size: 35px" onclick="Toggle1()" id="btnh1" class="btn"><i
+                                  class="fas fa-heart"></i></Button>
+                      </div>
+                      <!---Heart Button--->
+                      <!---Star Rating--->
+                      <div class="rating-box">
+                        <div class="star-source">
+                          <svg>
+                                  <linearGradient x1="50%" y1="5.41294643%" x2="87.5527344%" y2="65.4921875%" id="grad">
+                                    <stop stop-color="#bf209f" offset="0%"></stop>
+                                    <stop stop-color="#d62a9d" offset="60%"></stop>
+                                    <stop stop-color="#ED009E" offset="100%"></stop>
+                                  </linearGradient>
+                                  <symbol id="star" viewBox="153 89 106 108">
+                                    <polygon id="star-shape" stroke="url(#grad)" stroke-width="5" fill="currentColor"
+                                      points="206 162.5 176.610737 185.45085 189.356511 150.407797 158.447174 129.54915 195.713758 130.842203 206 95 216.286242 130.842203 253.552826 129.54915 222.643489 150.407797 235.389263 185.45085">
+                                    </polygon>
+                                  </symbol>
+                                </svg>
+                        </div>
+                        <div class="star-container">
+                          <input type="radio" name="star" id="five">
+                          <label for="five">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                          <input type="radio" name="star" id="four">
+                          <label for="four">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                          <input type="radio" name="star" id="three">
+                          <label for="three">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                          <input type="radio" name="star" id="two">
+                          <label for="two">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                          <input type="radio" name="star" id="one">
+                          <label for="one">
+                                  <svg class="star">
+                                    <use xlink:href="#star" />
+                                  </svg>
+                                </label>
+                        </div>
+                      </div>
+                      <!---Star Rating--->
+
+
+                    </div>
+                  </div>
+                </li>
+                <!--Studio Front Page-->
+
+
+              </ul>
+              <!-- <button class="buttons next">></button> -->
+            </div>
+          </div>
+        </div>
+        <!--Studio Two-->
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="./cardstack.js"></script>
+
+</body>
+
+</html>
