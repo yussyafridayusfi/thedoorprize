@@ -6,9 +6,11 @@
 <script>
     var a = 47
     var Hadiah = [];
+    var listpemenang_door = []
+
     $(document).ready(function () {
         getHadiah()
-        setTimeout(setid, 15000);
+        //setTimeout(setid, 15000);
     });
     function setid() {
         if (a == 1) {
@@ -19,7 +21,7 @@
         getHadiah()
        
         //$("#set").text(a);
-        setTimeout(setid, 15000);
+        //setTimeout(setid, 15000);
     }
 
     function getHadiah() {
@@ -29,13 +31,17 @@
             contentType: "application/json; charset=utf-8",
             //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
             dataType: "json",
-            success: function (result, status, xhr) {
+            success: async function (result, status, xhr) {
                 console.log(result);
                 if (result.status == "1") {
                     for (var i = 0; i < result.data.length; i++) {
                         Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
                     }
-                    sethadiah(a);
+                    await getdata_winner()
+                    //displayUserData(a);
+                    //displayUserData(a);
+                    //sethadiah(a);
+                    //sethadiah_v2(a);
                 }
                 else {
                     alert(result.message);
@@ -47,7 +53,130 @@
         });
     }
 
+    async function displayUserData(id) {
+        //const userDataContainer = document.getElementById('userData');
+        console.log('params.',id)
+        var nama = "";
+        $('.pemenang').empty();
+        for (var a = 0; a < Hadiah.length; a++) {
+            if (Hadiah[a].id == id) {
+                jumlah = Hadiah[a].jumlah;
+                nama = Hadiah[a].nama;
+            }
+        }
+        console.log('jum-.', jumlah)
+        console.log('nama-.', nama)
+        if (nama == "") {
+            location.reload()
+        } else {
+            if (jumlah == 0) {
+                a = a - 1;
+                sethadiah(a);
+            } else {
+                console.log('here.')
+                document.getElementById("hadiahNama").innerHTML = nama;
+
+                const hadiah_data = [{
+                    name: nama, total: jumlah
+                }]
+                console.log('hadiah_data.',hadiah_data)
+
+
+                //
+                for (const user of hadiah_data) {
+                    //const userContainer = document.createElement('div');
+                    //userContainer.textContent = `USER ${user.name}`;
+                    //userDataContainer.appendChild(userContainer);
+                    const list_winner = listpemenang_door
+                    console.log('getmenang.', list_winner)
+
+                    let remaining = user.total;
+                    let displayedCount = 0;
+                    
+                    
+
+                    while (remaining > 0) {
+                        const displayCount = Math.min(remaining, 4);
+                        console.log('displayCount.',displayCount)
+                        //const intervalData = document.createElement('div');
+                        //userDataContainer.appendChild(intervalData);
+
+                        for (let i = 1; i <= displayCount; i++) {
+                            //const dataElement = document.createElement('p');
+                            //dataElement.textContent = `Data ${++displayedCount}`;
+                            //intervalData.appendChild(dataElement);
+
+                            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:3px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:50px;'>............</label> </div></div></div>")
+                            console.log('npk.', list_winner[i-1])
+                            $("#npk" + i.toString()).text(list_winner[displayCount]?.NPK + " - " + list_winner.NAMA);
+                           
+                            remaining--;
+                        }
+
+                        await sleep(2000); // Wait for 2 seconds before displaying the next interval
+                        //intervalData.innerHTML = ''; // Remove the displayed data for the next interval
+                        $('.pemenang').empty();
+                    }
+
+
+                    // Remove the USER div after displaying all data for that user
+                    //userDataContainer.removeChild(userContainer);
+                    setid()
+                }
+
+
+            }
+
+
+        }
+
+
+        
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function getdata_winner() {
+        await winner();
+        //console.log(list_winner);
+        displayUserData(a);
+    }
+
+    function winner() {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                type: "POST",
+                url: "/Home/GetDataHadiah",
+                contentType: "application/json; charset=utf-8",
+                data: '{"hadiah":"' + a + '"}',
+                dataType: "json",
+                success: function (result, status, xhr) {
+                    console.log(result);
+                    listpemenang_door.push(result.data)
+                    if (result.status == "1") {
+                        var i = 1
+                        for (var a = 0; a < result.data.length; a++) {
+                            console.log(i + " = " + result.data[a].NPK + " - " + result.data[a].NAMA);
+                            //$("#npk" + i.toString()).text(result.data[a].NPK + " - " + result.data[a].NAMA);
+                            i++;
+                        }
+                        //console.log(Pemenang);
+                    } else {
+                        alert(result.message);
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+                }
+            });
+        });
+    }
+
     function sethadiah(id) {
+        console.log('sethadiah-params.',id)
         var jumlah = 0;
         var nama = "";
         $('.pemenang').empty();
@@ -57,6 +186,8 @@
                 nama = Hadiah[a].nama;
             }
         }
+        console.log('jum.',jumlah)
+        console.log('nama.',nama)
         if (nama == "") {
             location.reload()
         } else {
@@ -65,6 +196,7 @@
                 sethadiah(a);
             } else {
                 document.getElementById("hadiahNama").innerHTML = nama;
+                console.log("JUMLAH: ", jumlah)
                 if (jumlah < 10 && jumlah > 3) {
                     for (var i = 1; i <= jumlah; i++) {
                         $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
@@ -95,6 +227,8 @@
         
         
     }
+
+
     function getPemanang() {
         $.ajax({
             type: "POST",
@@ -125,12 +259,12 @@
 
 </script>
 
-<div id="door" class="divall" style="padding-top:10px;padding-bottom:10px">
+<div id="door" class="" style="padding-top:10px;padding-bottom:10px">
     <div class="w-75 p-3 divBorder text-center">
         <h1 id="hadiahNama"></h1>
     </div>
 
-    <div class="col-md-12 pemenang divall" style="margin-top:15px;padding-top:10px" id="listPemenang">
+    <div class="col-md-12 pemenang" style="margin-top:15px;padding-top:10px" id="listPemenang">
         @*@for (var a = 1; a <= 20; a++)
             {
                 <div class="card">

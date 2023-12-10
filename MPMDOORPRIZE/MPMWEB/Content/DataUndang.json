@@ -4695,7 +4695,7 @@
     "COMPANYOFFICE": "Administrasi",
     "KODEWARNA": "grandprize",
     "HADIAH": "0",
-    "ABSEN": "0",
+    "ABSEN": "1",
     "AMBILHADIAH": " ",
     "KETERANGAN": "grandprize"
   },
@@ -11195,7 +11195,7 @@
     "COMPANYOFFICE": "IT",
     "KODEWARNA": "doorprize, grandprize",
     "HADIAH": "0",
-    "ABSEN": "0",
+    "ABSEN": "1",
     "AMBILHADIAH": " ",
     "KETERANGAN": "doorprize, grandprize"
   },
@@ -11825,7 +11825,7 @@
     "COMPANYOFFICE": "IT",
     "KODEWARNA": "null",
     "HADIAH": "0",
-    "ABSEN": "0",
+    "ABSEN": "1",
     "AMBILHADIAH": " ",
     "KETERANGAN": "null"
   },
@@ -11835,7 +11835,7 @@
     "COMPANYOFFICE": "IT",
     "KODEWARNA": "null",
     "HADIAH": "0",
-    "ABSEN": "0",
+    "ABSEN": "1",
     "AMBILHADIAH": " ",
     "KETERANGAN": "null"
   },

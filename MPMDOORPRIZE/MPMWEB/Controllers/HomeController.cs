@@ -22,7 +22,8 @@ namespace MPMWEB.Controllers
         }
         public override ActionResult Index()
         {
-            return View();
+            //return View();
+            return View("MainMenu");
         }
         public ActionResult Ambil()
         {
@@ -72,9 +73,15 @@ namespace MPMWEB.Controllers
         {
             return View("Register6");
         }
+        public ActionResult MainMenu()
+        {
+            return View();
+        }
         public void setStatus(string hadiah)
         {
-            string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json");
+            //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json");
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+            string djson = System.IO.File.ReadAllText(json_text);
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
             List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(djson);
             string f = jsonObj[0].NPK;
@@ -89,12 +96,17 @@ namespace MPMWEB.Controllers
             
 
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-            System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json", output);
+            var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+            //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json", output);
+            System.IO.File.WriteAllText(json_out, output);
+            System.IO.File.WriteAllText(json_out, output);
         }
 
         public void setStatusGR(string hadiah)
         {
-            string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiahGR.json");
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiahGR.json";
+            //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiahGR.json");
+            string djson = System.IO.File.ReadAllText(json_text);
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
             List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(djson);
             string f = jsonObj[0].NPK;
@@ -109,12 +121,16 @@ namespace MPMWEB.Controllers
 
 
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-            System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiahGR.json", output);
+            var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiahGR.json";
+            //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiahGR.json", output);
+            System.IO.File.WriteAllText(json_out, output);
         }
 
         public string getHadihnya(string hadiah)
         {
-            using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+            //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+            using (StreamReader r = new StreamReader(json_text))
             {
                 string json = r.ReadToEnd();
                 List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(json);
@@ -128,8 +144,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-
-                string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                string djson = System.IO.File.ReadAllText(json_text);
                 dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
                 string f = jsonObj[0].NPK;
@@ -168,7 +185,9 @@ namespace MPMWEB.Controllers
                 
 
                 string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                System.IO.File.WriteAllText(json_out, output);
                 
                 return Json(new
                 {
@@ -194,8 +213,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-
-                string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                string djson = System.IO.File.ReadAllText(json_text);
                 dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
                 string f = jsonObj[0].NPK;
@@ -211,7 +231,9 @@ namespace MPMWEB.Controllers
                 }
 
                 string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                System.IO.File.WriteAllText(json_out, output);
                 setStatus(hadiah);
                 return Json(new
                 {
@@ -237,8 +259,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-
-                string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                string djson = System.IO.File.ReadAllText(json_text);
                 dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
                 string f = jsonObj[0].NPK;
@@ -254,7 +277,9 @@ namespace MPMWEB.Controllers
                 }
 
                 string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                System.IO.File.WriteAllText(json_out, output);
                 setStatusGR(hadiah);
                 return Json(new
                 {
@@ -281,8 +306,9 @@ namespace MPMWEB.Controllers
             try
             {
                 //var data = Model._queryWeb.getPemanang(Convert.ToInt32(maxData));
-                
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -335,8 +361,9 @@ namespace MPMWEB.Controllers
             try
             {
                 //var data = Model._queryWeb.getPemanang(Convert.ToInt32(maxData));
-
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -387,7 +414,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -396,7 +425,7 @@ namespace MPMWEB.Controllers
                                             && a.AMBILHADIAH == " "
                                             select new RecordWeb
                                             {
-                                                NPK = a.NPK,
+                                                NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(5, '0') : a.NPK,
                                                 NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
                                                 HADIAH = a.HADIAH
                                             }).ToList();
@@ -433,7 +462,8 @@ namespace MPMWEB.Controllers
         }
         public int getJumlahWin(string hadiah)
         {
-            using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+            using (StreamReader r = new StreamReader(json_text))
             {
                 string json = r.ReadToEnd();
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -448,8 +478,9 @@ namespace MPMWEB.Controllers
             try
             {
                 //var data = Model._queryWeb.listHadiahDoorPrize();
-
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(json);
@@ -498,8 +529,9 @@ namespace MPMWEB.Controllers
             try
             {
                 //var data = Model._queryWeb.listHadiahDoorPrize();
-                
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(json);
@@ -548,8 +580,9 @@ namespace MPMWEB.Controllers
             try
             {
                 //var data = Model._queryWeb.listHadiahDoorPrize();
-
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiahGR.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiahGR.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiahGR.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(json);
@@ -597,7 +630,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register1.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 var jsonObj = JObject.Parse(json);
                 //var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 //var newCompany = JObject.Parse(newCompanyMember);
@@ -606,7 +641,9 @@ namespace MPMWEB.Controllers
                 //jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register1.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
                 
             }
             catch (Exception e)
@@ -620,7 +657,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -663,7 +702,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -712,7 +753,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -760,8 +803,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-
-                string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json");
+                string djson = System.IO.File.ReadAllText(json_text);
                 dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
                 string cekAbsen = "";
@@ -784,7 +828,9 @@ namespace MPMWEB.Controllers
                 
 
                 string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json", output);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json", output);
+                System.IO.File.WriteAllText(json_out, output);
                 if(cekAbsen != "")
                 {
                     return Json(new
@@ -823,7 +869,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register1.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 //var jsonObj = JObject.Parse(json);
                 //var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 //var newCompany = JObject.Parse(newCompanyMember);
@@ -832,7 +880,9 @@ namespace MPMWEB.Controllers
                 //jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(json,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register1.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register1.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
 
             }
             catch (Exception e)
@@ -846,7 +896,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -889,7 +941,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register2.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register2.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register2.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 var jsonObj = JObject.Parse(json);
                 var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 var newCompany = JObject.Parse(newCompanyMember);
@@ -898,7 +952,9 @@ namespace MPMWEB.Controllers
                 jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register2.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register2.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register2.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
 
             }
             catch (Exception e)
@@ -912,7 +968,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -955,7 +1013,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register3.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register3.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register3.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 var jsonObj = JObject.Parse(json);
                 var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 var newCompany = JObject.Parse(newCompanyMember);
@@ -964,7 +1024,9 @@ namespace MPMWEB.Controllers
                 jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register3.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register3.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register3.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
 
             }
             catch (Exception e)
@@ -978,7 +1040,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -1021,7 +1085,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register4.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register4.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register4.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 var jsonObj = JObject.Parse(json);
                 var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 var newCompany = JObject.Parse(newCompanyMember);
@@ -1030,7 +1096,9 @@ namespace MPMWEB.Controllers
                 jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register4.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register4.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register4.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
 
             }
             catch (Exception e)
@@ -1044,7 +1112,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -1087,7 +1157,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register5.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register5.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register5.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 var jsonObj = JObject.Parse(json);
                 var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 var newCompany = JObject.Parse(newCompanyMember);
@@ -1096,7 +1168,9 @@ namespace MPMWEB.Controllers
                 jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register5.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register5.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register5.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
 
             }
             catch (Exception e)
@@ -1110,7 +1184,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -1153,7 +1229,9 @@ namespace MPMWEB.Controllers
             try
             {
                 string newCompanyMember = "{'NPK':'" + npk + "','NAMA':'" + nama + "','KODEWARNA':'" + kodewarna + "','HADIAH':'0'}";
-                var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register6.json");
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register6.json";
+                //var json = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register6.json");
+                var json = System.IO.File.ReadAllText(json_text);
                 var jsonObj = JObject.Parse(json);
                 var experienceArrary = jsonObj.GetValue("experiences") as JArray;
                 var newCompany = JObject.Parse(newCompanyMember);
@@ -1162,7 +1240,9 @@ namespace MPMWEB.Controllers
                 jsonObj["experiences"] = experienceArrary;
                 string newJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj,
                                        Newtonsoft.Json.Formatting.Indented);
-                System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register6.json", newJsonResult);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register6.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register6.json", newJsonResult);
+                System.IO.File.WriteAllText(json_out, newJsonResult);
 
             }
             catch (Exception e)
@@ -1176,7 +1256,9 @@ namespace MPMWEB.Controllers
         {
             try
             {
-                using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\DataUndang.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\DataUndang.json"))
+                using (StreamReader r = new StreamReader(json_text))
                 {
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
@@ -1215,9 +1297,12 @@ namespace MPMWEB.Controllers
         }
         public ActionResult ExportDataFinal()
         {
-            string reportPath = "D:\\PINDAHAN\\Project\\Panitia Penutupan\\dataregis\\";
+            //string reportPath = "D:\\PINDAHAN\\Project\\Panitia Penutupan\\dataregis\\";
+            string reportPath = "D:\\TheDoorprize\\dataregis\\";
             string reportName = "DataFinal.xlsb";
-            using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+            //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+            using (StreamReader r = new StreamReader(json_text))
             {
                 string json = r.ReadToEnd();
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -1287,9 +1372,12 @@ namespace MPMWEB.Controllers
         }
         public ActionResult ExportToExcelLogin(string log)
         {
-            string reportPath = "D:\\PINDAHAN\\Project\\Panitia Penutupan\\dataregis\\";
+            //string reportPath = "D:\\PINDAHAN\\Project\\Panitia Penutupan\\dataregis\\";
+            string reportPath = "D:\\TheDoorprize\\dataregis\\";
             string reportName = "ReportRegister"+ log + ".xlsb";
-            using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register" + log+".json"))
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\register";
+            //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\register" + log+".json"))
+            using (StreamReader r = new StreamReader(json_text + log+".json"))
             {
                 string json = r.ReadToEnd();
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
@@ -1352,9 +1440,12 @@ namespace MPMWEB.Controllers
 
         public ActionResult ExportToExcel(string hadiah)
         {
-            string reportPath = "D:\\PINDAHAN\\Project\\Panitia Penutupan\\dataregis\\";
+            //string reportPath = "D:\\PINDAHAN\\Project\\Panitia Penutupan\\dataregis\\";
+            string reportPath = "D:\\TheDoorprize\\dataregis\\";
             string reportName = getHadihnya(hadiah) + ".xlsb";
-            using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+            var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+            //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+            using (StreamReader r = new StreamReader(json_text))
             {
                 string json = r.ReadToEnd();
                 List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);

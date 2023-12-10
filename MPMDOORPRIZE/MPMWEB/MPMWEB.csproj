@@ -198,6 +198,7 @@
     <Content Include="Views\Home\Ambil.cshtml" />
     <Content Include="Views\Home\Export.cshtml" />
     <Content Include="Views\Home\GrandPrize.cshtml" />
+    <Content Include="Views\Home\MainMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
