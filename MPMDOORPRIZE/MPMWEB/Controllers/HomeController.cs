@@ -23,7 +23,7 @@ namespace MPMWEB.Controllers
         public override ActionResult Index()
         {
             //return View();
-            return View("MainMenu");
+            return View();
         }
         public ActionResult Ambil()
         {

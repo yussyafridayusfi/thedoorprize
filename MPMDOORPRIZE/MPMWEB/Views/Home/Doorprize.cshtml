@@ -10,6 +10,7 @@
 
     $(document).ready(function () {
         getHadiah()
+        //getHadiah_v2()
         //setTimeout(setid, 15000);
     });
     function setid() {
@@ -19,6 +20,7 @@
             a = a - 1;
         }
         getHadiah()
+        //getHadiah_v2()
        
         //$("#set").text(a);
         //setTimeout(setid, 15000);
@@ -31,14 +33,14 @@
             contentType: "application/json; charset=utf-8",
             //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
             dataType: "json",
-            success: async function (result, status, xhr) {
+            success: function (result, status, xhr) {
                 console.log(result);
                 if (result.status == "1") {
                     for (var i = 0; i < result.data.length; i++) {
                         Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
                     }
-                    await getdata_winner()
-                    //displayUserData(a);
+                    getdata_winner()
+                    displayUserData(a);
                     //displayUserData(a);
                     //sethadiah(a);
                     //sethadiah_v2(a);
@@ -50,6 +52,55 @@
             error: function (xhr, status, error) {
                 console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
             }
+        });
+    }
+
+    function getHadiah_v2() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetHadiahDoor",
+            contentType: "application/json; charset=utf-8",
+            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                const promises = [];
+
+                if (result.status == "1") {
+                    for (var i = 0; i < result.data.length; i++) {
+                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
+                    }
+                    //await getdata_winner()
+                    ////displayUserData(a);
+                    ////displayUserData(a);
+                    ////sethadiah(a);
+                    ////sethadiah_v2(a);
+                    promises.push(performTasks());
+                    Promise.all(promises).then(() => {
+                        displayUserData(a);
+                    }).catch((error) => {
+                        console.error(error);
+                    });
+                }
+                else {
+                    alert(result.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    function performTasks() {
+        return new Promise((resolve, reject) => {
+            //winner().then(() => {
+            getdata_winner().then(() => {
+                // Do other async tasks here if needed
+                resolve();
+            }).catch((error) => {
+                reject(error);
+            });
         });
     }
 
@@ -141,7 +192,7 @@
     async function getdata_winner() {
         await winner();
         //console.log(list_winner);
-        displayUserData(a);
+        
     }
 
     function winner() {
