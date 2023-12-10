@@ -1,284 +1,261 @@
 [
   {
     "No": "1",
-    "Hadiah": "Lappy A9",
+    "Hadiah": "Ecentio",
     "Status": "0",
-    "Unit": "3"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "2",
-    "Hadiah": "HP O4",
+    "Hadiah": "Matras Yoga + Tas",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "3",
-    "Hadiah": "Kurumi V3",
+    "Hadiah": "Eiger Forlough 20L",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "4",
-    "Hadiah": "Tipi Pintar",
+    "Hadiah": "Tas",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "1",
+    "isBesar": "1"
   },
   {
     "No": "5",
-    "Hadiah": "HP O3",
+    "Hadiah": "CORKCICLE® Canteen 16oz",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "15",
+    "isBesar": "1"
   },
   {
     "No": "6",
-    "Hadiah": "Tablet",
+    "Hadiah": "CORKCICLE® Canteen 25oz",
     "Status": "0",
-    "Unit": "4"
+    "Unit": "5",
+    "isBesar": "1"
   },
   {
     "No": "7",
-    "Hadiah": "HP M1",
+    "Hadiah": "Ecentio Juicer Portable Blender",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "15",
+    "isBesar": "1"
   },
   {
     "No": "8",
-    "Hadiah": "Dolby",
+    "Hadiah": "Indomaret 100K",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "20",
+    "isBesar": "0"
   },
   {
     "No": "9",
-    "Hadiah": "Kurumi V2",
+    "Hadiah": "Indomaret 200K",
     "Status": "0",
-    "Unit": "3"
+    "Unit": "10",
+    "isBesar": "0"
   },
   {
     "No": "10",
-    "Hadiah": "Microwave",
+    "Hadiah": "Sodexo 200k",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "20",
+    "isBesar": "0"
   },
   {
     "No": "11",
-    "Hadiah": "HP C2",
+    "Hadiah": "Hypermart 100K",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "5",
+    "isBesar": "0"
   },
   {
     "No": "12",
-    "Hadiah": "Traveloka Gift Voucher 1K",
+    "Hadiah": "AIR COOLER TOWER SHARP PJ-R34TY-B",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "2",
+    "isBesar": "1"
   },
   {
     "No": "13",
-    "Hadiah": "Speaker BT",
+    "Hadiah": "Maspion",
     "Status": "0",
-    "Unit": "3"
+    "Unit": "5",
+    "isBesar": "1"
   },
   {
     "No": "14",
-    "Hadiah": "Travel Luggage",
+    "Hadiah": "Setrika Uap Philips",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "15",
-    "Hadiah": "Traveloka Gift Voucher 5M",
+    "Hadiah": "Lion Star (Primera lion star SM4)",
     "Status": "0",
-    "Unit": "10"
+    "Unit": "3",
+    "isBesar": "1"
   },
   {
     "No": "16",
-    "Hadiah": "Tour Voucher - WM",
+    "Hadiah": "Hi-Cook Kompor Portable KC-105",
     "Status": "0",
-    "Unit": "5"
+    "Unit": "5",
+    "isBesar": "1"
   },
   {
     "No": "17",
-    "Hadiah": "Tour Voucher - GR",
+    "Hadiah": "PHILIPS 2L Rice cooker",
     "Status": "0",
-    "Unit": "3"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "18",
-    "Hadiah": "Pro Blend",
+    "Hadiah": "Ace - Kris Coffee Maker",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "5",
+    "isBesar": "1"
   },
   {
     "No": "19",
-    "Hadiah": "Colorfull Gift Bag - Mi2",
+    "Hadiah": "Portable Vacuum Cleaner",
     "Status": "0",
-    "Unit": "4"
+    "Unit": "5",
+    "isBesar": "1"
   },
   {
     "No": "20",
-    "Hadiah": "Smartwatch M4",
+    "Hadiah": "PHILIPS Stand Mixer",
     "Status": "0",
-    "Unit": "20"
+    "Unit": "5",
+    "isBesar": "1"
   },
   {
     "No": "21",
-    "Hadiah": "Smartwatch H4",
+    "Hadiah": "Philips Blender",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "22",
-    "Hadiah": "Backpack",
+    "Hadiah": "Samsung 43inch Smart TV",
     "Status": "0",
-    "Unit": "10"
+    "Unit": "2",
+    "isBesar": "1"
   },
   {
     "No": "23",
-    "Hadiah": "Colorfull Gift Bag - VB",
+    "Hadiah": "Samsung 32inch Smart TV",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "3",
+    "isBesar": "1"
   },
   {
     "No": "24",
-    "Hadiah": "Colorfull Gift Bag - Simba",
+    "Hadiah": "Polytron 32 inch",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "3",
+    "isBesar": "1"
   },
   {
     "No": "25",
-    "Hadiah": "Dr. Care",
+    "Hadiah": "Nintendo Switch",
     "Status": "0",
-    "Unit": "2"
+    "Unit": "2",
+    "isBesar": "1"
   },
   {
     "No": "26",
-    "Hadiah": "Colorfull Gift Bag - P47",
+    "Hadiah": "Fujifilm Instax Instant Camera",
     "Status": "0",
-    "Unit": "4"
+    "Unit": "3",
+    "isBesar": "1"
   },
   {
     "No": "27",
-    "Hadiah": "Colorfull Gift Bag - Dora",
+    "Hadiah": "Soundtech Soundbar Speaker Wireless",
     "Status": "0",
-    "Unit": "11"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "28",
-    "Hadiah": "Colorfull Gift Bag - Bose",
+    "Hadiah": "Xiaomi Mi TV Soundbar Wired",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "10",
+    "isBesar": "1"
   },
   {
     "No": "29",
-    "Hadiah": "Colorfull Gift Bag - Pandora",
+    "Hadiah": "OPPO A78 5G",
     "Status": "0",
-    "Unit": "4"
+    "Unit": "5",
+    "isBesar": "0"
   },
   {
     "No": "30",
-    "Hadiah": "Colorfull Gift Bag - J01",
+    "Hadiah": "Galaxy A14",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "5",
+    "isBesar": "0"
   },
   {
     "No": "31",
-    "Hadiah": "Colorfull Gift Bag - Tumb",
+    "Hadiah": "Headphone Soundcore Q20i",
     "Status": "0",
-    "Unit": "1"
+    "Unit": "5",
+    "isBesar": "0"
   },
   {
     "No": "32",
-    "Hadiah": "Colorfull Gift Bag - Joy",
+    "Hadiah": "Amazfit BIP 3 Pro",
     "Status": "0",
-    "Unit": "3"
+    "Unit": "15",
+    "isBesar": "0"
   },
   {
     "No": "33",
-    "Hadiah": "Colorfull Gift Bag - Ombre",
+    "Hadiah": "HUAWEI Band 8 Smartband",
     "Status": "0",
-    "Unit": "21"
+    "Unit": "10",
+    "isBesar": "0"
   },
   {
     "No": "34",
-    "Hadiah": "Matahari Voucher 3M",
+    "Hadiah": "BASEUS WIRELESS POWER BANK",
     "Status": "0",
-    "Unit": "23"
+    "Unit": "10",
+    "isBesar": "0"
   },
   {
     "No": "35",
-    "Hadiah": "Colorfull Gift Bag - Cali",
+    "Hadiah": "Anker Charger 735",
     "Status": "0",
-    "Unit": "10"
+    "Unit": "10",
+    "isBesar": "0"
   },
   {
     "No": "36",
-    "Hadiah": "Colorfull Gift Bag - M3",
+    "Hadiah": "Soundcore life dot 3i",
     "Status": "0",
-    "Unit": "3"
+    "Unit": "15",
+    "isBesar": "0"
   },
   {
     "No": "37",
-    "Hadiah": "Colorfull Gift Bag - Cons",
+    "Hadiah": "Lenovo X4 Bluetooth Earphone",
     "Status": "0",
-    "Unit": "12"
-  },
-  {
-    "No": "38",
-    "Hadiah": "Colorfull Gift Bag - T5",
-    "Status": "0",
-    "Unit": "20"
-  },
-  {
-    "No": "39",
-    "Hadiah": "Outdoor Sling Bag",
-    "Status": "0",
-    "Unit": "10"
-  },
-  {
-    "No": "40",
-    "Hadiah": "Sodexo Voucher 2M",
-    "Status": "0",
-    "Unit": "20"
-  },
-  {
-    "No": "41",
-    "Hadiah": "MAP Voucher 2M",
-    "Status": "0",
-    "Unit": "20"
-  },
-  {
-    "No": "42",
-    "Hadiah": "Matahari Voucher 2M",
-    "Status": "0",
-    "Unit": "21"
-  },
-  {
-    "No": "43",
-    "Hadiah": "Traveloka Gift Voucher 2M",
-    "Status": "0",
-    "Unit": "20"
-  },
-  {
-    "No": "44",
-    "Hadiah": "City Sling Bag",
-    "Status": "0",
-    "Unit": "8"
-  },
-  {
-    "No": "45",
-    "Hadiah": "Coffee Maker",
-    "Status": "0",
-    "Unit": "20"
-  },
-  {
-    "No": "46",
-    "Hadiah": "Sodexo Voucher 1M",
-    "Status": "1",
-    "Unit": "10"
-  },
-  {
-    "No": "47",
-    "Hadiah": "Matahari Voucher 1M",
-    "Status": "1",
-    "Unit": "20"
+    "Unit": "15",
+    "isBesar": "0"
   }
 ]
