@@ -23,7 +23,7 @@ namespace MPMWEB.Controllers
         public override ActionResult Index()
         {
             //return View();
-            return View();
+            return View("MainMenu");
         }
         public ActionResult Ambil()
         {
@@ -76,6 +76,10 @@ namespace MPMWEB.Controllers
         public ActionResult MainMenu()
         {
             return View();
+        }
+        public ActionResult RolateDoorprize()
+        {
+            return View("Index");
         }
         public void setStatus(string hadiah)
         {
