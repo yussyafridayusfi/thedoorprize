@@ -16,6 +16,7 @@ namespace MPMMODELWEB.Record
         public string ABSEN { get; set; }
         public string AMBILHADIAH { get; set; }
         public string COMPANYOFFICE { get; set; }
+        public string ISMULIA { get; set; }
 
 
     }
@@ -30,6 +31,7 @@ namespace MPMMODELWEB.Record
         public string AMBILHADIAH { get; set; }
         public string COMPANYOFFICE { get; set; }        
         public string ABSEN { get; set; }
+        public string ISMULIA { get; set; }
     }
 
     public class RegisterRec
@@ -42,6 +44,7 @@ namespace MPMMODELWEB.Record
         public string ABSEN { get; set; }
         public string AMBILHADIAH { get; set; }
         public string COMPANYOFFICE { get; set; }
+        public string ISMULIA { get; set; }
     }
 
 
@@ -51,6 +54,7 @@ namespace MPMMODELWEB.Record
         public string Hadiah { get; set; }
         public string Status { get; set; }
         public string Unit { get; set; }
+        public string isBesar { get; set; }
     }
 
    
@@ -61,5 +65,6 @@ namespace MPMMODELWEB.Record
         public string Hadiah { get; set; }
         public string Status { get; set; }
         public int Unit { get; set; }
+        public int isBesar { get; set; }
     }
 }

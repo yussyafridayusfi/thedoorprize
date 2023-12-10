@@ -80,6 +80,7 @@ namespace MPMWEB.Controllers
         public ActionResult RolateDoorprize()
         {
             return View("Index");
+            //return View();
         }
         public void setStatus(string hadiah)
         {
@@ -324,7 +325,8 @@ namespace MPMWEB.Controllers
                                                  {
                                                      NPK = a.NPK,
                                                      NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20) ,
-                                                      HADIAH = a.HADIAH
+                                                      HADIAH = a.HADIAH,
+                                                      ISMULIA = a.ISMULIA
                                                   }).ToList();
 
                     List<RecordWeb> data = datafinal.OrderBy(u => rnd.Next()).Take(Convert.ToInt32(maxData)).ToList();
@@ -527,6 +529,57 @@ namespace MPMWEB.Controllers
             }
         }
 
+        public JsonResult GetHadiahDoor_v2()
+        {
+            try
+            {
+                //var data = Model._queryWeb.listHadiahDoorPrize();
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
+                using (StreamReader r = new StreamReader(json_text))
+                {
+                    string json = r.ReadToEnd();
+                    List<JsonHadiahRec> items = JsonConvert.DeserializeObject<List<JsonHadiahRec>>(json);
+                    List<HadiahRecWeb> data = (from a in items
+                                               where a.Status == "0"
+                                               select new HadiahRecWeb
+                                               {
+                                                   No = int.Parse(a.No),
+                                                   Hadiah = a.Hadiah,
+                                                   Status = a.Status,
+                                                   Unit = int.Parse(a.Unit),
+                                                   isBesar = int.Parse(a.isBesar)
+                                               }).ToList();
+
+                    if (items == null || items.Count().Equals(0))
+                    {
+                        return Json(new
+                        {
+                            status = 0,
+                            message = "Data Not Found",
+                            data = new { }
+                        });
+                    }
+
+                    return Json(new
+                    {
+                        status = 1,
+                        message = "OK",
+                        data = data.OrderByDescending(c => c.No).ToList()
+                    });
+                }
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
         [HttpPost]
         public JsonResult GetHadiah()
         {
@@ -546,7 +599,8 @@ namespace MPMWEB.Controllers
                                                    No = int.Parse(a.No),
                                                    Hadiah = a.Hadiah,
                                                    Status = a.Status,
-                                                   Unit = int.Parse(a.Unit)
+                                                   Unit = int.Parse(a.Unit),
+                                                   isBesar = int.Parse(a.isBesar)
                                                }).ToList();
 
                     if (items == null || items.Count().Equals(0))
@@ -740,6 +794,110 @@ namespace MPMWEB.Controllers
                 //var data = Model._queryWeb.listDoorPrize();
 
                
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
+        [HttpPost]
+        public JsonResult GetData_all()
+        {
+            try
+            {
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
+                {
+                    string json = r.ReadToEnd();
+                    List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
+                    List<RecordWeb> data = (from a in items
+                                            where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                                            select new RecordWeb
+                                            {
+                                                NPK = a.NPK,
+                                                NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                HADIAH = a.HADIAH,
+                                                ISMULIA = a.ISMULIA
+                                            }).ToList();
+                    if (data == null || data.Count().Equals(0))
+                    {
+                        return Json(new
+                        {
+                            status = 0,
+                            message = "Data Not Found",
+                            data = new { }
+                        });
+                    }
+
+                    return Json(new
+                    {
+                        status = 1,
+                        message = "OK",
+                        data = data
+                    });
+                }
+                //var data = Model._queryWeb.listDoorPrize();
+
+
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
+        public JsonResult GetDataDoorMulia()
+        {
+            try
+            {
+                //isMulia = 1
+
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
+                {
+                    string json = r.ReadToEnd();
+                    List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
+                    List<RecordWeb> data = (from a in items
+                                            where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize") && (a.ISMULIA == "1")
+                                            select new RecordWeb
+                                            {
+                                                NPK = a.NPK,
+                                                NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                HADIAH = a.HADIAH
+                                            }).ToList();
+                    if (data == null || data.Count().Equals(0))
+                    {
+                        return Json(new
+                        {
+                            status = 0,
+                            message = "Data Not Found",
+                            data = new { }
+                        });
+                    }
+
+                    return Json(new
+                    {
+                        status = 1,
+                        message = "OK",
+                        data = data
+                    });
+                }
+                //var data = Model._queryWeb.listDoorPrize();
+
+
             }
             catch (Exception e)
             {

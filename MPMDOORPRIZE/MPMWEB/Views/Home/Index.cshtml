@@ -109,6 +109,8 @@
         Pemenang = [];
         setPemanang = [];
         var data = Hadiah[0].jumlah;
+        var isBesar = Hadiah[0].isBesar;
+        console.log('isBesar.',isBesar)
         $.ajax({
             type: "POST",
             url: "/Home/GetPemanang",
@@ -118,11 +120,27 @@
             success: function (result, status, xhr) {
                 console.log(result);
                 if (result.status == "1") {
+                    //for (var i = 0; i < result.data.length; i++) {
+                    //    setPemanang.push({ NPK: result.data[i].NPK, NAMA: result.data[i].NAMA });
+                    //    Pemenang.push(result.data[i].NPK + " - " + result.data[i].NAMA)
+
+                    //}
+
+                    var arr_winner = result.data
+                    console.log('arr_winner.', result.data)
+                    
+                    // ISMULIA
+                    if (isBesar == "1") {
+                        arr_winner = arr_winner.filter(item => item.ISMULIA == "1")
+                    }
                     for (var i = 0; i < result.data.length; i++) {
-                        setPemanang.push({ NPK: result.data[i].NPK, NAMA: result.data[i].NAMA });
-                        Pemenang.push(result.data[i].NPK + " - " + result.data[i].NAMA)
+                        console.log(arr_winner[i])
+                        setPemanang.push({ NPK: arr_winner[i].NPK, NAMA: arr_winner[i].NAMA });
+                        Pemenang.push(arr_winner[i].NPK + " - " + arr_winner[i].NAMA)
 
                     }
+
+
                     console.log(Pemenang);
                 } else {
                     alert(result.message);
@@ -148,7 +166,7 @@
                 console.log(result);
                 if (result.status == "1") {
                     for (var i = 0; i < result.data.length; i++) {
-                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
+                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit, isBesar: result.data[i].isBesar })
                     }
                     sethadiah();
                 }

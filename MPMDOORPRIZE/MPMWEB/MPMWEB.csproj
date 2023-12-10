@@ -151,8 +151,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\drum-roll.mp3" />
     <Content Include="Content\Template-PPT.jpg" />
     <Content Include="Content\test.jpeg" />
+    <Content Include="Content\winner-trumpet.mp3" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -170,6 +172,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sweetalert2.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -199,6 +202,7 @@
     <Content Include="Views\Home\Export.cshtml" />
     <Content Include="Views\Home\GrandPrize.cshtml" />
     <Content Include="Views\Home\MainMenu.cshtml" />
+    <Content Include="Views\Home\RolateDoorprize.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
