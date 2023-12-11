@@ -22,7 +22,7 @@
     function CekAbsen(npk) {
         $.ajax({
             type: "POST",
-            url: "/Home/setabsen";
+            url: "/Home/setabsen",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             data: '{"npk":"' + npk + '"}',
@@ -54,7 +54,7 @@
                 console.log(result);
                 if (result.status == 1) {
                     dataHadir = result.data
-                    $('#NPK').text(dataHadir[0].NPK);
+                    $('#NPK').text(dataHadir[0].NPK.toString().padStart(5, "0"));
                     $('#NAMA').text(dataHadir[0].NAMA);
                     $('#COMPANY').text(dataHadir[0].COMPANYOFFICE);
                     $('#KODEWARNA').text(dataHadir[0].KETERANGAN);

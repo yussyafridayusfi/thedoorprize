@@ -323,7 +323,7 @@ namespace MPMWEB.Controllers
                                                  where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
                                                  select new RecordWeb
                                                  {
-                                                     NPK = a.NPK,
+                                                     NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(5, '0') : a.NPK, //a.NPK,
                                                      NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20) ,
                                                       HADIAH = a.HADIAH,
                                                       ISMULIA = a.ISMULIA
@@ -1191,19 +1191,19 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
                     var data = items.Where(x => x.NPK == npk).Take(1).ToList();
-                    foreach (var row in data)
-                    {
-                        SetHadir2(row.NPK, row.NAMA, row.KODEWARNA);
-                    }
-                    if (items == null || items.Count().Equals(0))
-                    {
-                        return Json(new
-                        {
-                            status = 0,
-                            message = "Data Not Found",
-                            data = new { }
-                        });
-                    }
+                    //foreach (var row in data)
+                    //{
+                    //    SetHadir2(row.NPK, row.NAMA, row.KODEWARNA);
+                    //}
+                    //if (items == null || items.Count().Equals(0))
+                    //{
+                    //    return Json(new
+                    //    {
+                    //        status = 0,
+                    //        message = "Data Not Found",
+                    //        data = new { }
+                    //    });
+                    //}
 
                     return Json(new
                     {
@@ -1263,19 +1263,19 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
                     var data = items.Where(x => x.NPK == npk).Take(1).ToList();
-                    foreach (var row in data)
-                    {
-                        SetHadir3(row.NPK, row.NAMA, row.KODEWARNA);
-                    }
-                    if (items == null || items.Count().Equals(0))
-                    {
-                        return Json(new
-                        {
-                            status = 0,
-                            message = "Data Not Found",
-                            data = new { }
-                        });
-                    }
+                    //foreach (var row in data)
+                    //{
+                    //    SetHadir3(row.NPK, row.NAMA, row.KODEWARNA);
+                    //}
+                    //if (items == null || items.Count().Equals(0))
+                    //{
+                    //    return Json(new
+                    //    {
+                    //        status = 0,
+                    //        message = "Data Not Found",
+                    //        data = new { }
+                    //    });
+                    //}
 
                     return Json(new
                     {
@@ -1335,19 +1335,19 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
                     var data = items.Where(x => x.NPK == npk).Take(1).ToList();
-                    foreach (var row in data)
-                    {
-                        SetHadir4(row.NPK, row.NAMA, row.KODEWARNA);
-                    }
-                    if (items == null || items.Count().Equals(0))
-                    {
-                        return Json(new
-                        {
-                            status = 0,
-                            message = "Data Not Found",
-                            data = new { }
-                        });
-                    }
+                    //foreach (var row in data)
+                    //{
+                    //    SetHadir4(row.NPK, row.NAMA, row.KODEWARNA);
+                    //}
+                    //if (items == null || items.Count().Equals(0))
+                    //{
+                    //    return Json(new
+                    //    {
+                    //        status = 0,
+                    //        message = "Data Not Found",
+                    //        data = new { }
+                    //    });
+                    //}
 
                     return Json(new
                     {
@@ -1407,19 +1407,19 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
                     var data = items.Where(x => x.NPK == npk).Take(1).ToList();
-                    foreach (var row in data)
-                    {
-                        SetHadir5(row.NPK, row.NAMA, row.KODEWARNA);
-                    }
-                    if (items == null || items.Count().Equals(0))
-                    {
-                        return Json(new
-                        {
-                            status = 0,
-                            message = "Data Not Found",
-                            data = new { }
-                        });
-                    }
+                    //foreach (var row in data)
+                    //{
+                    //    SetHadir5(row.NPK, row.NAMA, row.KODEWARNA);
+                    //}
+                    //if (items == null || items.Count().Equals(0))
+                    //{
+                    //    return Json(new
+                    //    {
+                    //        status = 0,
+                    //        message = "Data Not Found",
+                    //        data = new { }
+                    //    });
+                    //}
 
                     return Json(new
                     {
@@ -1479,19 +1479,19 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<RegisterRec> items = JsonConvert.DeserializeObject<List<RegisterRec>>(json);
                     var data = items.Where(x => x.NPK == npk).Take(1).ToList();
-                    foreach (var row in data)
-                    {
-                        SetHadir6(row.NPK, row.NAMA, row.KODEWARNA);
-                    }
-                    if (items == null || items.Count().Equals(0))
-                    {
-                        return Json(new
-                        {
-                            status = 0,
-                            message = "Data Not Found",
-                            data = new { }
-                        });
-                    }
+                    //foreach (var row in data)
+                    //{
+                    //    SetHadir6(row.NPK, row.NAMA, row.KODEWARNA);
+                    //}
+                    //if (items == null || items.Count().Equals(0))
+                    //{
+                    //    return Json(new
+                    //    {
+                    //        status = 0,
+                    //        message = "Data Not Found",
+                    //        data = new { }
+                    //    });
+                    //}
 
                     return Json(new
                     {
