@@ -79,8 +79,8 @@ namespace MPMWEB.Controllers
         }
         public ActionResult RolateDoorprize()
         {
-            return View("Index");
-            //return View();
+            //return View("Index");
+            return View();
         }
         public void setStatus(string hadiah)
         {
@@ -323,7 +323,7 @@ namespace MPMWEB.Controllers
                                                  where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
                                                  select new RecordWeb
                                                  {
-                                                     NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(5, '0') : a.NPK, //a.NPK,
+                                                     NPK = a.NPK,
                                                      NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20) ,
                                                       HADIAH = a.HADIAH,
                                                       ISMULIA = a.ISMULIA

@@ -1,10 +1,290 @@
-﻿
-@{
-    ViewBag.Title = "RolateDoorprize";
+﻿@{
+    ViewBag.Title = "Home Page";
 }
-
 <audio id="winnerSound" src="~/Content/winner-trumpet.mp3" preload="auto"></audio>
 <audio id="loadingSound" src="~/Content/drum-roll.mp3" preload="auto"></audio>
+
+<script>
+    var clickier = 1;
+    let states = {
+        "START": 1,
+        "PLAY": 2,
+        "NEXT": 3
+    }
+    $(document).ready(function () {
+        $('#stop').prop('disabled', true);
+        $('#next').prop('disabled', true);
+        $('#grand').hide();
+
+        getData();
+        getHadiah();
+
+        document.addEventListener('click', function (event) {
+            console.log('Mouse clicked!');
+            myFunction()
+        });
+
+    });
+    var myArray = [];
+    var Hadiah = [];
+    var Pemenang = [];
+    var setPemanang = [];
+
+    //the original
+    function myFunction_old() {
+        if (clickier == 1) {
+            AniDice();
+            clickier = 2;
+        } else if (clickier == 2) {
+            stopDice();
+            clickier = 3;
+        } else {
+            nextHadiah();
+            clickier = 1;
+        }
+    }
+
+    function myFunction() {
+        console.log('clicker.', clickier)
+        if (clickier == states.START) {
+            document.removeEventListener('click', () => {})
+            Swal.fire({
+                title: "Are you  ready?",
+                showCancelButton: true,
+                confirmButtonText: "Yes",
+            }).then((result) => {
+
+                if (result.isConfirmed) {
+                    clickier = states.PLAY
+
+                    startAudioRoll();
+                    AniDice();
+
+
+                    setTimeout(() => {
+                        stopAudioRoll();
+                        startAudioWinner();
+                        stopDice();
+
+
+                        clickier = states.NEXT
+                        document.addEventListener('click', function (event) {
+                            console.log('Mouse clicked!');
+                            myFunction()
+                        });
+
+                    }, 2000)
+                }
+            });
+
+        }
+        else if (clickier == states.NEXT) {
+            //stopAudioWinner()
+            nextHadiah();
+            clickier = states.START;
+        }
+    }
+
+    function AniDice() {
+        getPemanang()
+        MyVar = setInterval(rolldice, 5)
+
+    }
+
+    function rolldice() {
+        $('#RD').prop('disabled', true);
+        $('#stop').prop('disabled', false);
+        $('#next').prop('disabled', true);
+
+        for (var a = 1; a <= Hadiah[0].jumlah; a++) {
+            var ranNum = myArray[Math.floor(Math.random() * myArray.length)];
+            document.getElementById("npk" + a.toString()).innerHTML = ranNum;
+        }
+
+
+    }
+    function stopDice() {
+        $('#RD').prop('disabled', false);
+        $('#stop').prop('disabled', true);
+        $('#next').prop('disabled', false);
+        clearInterval(MyVar);
+        var i = 1;
+        for (var a = 0; a <= Pemenang.length; a++) {
+            var data = Pemenang[a]
+            $("#npk" + i.toString()).text(data);
+            i++;
+        }
+        setWin();
+    }
+    function nextHadiah() {
+        Hadiah.splice(0, 1);
+        $('.pemenang').empty();
+        sethadiah();
+    }
+
+    function sethadiah() {
+
+        console.log(Hadiah);
+        document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
+        if (Hadiah[0].jumlah < 10 && Hadiah[0].jumlah > 3) {
+            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+            }
+        } else if (Hadiah[0].jumlah < 3) {
+            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+            }
+        } else {
+            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+            }
+        }
+
+
+    }
+    function setWin() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/setPemanang",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ 'data': setPemanang, 'hadiah': Hadiah[0].id }),
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == "1") { }
+                else {
+                    alert(result.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+    function getPemanang() {
+        Pemenang = [];
+        setPemanang = [];
+        var data = Hadiah[0].jumlah;
+        var isBesar = Hadiah[0].isBesar;
+        console.log('isBesar.', isBesar)
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetPemanang",
+            contentType: "application/json; charset=utf-8",
+            data: '{"maxData":"' + data + '","maxData":"' + data + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == "1") {
+                    //for (var i = 0; i < result.data.length; i++) {
+                    //    setPemanang.push({ NPK: result.data[i].NPK, NAMA: result.data[i].NAMA });
+                    //    Pemenang.push(result.data[i].NPK + " - " + result.data[i].NAMA)
+
+                    //}
+
+                    var arr_winner = result.data
+                    console.log('arr_winner.', result.data)
+
+                    // ISMULIA
+                    if (isBesar == "1") {
+                        arr_winner = arr_winner.filter(item => item.ISMULIA == "1")
+                    }
+                    for (var i = 0; i < result.data.length; i++) {
+                        console.log(arr_winner[i])
+                        setPemanang.push({ NPK: arr_winner[i].NPK, NAMA: arr_winner[i].NAMA });
+                        Pemenang.push(arr_winner[i].NPK.toString().padStart(5, "0") + " - " + arr_winner[i].NAMA)
+
+                    }
+
+
+                    console.log(Pemenang);
+                } else {
+                    alert(result.message);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    function getHadiah() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetHadiah",
+            contentType: "application/json; charset=utf-8",
+            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log("Hadiah");
+
+                console.log(result);
+                if (result.status == "1") {
+                    for (var i = 0; i < result.data.length; i++) {
+                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit, isBesar: result.data[i].isBesar })
+                    }
+                    sethadiah();
+                }
+                else {
+                    alert(result.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    function getData() {
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetData",
+            contentType: "application/json; charset=utf-8",
+            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+            dataType: "json",
+            success: function (result, status, xhr) {
+                console.log(result);
+                if (result.status == "1") {
+                    for (var i = 0; i < result.data.length; i++) {
+                        myArray.push(result.data[i].NPK + " - " + result.data[i].NAMA)
+                    }
+                } else {
+                    alert(result.message);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
+
+    // updated sound
+    var sound = document.getElementById("winnerSound");
+    var roll = document.getElementById("loadingSound");
+
+    function startAudioWinner() {
+        sound.play();
+    }
+
+    function startAudioRoll() {
+        roll.play();
+        roll.onended = function () {
+            stopDice();
+        };
+    }
+
+    function stopAudioWinner() {
+        sound.pause();
+        sound.currentTime = 0; // Reset audio to the beginning
+    }
+
+    function stopAudioRoll() {
+        roll.pause();
+        roll.currentTime = 0; // Reset audio to the beginning
+    }
+</script>
 
 <div id="door" class="divall" style="padding-top:10px;padding-bottom:10px">
     <div class="w-75 p-3 divBorder text-center">
@@ -65,338 +345,6 @@
             <button onclick="nextHadiah()" id="next">Next</button>
         </div>*@
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('#stop').prop('disabled', true);
-        $('#next').prop('disabled', true);
-        $('#grand').hide();
-        var myArray = [];
-        var Hadiah = [];
-        var Pemenang = [];
-        var setPemanang = [];
-        var clickier = 1;
-        var isWait = 1;
-
-        getData_all();
-        getHadiah();
-        document.addEventListener('click', function (event) {
-            console.log('Mouse clicked!');
-            // Your logic here
-            myFunction_()
-        });
-
-
-        function myFunction_3() {
-            console.log('clicker.', clickier)
-            if (clickier == 1) {
-                Swal.fire({
-                    title: "Are you  ready?",
-                    showCancelButton: true,
-                    confirmButtonText: "Yes",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        startAudioRoll()
-                        AniDice();
-                        setTimeout({},5000)
-                        startAudioWinner()
-                        stopDice();
-
-                    }
-                });
-                
-            }
-            //else if (clickier == 2) {
-            //    stopAudioRoll()
-            //    startAudioWinner()
-            //    stopDice();
-            //    //Swal.fire("Well done!", "", "success");
-            //    clickier = 3;
-            //}
-            else {
-                //stopAudioWinner()
-                nextHadiah();
-                clickier = 1;
-            }
-        }
-
-        function myFunction_error() {
-            console.log('clicker.', clickier)
-            console.log('isWait.', isWait)
-            //Swal.fire("Be Ready!");
-            if (isWait == 1) {
-
-                Swal.fire({
-                    title: "Are you  ready?",
-                    showCancelButton: true,
-                    confirmButtonText: "Yes",
-                }).then((result) => {
-                    if (result.isConfirmed) {
-
-                        startAudioRoll()
-                        if (clickier == 1) {
-                            AniDice();
-                            clickier = 2;
-                            isWait = 0
-                        }
-                        //else if (clickier == 2) {
-                        //    stopDice();
-                        //    clickier = 3;
-                        //    isWait = 0
-                        //} else {
-                        //    nextHadiah();
-                        //    clickier = 1;
-                        //}
-
-                    }
-                });
-
-            } else {
-                if (clickier == 2) {
-                    stopDice();
-                    clickier = 3;
-
-                }
-                else if (clickier >= 2) {
-                    nextHadiah();
-                    clickier = 1;
-                    isWait = 0
-                }
-
-            }
-
-
-
-        }
-
-        // the original
-        function myFunction_() {
-            console.log('clicker.', clickier)
-            if (clickier == 1) {
-                AniDice();
-                clickier = 2;
-            } else if (clickier == 2) {
-                stopDice();
-                clickier = 3;
-            } else {
-                nextHadiah();
-                clickier = 1;
-            }
-        }
-        function AniDice() {
-
-            getPemanang()
-            MyVar = setInterval(rolldice, 5)
-
-        }
-
-        function rolldice() {
-            var jenisHadiah = Hadiah[0].isBesar
-            console.log('isBesar: ', jenisHadiah)
-
-            $('#RD').prop('disabled', true);
-            $('#stop').prop('disabled', false);
-            $('#next').prop('disabled', true);
-
-            if (jenisHadiah == "1") {
-                var myArray_besar = myArray.filter(item => item.ISMULIA === "1");
-                console.log('data_kandidat_sp.', myArray_besar)
-
-                for (var a = 1; a <= Hadiah[0].jumlah; a++) {
-                    var ranNum = myArray_besar[Math.floor(Math.random() * myArray.length)];
-                    document.getElementById("npk" + a.toString()).innerHTML = ranNum;
-                }
-            } else {
-                console.log('data_kandidat_all.', myArray)
-                for (var a = 1; a <= Hadiah[0].jumlah; a++) {
-                    var ranNum = myArray[Math.floor(Math.random() * myArray.length)];
-                    document.getElementById("npk" + a.toString()).innerHTML = ranNum;
-                }
-            }
-
-            
-
-
-        }
-        function stopDice() {
-
-            $('#RD').prop('disabled', false);
-            $('#stop').prop('disabled', true);
-            $('#next').prop('disabled', false);
-            clearInterval(MyVar);
-            var i = 1;
-            for (var a = 0; a <= Pemenang.length; a++) {
-                var data = Pemenang[a]
-                $("#npk" + i.toString()).text(data);
-                i++;
-            }
-            setWin();
-
-        }
-        function nextHadiah() {
-            Hadiah.splice(0, 1);
-            $('.pemenang').empty();
-            sethadiah();
-        }
-
-        function sethadiah() {
-
-            console.log(Hadiah);
-            document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
-            if (Hadiah[0].jumlah < 10 && Hadiah[0].jumlah > 3) {
-                for (var i = 1; i <= Hadiah[0].jumlah; i++) {
-                    $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-                }
-            } else if (Hadiah[0].jumlah < 3) {
-                for (var i = 1; i <= Hadiah[0].jumlah; i++) {
-                    $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-                }
-            } else {
-                for (var i = 1; i <= Hadiah[0].jumlah; i++) {
-                    $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-                }
-            }
-
-
-        }
-        function setWin() {
-            $.ajax({
-                type: "POST",
-                url: "/Home/setPemanang",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({ 'data': setPemanang, 'hadiah': Hadiah[0].id }),
-                dataType: "json",
-                success: function (result, status, xhr) {
-                    console.log(result);
-                    if (result.status == "1") { }
-                    else {
-                        alert(result.message);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-                }
-            });
-        }
-        function getPemanang() {
-            Pemenang = [];
-            setPemanang = [];
-            var data = Hadiah[0].jumlah;
-            $.ajax({
-                type: "POST",
-                url: "/Home/GetPemanang",
-                contentType: "application/json; charset=utf-8",
-                data: '{"maxData":"' + data + '","maxData":"' + data + '"}',
-                dataType: "json",
-                success: function (result, status, xhr) {
-                    console.log(result);
-                    if (result.status == "1") {
-                        for (var i = 0; i < result.data.length; i++) {
-                            setPemanang.push({ NPK: result.data[i].NPK, NAMA: result.data[i].NAMA });
-                            Pemenang.push(result.data[i].NPK + " - " + result.data[i].NAMA)
-
-                        }
-                        console.log(Pemenang);
-                    } else {
-                        alert(result.message);
-                    }
-
-                },
-                error: function (xhr, status, error) {
-                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-                }
-            });
-        }
-
-        function getHadiah() {
-            $.ajax({
-                type: "POST",
-                url: "/Home/GetHadiahDoor_v2",
-                contentType: "application/json; charset=utf-8",
-                //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
-                dataType: "json",
-                success: function (result, status, xhr) {
-                    console.log("Hadiah");
-
-                    console.log(result);
-                    if (result.status == "1") {
-                        for (var i = 0; i < result.data.length; i++) {
-                            Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit, isBesar:result.data[i].isBesar })
-                        }
-                        //getData();
-                        console.log('res-hadiah.',Hadiah)
-                        sethadiah();
-                    }
-                    else {
-                        alert(result.message);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-                }
-            });
-        }
-
-        
-        function getData_all() {
-            $.ajax({
-                type: "POST",
-                url: "/Home/GetData_all",
-                contentType: "application/json; charset=utf-8",
-                //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
-                dataType: "json",
-                success: function (result, status, xhr) {
-                    console.log(result);
-                    if (result.status == "1") {
-                        for (var i = 0; i < result.data.length; i++) {
-                            myArray.push(result.data[i].NPK + " - " + result.data[i].NAMA)
-                        }
-                    } else {
-                        alert(result.message);
-                    }
-
-                },
-                error: function (xhr, status, error) {
-                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-                }
-            });
-        }
-
-        // updated sound
-        var sound = document.getElementById("winnerSound");
-        var roll = document.getElementById("loadingSound");
-
-        function startAudioWinner() {
-            sound.play();
-        }
-
-        function startAudioRoll() {
-            roll.play();
-            roll.onended = function () {
-                stopDice();
-            };
-        }
-
-        function stopAudioWinner() {
-            sound.pause();
-            sound.currentTime = 0; // Reset audio to the beginning
-        }
-
-        function stopAudioRoll() {
-            roll.pause();
-            roll.currentTime = 0; // Reset audio to the beginning
-        }
-
-
-    });
-    
-    
-
-</script>
-
-
-
-
 
 
 
