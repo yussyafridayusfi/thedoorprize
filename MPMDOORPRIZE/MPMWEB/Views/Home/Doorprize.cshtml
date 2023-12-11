@@ -163,7 +163,7 @@
 
                     var displayedCount = 0;
                     while (remaining > 0) {
-                        const displayCount = Math.min(remaining, 4);
+                        const displayCount = Math.min(remaining, 3);
                         console.log('displayCount.',displayCount)
                         //const intervalData = document.createElement('div');
                         //userDataContainer.appendChild(intervalData);
@@ -181,7 +181,7 @@
                             remaining--;
                         }
 
-                        await sleep(15000); //2000
+                        await sleep(2000); //2000
                         $('.pemenang').empty();
                     }
 
@@ -378,12 +378,12 @@
 
 </script>
 
-<div id="door" class="" style="padding-top:10px;padding-bottom:10px">
+<div id="door" class="divall" style="padding-top:10px;padding-bottom:10px">
     <div class="w-75 p-3 divBorder text-center">
-        <h1 id="hadiahNama"></h1>
+        <h1 id="hadiahNama" style="font-size:80px;"></h1>
     </div>
 
-    <div class="col-md-12 pemenang" style="margin-top:15px;padding-top:10px" id="listPemenang">
+    <div class="col-md-12 pemenang divall" style="margin-top:15px;padding-top:10px" id="listPemenang">
         @*@for (var a = 1; a <= 20; a++)
             {
                 <div class="card">
