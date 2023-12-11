@@ -151,35 +151,37 @@
                     //const userContainer = document.createElement('div');
                     //userContainer.textContent = `USER ${user.name}`;
                     //userDataContainer.appendChild(userContainer);
-                    const list_winner = listpemenang_door
-                    console.log('getmenang.', list_winner)
+                    //const list_winner = listpemenang_door
+                    //console.log('getmenang.', list_winner)
 
                     let remaining = user.total;
-                    let displayedCount = 0;
                     console.log('idhadiah.', user.id)
 
-                    const filterData = all_datawinner.filter(item => item.HADIAH === user.id);
-                    console.log('sdh filter.',filterData)
+                    const hadiahIds = hadiah_data.map(item => item.id.toString());
+                    const filterData = all_datawinner.filter(item => hadiahIds.includes(item.HADIAH));
+                    console.log('Filtered data:', filterData);
 
+                    var displayedCount = 0;
                     while (remaining > 0) {
                         const displayCount = Math.min(remaining, 4);
                         console.log('displayCount.',displayCount)
                         //const intervalData = document.createElement('div');
                         //userDataContainer.appendChild(intervalData);
 
-                        for (let i = 1; i <= displayCount; i++) {
+                        for (let i = 0; i < displayCount; i++) {
                             //const dataElement = document.createElement('p');
                             //dataElement.textContent = `Data ${++displayedCount}`;
                             //intervalData.appendChild(dataElement);
 
-                            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:3px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:50px;'>............</label> </div></div></div>")
-                            console.log('npk.', list_winner[i-1])
-                            $("#npk" + i.toString()).text(list_winner[displayCount]?.NPK + " - " + list_winner.NAMA);
-                           
+                            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:3px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:60px;'>............</label> </div></div></div>")
+                            console.log('npk.', filterData[displayedCount])
+                            $("#npk" + i.toString()).text(filterData[displayedCount]?.NPK + " - " + filterData[displayedCount]?.NAMA);
+
+                            displayedCount++;
                             remaining--;
                         }
 
-                        await sleep(2000); 
+                        await sleep(15000); //2000
                         $('.pemenang').empty();
                     }
 
