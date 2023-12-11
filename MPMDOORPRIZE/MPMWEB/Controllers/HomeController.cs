@@ -466,6 +466,60 @@ namespace MPMWEB.Controllers
                 });
             }
         }
+
+        [HttpPost]
+        public JsonResult GetDataHadiah_all()
+        {
+            try
+            {
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
+                {
+                    string json = r.ReadToEnd();
+                    List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
+                    List<RecordWeb> data = (from a in items
+                                            where a.ABSEN == "1" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                                            && a.AMBILHADIAH == " "
+                                            && a.HADIAH != "0"
+                                            select new RecordWeb
+                                            {
+                                                NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(5, '0') : a.NPK,
+                                                NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                HADIAH = a.HADIAH
+                                            }).ToList();
+                    if (data == null || data.Count().Equals(0))
+                    {
+                        return Json(new
+                        {
+                            status = 0,
+                            message = "Data Not Found",
+                            data = new { }
+                        });
+                    }
+
+                    return Json(new
+                    {
+                        status = 1,
+                        message = "OK",
+                        data = data
+                    });
+                }
+                //var data = Model._queryWeb.listDoorPrize();
+
+
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
         public int getJumlahWin(string hadiah)
         {
             var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
