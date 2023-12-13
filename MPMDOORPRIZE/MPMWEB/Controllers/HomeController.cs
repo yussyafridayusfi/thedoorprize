@@ -82,6 +82,11 @@ namespace MPMWEB.Controllers
             //return View("Index");
             return View();
         }
+        public ActionResult RolateDoorprizeBackup()
+        {
+            return View("Index");
+            //return View();
+        }
         public void setStatus(string hadiah)
         {
             //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json");
@@ -318,16 +323,27 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
                     Random rnd = new Random();
-                    
+
+                    //List<RecordWeb> datafinal = (from a in items
+                    //                             where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
+                    //                             select new RecordWeb
+                    //                             {
+                    //                                 NPK = a.NPK,
+                    //                                 NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20) ,
+                    //                                  HADIAH = a.HADIAH,
+                    //                                  ISMULIA = a.ISMULIA
+                    //                              }).ToList();
+
+                    // updated ABSEN 1 UNTUK UNDANGAN DAN ABSEN 2 UNTUK NON UNDANGAN
                     List<RecordWeb> datafinal = (from a in items
-                                                 where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
+                                                 where a.ABSEN != "0" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
                                                  select new RecordWeb
                                                  {
                                                      NPK = a.NPK,
-                                                     NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20) ,
-                                                      HADIAH = a.HADIAH,
-                                                      ISMULIA = a.ISMULIA
-                                                  }).ToList();
+                                                     NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                     HADIAH = a.HADIAH,
+                                                     ISMULIA = a.ISMULIA
+                                                 }).ToList();
 
                     List<RecordWeb> data = datafinal.OrderBy(u => rnd.Next()).Take(Convert.ToInt32(maxData)).ToList();
 
@@ -426,8 +442,17 @@ namespace MPMWEB.Controllers
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
+                    //List<RecordWeb> data = (from a in items
+                    //                        where a.ABSEN == "1" && a.HADIAH == hadiah && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                    //                        && a.AMBILHADIAH == " "
+                    //                        select new RecordWeb
+                    //                        {
+                    //                            NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(4, '0') : a.NPK,
+                    //                            NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                    //                            HADIAH = a.HADIAH
+                    //                        }).ToList();
                     List<RecordWeb> data = (from a in items
-                                            where a.ABSEN == "1" && a.HADIAH == hadiah && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                                            where a.ABSEN != "0" && a.HADIAH == hadiah && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
                                             && a.AMBILHADIAH == " "
                                             select new RecordWeb
                                             {
@@ -478,8 +503,18 @@ namespace MPMWEB.Controllers
                 {
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
+                    //List<RecordWeb> data = (from a in items
+                    //                        where a.ABSEN == "1" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                    //                        && a.AMBILHADIAH == " "
+                    //                        && a.HADIAH != "0"
+                    //                        select new RecordWeb
+                    //                        {
+                    //                            NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(4, '0') : a.NPK,
+                    //                            NAMA = a.NAMA.Length <= 10 ? a.NAMA : a.NAMA.Substring(0, 10),
+                    //                            HADIAH = a.HADIAH
+                    //                        }).ToList();
                     List<RecordWeb> data = (from a in items
-                                            where a.ABSEN == "1" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                                            where a.ABSEN != "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
                                             && a.AMBILHADIAH == " "
                                             && a.HADIAH != "0"
                                             select new RecordWeb
@@ -821,7 +856,7 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
                     List<RecordWeb> data = (from a in items
-                                            where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                                            where a.ABSEN != "0" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
                                           select new RecordWeb
                                           {
                                               NPK = a.NPK,
@@ -872,7 +907,7 @@ namespace MPMWEB.Controllers
                     string json = r.ReadToEnd();
                     List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
                     List<RecordWeb> data = (from a in items
-                                            where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
+                                            where a.ABSEN != "0" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize, grandprize" || a.KODEWARNA == "doorprize")
                                             select new RecordWeb
                                             {
                                                 NPK = a.NPK,
