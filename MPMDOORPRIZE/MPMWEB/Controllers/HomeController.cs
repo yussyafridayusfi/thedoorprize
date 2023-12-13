@@ -1181,11 +1181,19 @@ namespace MPMWEB.Controllers
                     //        data = new { }
                     //    });
                     //}
+                    var msg = "OK";
+                    int status_ = 1;
+
+                    if (data == null || data.Count() == 0)
+                    {
+                        msg = "Data Not Found";
+                        status_ = 0;
+                    }
 
                     return Json(new
                     {
-                        status = 1,
-                        message = "OK",
+                        status = status_,
+                        message = msg,
                         data = data
                     });
                 }
@@ -1254,10 +1262,19 @@ namespace MPMWEB.Controllers
                     //    });
                     //}
 
+                    var msg = "OK";
+                    int status_ = 1;
+
+                    if (data == null || data.Count() == 0)
+                    {
+                        msg = "Data Not Found";
+                        status_ = 0;
+                    }
+
                     return Json(new
                     {
-                        status = 1,
-                        message = "OK",
+                        status = status_,
+                        message = msg,
                         data = data
                     });
                 }
@@ -1326,10 +1343,19 @@ namespace MPMWEB.Controllers
                     //    });
                     //}
 
+                    var msg = "OK";
+                    int status_ = 1;
+
+                    if (data == null || data.Count() == 0)
+                    {
+                        msg = "Data Not Found";
+                        status_ = 0;
+                    }
+
                     return Json(new
                     {
-                        status = 1,
-                        message = "OK",
+                        status = status_,
+                        message = msg,
                         data = data
                     });
                 }
@@ -1398,10 +1424,19 @@ namespace MPMWEB.Controllers
                     //    });
                     //}
 
+                    var msg = "OK";
+                    int status_ = 1;
+
+                    if (data == null || data.Count() == 0)
+                    {
+                        msg = "Data Not Found";
+                        status_ = 0;
+                    }
+
                     return Json(new
                     {
-                        status = 1,
-                        message = "OK",
+                        status = status_,
+                        message = msg,
                         data = data
                     });
                 }
@@ -1470,10 +1505,19 @@ namespace MPMWEB.Controllers
                     //    });
                     //}
 
+                    var msg = "OK";
+                    int status_ = 1;
+
+                    if (data == null || data.Count() == 0)
+                    {
+                        msg = "Data Not Found";
+                        status_ = 0;
+                    }
+
                     return Json(new
                     {
-                        status = 1,
-                        message = "OK",
+                        status = status_,
+                        message = msg,
                         data = data
                     });
                 }
@@ -1542,10 +1586,19 @@ namespace MPMWEB.Controllers
                     //    });
                     //}
 
+                    var msg = "OK";
+                    int status_ = 1;
+
+                    if (data == null || data.Count() == 0)
+                    {
+                        msg = "Data Not Found";
+                        status_ = 0;
+                    }
+
                     return Json(new
                     {
-                        status = 1,
-                        message = "OK",
+                        status = status_,
+                        message = msg,
                         data = data
                     });
                 }
