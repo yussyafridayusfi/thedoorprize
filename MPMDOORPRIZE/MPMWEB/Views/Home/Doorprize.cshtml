@@ -4,7 +4,7 @@
 }
 
 <script>
-    var a = 37
+    var a = 36
     var Hadiah = [];
     var listpemenang_door = []
     var all_datawinner = []
@@ -25,7 +25,7 @@
     });
     function setid() {
         if (a == 1) {
-            a = 37
+            a = 36
         } else {
             a = a - 1;
         }
@@ -163,7 +163,7 @@
 
                     var displayedCount = 0;
                     while (remaining > 0) {
-                        const displayCount = Math.min(remaining, 3);
+                        const displayCount = Math.min(remaining, 5);
                         console.log('displayCount.',displayCount)
                         //const intervalData = document.createElement('div');
                         //userDataContainer.appendChild(intervalData);
@@ -173,9 +173,9 @@
                             //dataElement.textContent = `Data ${++displayedCount}`;
                             //intervalData.appendChild(dataElement);
 
-                            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:3px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:60px;'>............</label> </div></div></div>")
+                            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:2px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:60px;'>............</label> </div></div></div>")
                             console.log('npk.', filterData[displayedCount])
-                            $("#npk" + i.toString()).text(filterData[displayedCount]?.NPK + " - " + filterData[displayedCount]?.NAMA);
+                            $("#npk" + i.toString()).text(filterData[displayedCount]?.NPK + " - " + filterData[displayedCount]?.NAMA.split(' ').slice(0, 2).join(' '));
 
                             displayedCount++;
                             remaining--;
@@ -378,7 +378,7 @@
 
 </script>
 
-<div id="door" class="divall" style="padding-top:10px;padding-bottom:10px">
+<div id="door" class="divall" style="padding-top:0px;padding-bottom:10px">
     <div class="w-75 p-3 divBorder text-center">
         <h1 id="hadiahNama" style="font-size:80px;"></h1>
     </div>
