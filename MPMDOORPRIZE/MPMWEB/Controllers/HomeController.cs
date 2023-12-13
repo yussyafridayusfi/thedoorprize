@@ -520,7 +520,8 @@ namespace MPMWEB.Controllers
                                             select new RecordWeb
                                             {
                                                 NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(4, '0') : a.NPK,
-                                                NAMA = a.NAMA.Length <= 10 ? a.NAMA : a.NAMA.Substring(0, 10),
+                                                NAMA = a.NAMA,
+                                                //NAMA = a.NAMA.Length <= 10 ? a.NAMA : a.NAMA.Substring(0, 10),
                                                 HADIAH = a.HADIAH
                                             }).ToList();
                     if (data == null || data.Count().Equals(0))
@@ -1064,7 +1065,11 @@ namespace MPMWEB.Controllers
                 {
                     if (jsonObj[row].NPK == npk)
                     {
-                        if(jsonObj[row].ABSEN == "1")
+                        if (jsonObj[row].ABSEN == "2")
+                        {
+                            // diabaikan
+                        }
+                        else if (jsonObj[row].ABSEN == "1")
                         {
                             cekAbsen = npk;
                         }
@@ -1072,6 +1077,15 @@ namespace MPMWEB.Controllers
                         {
                             jsonObj[row].ABSEN = "1";
                         }
+
+                        //if (jsonObj[row].ABSEN == "1")
+                        //{
+                        //    cekAbsen = npk;
+                        //}
+                        //else
+                        //{
+                        //    jsonObj[row].ABSEN = "1";
+                        //}
 
 
                     }
