@@ -431,7 +431,7 @@ namespace MPMWEB.Controllers
                                             && a.AMBILHADIAH == " "
                                             select new RecordWeb
                                             {
-                                                NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(5, '0') : a.NPK,
+                                                NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(4, '0') : a.NPK,
                                                 NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
                                                 HADIAH = a.HADIAH
                                             }).ToList();
@@ -484,8 +484,8 @@ namespace MPMWEB.Controllers
                                             && a.HADIAH != "0"
                                             select new RecordWeb
                                             {
-                                                NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(5, '0') : a.NPK,
-                                                NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                NPK = a.NPK.Length != 5 ? a.NPK.PadLeft(4, '0') : a.NPK,
+                                                NAMA = a.NAMA.Length <= 10 ? a.NAMA : a.NAMA.Substring(0, 10),
                                                 HADIAH = a.HADIAH
                                             }).ToList();
                     if (data == null || data.Count().Equals(0))

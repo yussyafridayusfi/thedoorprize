@@ -55,9 +55,9 @@
                 console.log(result);
                 if (result.status == 1) {
                     dataHadir = result.data
-                    $('#NPK').text(dataHadir[0].NPK.toString().padStart(5, "0"));
+                    $('#NPK').text(dataHadir[0].NPK.toString().padStart(4, "0"));
                     $('#NAMA').text(dataHadir[0].NAMA);
-                    $('#KODEWARNA').text(dataHadir[0].KETERANGAN);
+                    $('#KODEWARNA').text("BERHASIL REGISTRASI");
                     $('#COMPANY').text(dataHadir[0].COMPANYOFFICE);
                     $('#scan').val("");
                     $('#scan').focus();
