@@ -54,7 +54,7 @@
                 console.log(result);
                 if (result.status == 1) {
                     dataHadir = result.data
-                    $('#NPK').text(dataHadir[0].NPK.toString().padStart(4, "0"));
+                    $('#NPK').text(dataHadir[0].NPK);
                     $('#NAMA').text(dataHadir[0].NAMA);
                     $('#KODEWARNA').text(dataHadir[0].KETERANGAN); 
                     $('#COMPANY').text(dataHadir[0].COMPANYOFFICE);
