@@ -1,85 +1,98 @@
-<%- include('./templates/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Njajal Sek</title>
 
-  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <img src="images/mpm.png" class="py-4">
-    <h2 class="text-white pb-5">DOORPRIZE GENERATOR</h2>
-    <img src="images/button-before.png" class="mpm-button-start my-4" onmouseover="this.src='images/button-after.png';" onmouseout="this.src='images/button-before.png';" onclick="processGenerate();">
-    <div class="list-group list-group-horizontal pt-5 pb-4">
-      <a href="./item" class="list-group-item list-group-item-warning list-group-item-action">Items</a>
-      <a href="./participant" class="list-group-item list-group-item-warning list-group-item-action">Participants</a>
-      <a href="./winner" class="list-group-item list-group-item-warning list-group-item-action">Winners</a>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="background-only position-absolute h-100 w-100 bg-stars"></div>
+
+  <div class="backdrop-winner d-none">
+    <div class="bg-fireworks"></div>
+    <div class="nduwur-dewe">
+
+      <div class="d-flex flex-column min-vh-100 min-vw-100 position-absolute logo-index">
+        <div class="d-flex flex-grow-1 justify-content-center align-items-center" id="thewinner">
+    
+          
+          
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="z-10 w-100 h-100 top-0 left-0 position-fixed bg-dark opacity-75 d-none" id="spinner">
-    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-      <div class="loader"></div>
+  <div class="arrows arrow-1">
+    <img src="images/arrow-1.gif" class="img-fluid" alt="bg-arrow">
+  </div>
+  <div class="arrows arrow-3">
+    <img src="images/arrow-3.gif" class="img-fluid" alt="bg-arrow">
+  </div>
+  <div class="arrows arrow-4">
+    <img src="images/arrow-4.gif" class="img-fluid" alt="bg-arrow">
+  </div>
+
+  <div class="d-flex flex-column min-vh-100 min-vw-100 position-absolute logo-index">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-start">
+
+      <div class="container container-logo mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <img src="images/logo.png" class="img-fluid" alt="bg-slot">
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 
+  <div class="d-flex flex-column min-vh-100 min-vw-100">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-end">
+
+      <div class="container position-relative container-slot">
+        <div class="row">
+          <div class="col g-0">
+
+            <div class="layer-1"  >
+              
+              <div class="d-flex flex-column w-100 h-100">
+                <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+                  <div class='main-container'>
+                    <div class='reel-container'>
+                      <div class="reel">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="layer-2">
+              <img src="images/bg-slot.png" class="img-fluid" alt="bg-slot">
+            </div>
+              
+          </div>
+        </div>
+      </div> 
+      
+    </div>
+  </div>
+
+  <script src="js/jquery-3.7.1.js"></script>
+  <script src="js/script.js"></script>
   <script>
-
-    var items = [];
-    var participants = [];
-
-    async function processGenerate () {
-
-      $('#spinner').removeClass('d-none').addClass('d-block');
-
-      var winners = [];
-
-      await getAllItems();
-      await getAllParticipant();
-
-      if( items.length == 0 || participants.length == 0)
-        toastr.error('Harap Input Data Item dan Participant Terlebih Dahulu!');
-      else {
-
-        items.forEach( async (item, i) => {
-          const itemId = item.id;
-
-          for( var qty = item.qty; qty >= 1; qty--){
-            console.log(participants.length);
-            var random = Math.floor(Math.random() * participants.length);
-
-            winners.push(
-              {
-                "itemId": itemId,
-                "participantId": participants[random].id
-              }
-            );
-
-            participants.splice(random, 1);
-            
-          }
-        });
-
-        $.ajax({
-          url: "<%- process.env.API_URL %>/api/winnercollection",
-          type: "POST",
-          contentType: "application/json; charset=utf-8",
-          data: JSON.stringify(winners)
-        }).done(() => {
-          $('#spinner').removeClass('d-block').addClass('d-none');
-          window.location.replace("<%- process.env.WEB_URL %>/winner");
-        });
-
-      }
-
-    }
-
-    async function getAllItems() {
-      await $.get('<%- process.env.API_URL %>/items').done( (data) => {
-        this.items = data;
-      });
-    }
-
-    async function getAllParticipant() {
-      await $.get('<%- process.env.API_URL %>/participants').done( (data) => {
-        this.participants = data;
-      });
-    }
-
+    $(window).on( 'resize', function () {
+      $('.main-container').height( $('.main-container').width() + ( $('.main-container').width() * 0.3 ));
+      $('.photo-card-div').height( $('.main-container').height() - $('.bottom-card-div').height() - 25);
+    }).resize();
+    
   </script>
-
-<%- include('./templates/footer.ejs') %>
+</body>
+</html>

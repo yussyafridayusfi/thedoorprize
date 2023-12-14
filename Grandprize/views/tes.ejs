@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+<style>
+@-moz-keyframes reel-loop {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -480px;
+  }
+}
+
+@-webkit-keyframes reel-loop {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -480px;
+  }
+}
+
+@keyframes reel-loop {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -480px;
+  }
+}
+
+@-moz-keyframes reel-begin {
+  0% {
+    margin-top: 0px;
+  }
+  75% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: 20px;
+  }
+}
+
+@-webkit-keyframes reel-begin {
+  0% {
+    margin-top: 0px;
+  }
+  75% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: 20px;
+  }
+}
+
+@keyframes reel-begin {
+  0% {
+    margin-top: 0px;
+  }
+  75% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: 20px;
+  }
+}
+
+@-moz-keyframes reel-stop {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes reel-stop {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes reel-stop {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.main-container {
+  margin: 0 auto;
+}
+
+.reel {
+  width: 70px;
+  height: 90px;
+  background: #DAC290;
+  border: 4px solid #C7A365;
+  float: left;
+  margin-right: 10px;
+}
+
+.reel-symbol {
+  color: black;
+  font-size: 60px;
+  line-height: 74px;
+  height: 74px;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+}
+
+.reel-container {
+  height: 90px;
+  overflow: hidden;
+  position: relative;
+}
+
+.reel-loop {
+  -moz-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -moz-animation-name: reel-loop;
+  -webkit-animation-name: reel-loop;
+  animation-name: reel-loop;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -moz-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.reel-stop {
+  -moz-animation-duration: 0.15s;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -moz-animation-name: reel-stop;
+  -webkit-animation-name: reel-stop;
+  animation-name: reel-stop;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.reel-begin {
+  -moz-animation-duration: 0.35s;
+  -webkit-animation-duration: 0.35s;
+  animation-duration: 0.35s;
+  -moz-animation-name: reel-begin;
+  -webkit-animation-name: reel-begin;
+  animation-name: reel-begin;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+</style>
+<!-- Range -->
+<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<div class="bg-img text-center">
+  <div class='main-container'>
+    <div class='reel-container'></div>
+  </div>
+  <button id="gen">Gen</button>
+</div>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script>
+  var reeling_time = 500;
+var stop_spinning_time_difference = 350;
+var start_spinning_time = 0;
+var currency_symbol = "$";
+var continue_spinning = true;
+
+$.fn.slotMachine = function(my_number) {
+
+  var $parentSlot = this;
+  var hidden_reels_html = '';
+  var hidden_reels_array = [];
+  var numberFormat = function number_format(number) {
+    number = (number + '');
+    return number;
+  }
+
+  for (var $j = 0; $j <= 9; $j++) {
+    hidden_reels_array[$j] = "";
+    for (var $i = 0; $i <= 9; $i++) {
+      hidden_reels_array[$j] += '<div class="reel-symbol' + ($i == 0 ? ' reel-loop' : '') + '">' + (($j + $i) % 10) + '</div>';
+    }
+  }
+  var transformNumberToArrayPlusDollar = function(my_number) {
+    var my_scale = parseInt(my_number, 10) > 999 ? 0 : 2;
+
+    my_number = numberFormat(my_number, my_scale, ".", ",");
+
+    var my_number_array = my_number.split('');
+
+    // my_number_array.unshift(currency_symbol);
+
+    return my_number_array;
+  };
+
+  //Effect for the reel to go up and then down like it is pushed to spin
+  var effectBeforeSpin = function() {
+    $parentSlot.find('.main-reel-symbol').removeClass('reel-stop').addClass('reel-begin');
+  };
+
+  var slotMachine = function(my_number) {
+
+    var my_number_array = transformNumberToArrayPlusDollar(my_number);
+    var reels_html = '';
+
+    for (var $i = 0; $i < my_number_array.length; $i++) {
+      reels_html += '<div class="reel">' + hidden_reels_array[($i % 10)] + '</div>';
+    }
+    effectBeforeSpin();
+    var startSpinning = function() {
+      $parentSlot.html(reels_html);
+      var my_timer = reeling_time;
+      $.each(my_number_array, function(my_index, my_value) {
+        var next_value = /^[0-9]$/.test(my_value) ? (parseInt(my_value, 10) + 1) % 10 : "0";
+        var stopSpinning = function() {
+          if (continue_spinning) {
+            setTimeout(stopSpinning, my_timer);
+            return
+          }
+          $parentSlot.find('.reel:eq(' + my_index + ')').html("<div class='reel-symbol main-reel-symbol reel-stop'>" + my_value + "</div>")
+            .append("<div class='reel-symbol'>" + next_value + "</div>");
+        };
+
+
+        setTimeout(stopSpinning, my_timer);
+
+        my_timer += stop_spinning_time_difference;
+
+
+      });
+
+    };
+
+    setTimeout(startSpinning, start_spinning_time);
+  };
+
+  slotMachine(my_number);
+
+  return this;
+
+};
+
+function randGen() {
+  var randNum = (Math.floor(Math.random() * 999) + 1).toString()
+  if (randNum.toString().length == 3) {
+    return randNum;
+  }
+  else if (randNum.toString().length == 2) {
+    return "0" + randNum;
+  }
+  else if (randNum.toString().length == 1) {
+    return "00" + randNum;
+  }
+}
+
+
+$('.reel-container:first').slotMachine('00' + 1).toString();
+
+if (continue_spinning) {
+  $('#gen').html('Stop');
+}
+$('#gen').click(function() {
+  if (continue_spinning) {
+    continue_spinning = false;
+    $('#gen').html('Start');
+    //$('#gen').attr('disabled', true)
+  }
+  else {
+    $('.reel-container:first').slotMachine(randGen());
+    continue_spinning = true;
+    $('#gen').html('Stop');
+  }
+});
+</script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js'></script>
