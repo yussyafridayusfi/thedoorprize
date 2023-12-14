@@ -1,0 +1,85 @@
+<%- include('./templates/header.ejs') %>
+
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <img src="images/mpm.png" class="py-4">
+    <h2 class="text-white pb-5">DOORPRIZE GENERATOR</h2>
+    <img src="images/button-before.png" class="mpm-button-start my-4" onmouseover="this.src='images/button-after.png';" onmouseout="this.src='images/button-before.png';" onclick="processGenerate();">
+    <div class="list-group list-group-horizontal pt-5 pb-4">
+      <a href="./item" class="list-group-item list-group-item-warning list-group-item-action">Items</a>
+      <a href="./participant" class="list-group-item list-group-item-warning list-group-item-action">Participants</a>
+      <a href="./winner" class="list-group-item list-group-item-warning list-group-item-action">Winners</a>
+    </div>
+  </div>
+
+  <div class="z-10 w-100 h-100 top-0 left-0 position-fixed bg-dark opacity-75 d-none" id="spinner">
+    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <script>
+
+    var items = [];
+    var participants = [];
+
+    async function processGenerate () {
+
+      $('#spinner').removeClass('d-none').addClass('d-block');
+
+      var winners = [];
+
+      await getAllItems();
+      await getAllParticipant();
+
+      if( items.length == 0 || participants.length == 0)
+        toastr.error('Harap Input Data Item dan Participant Terlebih Dahulu!');
+      else {
+
+        items.forEach( async (item, i) => {
+          const itemId = item.id;
+
+          for( var qty = item.qty; qty >= 1; qty--){
+            console.log(participants.length);
+            var random = Math.floor(Math.random() * participants.length);
+
+            winners.push(
+              {
+                "itemId": itemId,
+                "participantId": participants[random].id
+              }
+            );
+
+            participants.splice(random, 1);
+            
+          }
+        });
+
+        $.ajax({
+          url: "<%- process.env.API_URL %>/api/winnercollection",
+          type: "POST",
+          contentType: "application/json; charset=utf-8",
+          data: JSON.stringify(winners)
+        }).done(() => {
+          $('#spinner').removeClass('d-block').addClass('d-none');
+          window.location.replace("<%- process.env.WEB_URL %>/winner");
+        });
+
+      }
+
+    }
+
+    async function getAllItems() {
+      await $.get('<%- process.env.API_URL %>/items').done( (data) => {
+        this.items = data;
+      });
+    }
+
+    async function getAllParticipant() {
+      await $.get('<%- process.env.API_URL %>/participants').done( (data) => {
+        this.participants = data;
+      });
+    }
+
+  </script>
+
+<%- include('./templates/footer.ejs') %>

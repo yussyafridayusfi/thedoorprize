@@ -1,0 +1,239 @@
+<%- include('../templates/header.ejs') %>
+
+  <div class="container-sm mpm-container my-5">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <a href="./" class="btn btn-danger">Back</a>
+          </div>
+          <div class="col text-center">
+            <h5 class="my-2">Participant List</h5>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#uploadModal">
+              Import
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <table id="item-table" class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>N.P.K</th>
+                  <th>Participant Name</th>
+                  <th>Company</th>
+              </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+    <div class="modal fade" id="uploadModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uploadModalLabel">Import Excel File</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <form id="uploadForm">
+                <label for="formFile" class="form-label">Hanya file dengan format .xls dan .xlsx</label>
+                <input class="form-control" type="file" accept=".xls,.xlsx" id="formFile">
+              </form>
+            </div>
+          </div>
+          <div class="d-none justify-content-center mb-3" id="spinner">
+            <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;"  role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    var columnDefs = [ 
+      {
+        title: "Id",
+        type: "hidden",
+        visible: false,
+        data: "id"
+      }, 
+      {
+        title: "N.P.K",
+        type: "text",
+        required: true,
+        unique: true,
+        name: "npk",
+        data: "npk"
+      }, 
+      {
+        title: "Name",
+        type: "text",
+        required: true,
+        unique: true,
+        name: "name",
+        data: "name"
+      }
+      , 
+      {
+        title: "Company",
+        type: "text",
+        required: true,
+        name: "company",
+        data: "company"
+      }
+    ];
+
+    const itemTable = new DataTable('#item-table',
+      {
+        "ajax"        : {
+          "url"       : '<%- process.env.API_URL %>/participants',
+          "dataSrc"   : ""
+        },
+        "paging"      : false, 
+        "info"        : false,
+        "ordering"    : false,
+        "autoWidth"   : false,
+        "dom"         : 'Bfrtip',
+        "select"      : 'single',
+        "altEditor"   : true,
+        "buttons"     : [
+            {
+                "text": "Add",
+                "name": "add"  
+            },
+            {
+                "extend": "selected",
+                "text": "Edit",
+                "name": "edit"  
+            },
+            {
+                "extend": "selected",
+                "text": "Delete",
+                "name": "delete"
+            }
+        ],
+          "columnDefs": [
+            { "width" : "20%", "targets": 1 },
+            { "width" : "60%", "targets": 2 },
+            { "width" : "20%", "targets": 3 }
+          ],
+        "columns"     : columnDefs,
+        onAddRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                url: '<%- process.env.API_URL %>/participants',
+                type: 'POST',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onDeleteRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                url: '<%- process.env.API_URL %>/participants/' + rowdata[0].id,
+                type: 'DELETE',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        },
+        onEditRow: function(datatable, rowdata, success, error) {
+            $.ajax({
+                url: '<%- process.env.API_URL %>/participants/' + rowdata.id,
+                type: 'PUT',
+                data: rowdata,
+                success: success,
+                error: error
+            });
+        }
+      }
+    );
+
+    $('#formFile').on('change', () => {
+      var validExts = new Array(".xlsx", ".xls");
+      var file = $('#formFile')[0].files[0];
+      var fileExt = file.name;
+      console.log(fileExt);
+      fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+      if (validExts.indexOf(fileExt) < 0) {
+        alert("Invalid file selected, valid files are of " +
+                validExts.toString() + " types.");
+        $('#uploadForm').trigger('reset');
+        return false;
+      }
+
+      var participants = []
+
+      readXlsxFile(file).then(function(rows) {
+
+        $('#spinner').removeClass('d-none').addClass('d-flex');
+        $("#formFile").prop('disabled', true);
+
+        // rows.forEach( (row, i) => {
+        //   if( i != 0 ){
+        //     participants.push(
+        //       {
+        //         "id"      : i,
+        //         "npk"     : row[0],
+        //         "name"    : row[1],
+        //         "company" : row[2]
+        //       }
+        //     );
+        //   }
+        // });
+
+        rows.forEach( (row, i) => {
+          if( i != 0 ){
+            participants.push(
+              {
+                "NPK": `${ row[0].toString().padStart(4, "0") }`,
+                "NAMA": `${ row[1] }`,
+                "COMPANYOFFICE": `${ row[2] }`,
+                "KODEWARNA": `${ row[4].trim() }`,
+                "HADIAH": "0",
+                "ABSEN": `${ row[3] == 'undangan' ? 1 : 2 }`,
+                "AMBILHADIAH": " ",
+                "KETERANGAN": `${ row[4] }`,
+                "ISMULIA": `${ row[2].trim().includes('MULIA') ? 1 : 0 }`
+              }
+            );
+          }
+        });
+
+        console.log(participants);
+
+        // $.ajax({
+        //   url: "<%- process.env.API_URL %>/api/participantcollection",
+        //   type: "POST",
+        //   contentType: "application/json; charset=utf-8",
+        //   data: JSON.stringify(participants)
+        // }).done(() => {
+
+        //   $('#spinner').removeClass('d-flex').addClass('d-none');
+        //   $("#formFile").prop('disabled', false);
+
+        //   $('#uploadForm').trigger('reset');
+
+        //   itemTable.ajax.reload();
+
+        //   $('#uploadModal').modal('hide');
+
+        // });
+
+      })
+      
+    });
+
+  </script>
+
+<%- include('../templates/footer.ejs') %>

@@ -1,9 +1,20 @@
-var express = require('express');
-var app = express();
+require('dotenv').config();
 
-app.get('/', function (req, res) {
-  res.send('this!');
-});
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+const express = require('express');
+const path = require('path');
+const indexRoutes = require('./routes/indexRoutes');
+const itemRoutes = require('./routes/itemRoutes');
+const participantRoutes = require('./routes/participantRoutes');
+const winnerRoutes = require('./routes/winnerRoutes');
+
+const app = express();
+
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.listen(3000);
+
+app.use(indexRoutes);
+app.use('/item', itemRoutes);
+app.use('/participant', participantRoutes);
+app.use('/winner', winnerRoutes);
