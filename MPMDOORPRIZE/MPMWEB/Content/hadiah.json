@@ -4,14 +4,14 @@
     "Hadiah": "Peralatan Makan Ecentio",
     "Status": "0",
     "Unit": "10",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "2",
     "Hadiah": "Yoga Mat",
     "Status": "0",
     "Unit": "10",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "3",
@@ -32,7 +32,7 @@
     "Hadiah": "Earphone Bone Conduction",
     "Status": "0",
     "Unit": "15",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "6",
@@ -46,42 +46,42 @@
     "Hadiah": "Charger Adaptor",
     "Status": "0",
     "Unit": "10",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "8",
     "Hadiah": "Coffee Maker",
     "Status": "0",
     "Unit": "5",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "9",
     "Hadiah": "HP OPPO A78 5G",
     "Status": "0",
     "Unit": "5",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "10",
     "Hadiah": "HP Galaxy A14",
     "Status": "0",
     "Unit": "5",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "11",
     "Hadiah": "Headphone Soundcore",
     "Status": "0",
     "Unit": "5",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "12",
     "Hadiah": "Juicer Portable",
     "Status": "0",
     "Unit": "15",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "13",
@@ -130,14 +130,14 @@
     "Hadiah": "Power Bank Mag Safe",
     "Status": "0",
     "Unit": "10",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "20",
     "Hadiah": "Rice Cooker",
     "Status": "0",
     "Unit": "10",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "21",
@@ -190,7 +190,7 @@
   },
   {
     "No": "28",
-    "Hadiah": "XTWS Soundcore",
+    "Hadiah": "TWS Soundcore",
     "Status": "0",
     "Unit": "15",
     "isBesar": "1"
@@ -200,28 +200,28 @@
     "Hadiah": "CORKCICLE® 16oz",
     "Status": "0",
     "Unit": "15",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "30",
     "Hadiah": "CORKCICLE® 20oz",
     "Status": "0",
     "Unit": "4",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "31",
     "Hadiah": "TV Digital 32 inch",
     "Status": "0",
     "Unit": "3",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "32",
     "Hadiah": "Portable Vacuum Cleaner",
     "Status": "0",
     "Unit": "5",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "33",
@@ -233,22 +233,22 @@
   {
     "No": "34",
     "Hadiah": "Indomaret 200K",
-    "Status": "0",
+    "Status": "1",
     "Unit": "10",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "35",
     "Hadiah": "Sodexo 200k",
     "Status": "1",
     "Unit": "20",
-    "isBesar": "0"
+    "isBesar": "1"
   },
   {
     "No": "36",
     "Hadiah": "Hypermart 100K",
     "Status": "1",
     "Unit": "5",
-    "isBesar": "0"
+    "isBesar": "1"
   }
 ]
