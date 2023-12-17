@@ -153,6 +153,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\drum-roll.mp3" />
     <Content Include="Content\Template-PPT.jpg" />
+    <Content Include="Content\Template-PPT.png" />
     <Content Include="Content\test.jpeg" />
     <Content Include="Content\winner-trumpet.mp3" />
     <Content Include="favicon.ico" />
