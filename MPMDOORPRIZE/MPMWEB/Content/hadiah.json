@@ -1,234 +1,234 @@
 [
   {
     "No": "1",
-    "Hadiah": "Peralatan Makan Ecentio",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "2",
-    "Hadiah": "Yoga Mat",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "3",
-    "Hadiah": "Backpack",
-    "Status": "0",
-    "Unit": "11",
-    "isBesar": "1"
-  },
-  {
-    "No": "4",
-    "Hadiah": "Blender",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "5",
-    "Hadiah": "Earphone Bone Conduction",
-    "Status": "0",
-    "Unit": "15",
-    "isBesar": "0"
-  },
-  {
-    "No": "6",
-    "Hadiah": "Instant Camera",
-    "Status": "0",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "7",
-    "Hadiah": "Charger Adaptor",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "8",
-    "Hadiah": "Coffee Maker",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "9",
-    "Hadiah": "HP OPPO A78 5G",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "10",
-    "Hadiah": "HP Galaxy A14",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "11",
-    "Hadiah": "Headphone Soundcore",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "12",
-    "Hadiah": "Juicer Portable",
-    "Status": "0",
-    "Unit": "15",
-    "isBesar": "0"
-  },
-  {
-    "No": "13",
-    "Hadiah": "Kipas Angin",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "14",
-    "Hadiah": "Air Cooler Tower",
-    "Status": "0",
-    "Unit": "2",
-    "isBesar": "1"
-  },
-  {
-    "No": "15",
-    "Hadiah": "Kompor Portable",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "16",
-    "Hadiah": "Lemari Container",
-    "Status": "0",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "17",
-    "Hadiah": "Mixer",
-    "Status": "0",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "18",
-    "Hadiah": "Nintendo Switch",
-    "Status": "0",
-    "Unit": "2",
-    "isBesar": "1"
-  },
-  {
-    "No": "19",
-    "Hadiah": "Power Bank Mag Safe",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "20",
-    "Hadiah": "Rice Cooker",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "21",
-    "Hadiah": "Setrika Uap",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "22",
-    "Hadiah": "Smart TV 32 inch",
-    "Status": "0",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "23",
     "Hadiah": "Smart TV 42 inch",
     "Status": "0",
     "Unit": "2",
     "isBesar": "1"
   },
   {
-    "No": "24",
-    "Hadiah": "Smart Watch Amazfit",
+    "No": "2",
+    "Hadiah": "Nintendo Switch",
     "Status": "0",
-    "Unit": "15",
+    "Unit": "2",
     "isBesar": "1"
   },
   {
-    "No": "25",
-    "Hadiah": "Smart Watch Huawei",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "26",
-    "Hadiah": "Soundbar Soundtech",
-    "Status": "0",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "27",
-    "Hadiah": "Soundbar Xiaomi",
+    "No": "3",
+    "Hadiah": "HP OPPO A78 5G",
     "Status": "0",
     "Unit": "5",
     "isBesar": "1"
   },
   {
-    "No": "28",
-    "Hadiah": "TWS Soundcore",
-    "Status": "0",
-    "Unit": "15",
-    "isBesar": "1"
-  },
-  {
-    "No": "29",
-    "Hadiah": "CORKCICLE® 16oz",
-    "Status": "0",
-    "Unit": "15",
-    "isBesar": "1"
-  },
-  {
-    "No": "30",
-    "Hadiah": "CORKCICLE® 20oz",
-    "Status": "0",
-    "Unit": "4",
-    "isBesar": "1"
-  },
-  {
-    "No": "31",
-    "Hadiah": "TV Digital 32 inch",
+    "No": "4",
+    "Hadiah": "Smart TV 32 inch",
     "Status": "0",
     "Unit": "3",
     "isBesar": "1"
   },
   {
-    "No": "32",
-    "Hadiah": "Portable Vacuum Cleaner",
+    "No": "5",
+    "Hadiah": "HP Galaxy A14",
     "Status": "0",
     "Unit": "5",
     "isBesar": "1"
   },
   {
-    "No": "33",
-    "Hadiah": "Indomaret 100K",
+    "No": "6",
+    "Hadiah": "TV Digital 32 inch",
+    "Status": "1",
+    "Unit": "3",
+    "isBesar": "1"
+  },
+  {
+    "No": "7",
+    "Hadiah": "Instant Camera",
     "Status": "0",
-    "Unit": "20",
+    "Unit": "3",
+    "isBesar": "1"
+  },
+  {
+    "No": "8",
+    "Hadiah": "Air Cooler Tower",
+    "Status": "0",
+    "Unit": "2",
+    "isBesar": "1"
+  },
+  {
+    "No": "9",
+    "Hadiah": "Soundbar Xiaomi",
+    "Status": "1",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "10",
+    "Hadiah": "Lemari Container",
+    "Status": "0",
+    "Unit": "3",
+    "isBesar": "1"
+  },
+  {
+    "No": "11",
+    "Hadiah": "Smart Watch Amazfit",
+    "Status": "1",
+    "Unit": "15",
+    "isBesar": "1"
+  },
+  {
+    "No": "12",
+    "Hadiah": "CORKCICLE® 20oz",
+    "Status": "1",
+    "Unit": "4",
+    "isBesar": "1"
+  },
+  {
+    "No": "13",
+    "Hadiah": "Rice Cooker",
+    "Status": "0",
+    "Unit": "10",
     "isBesar": "0"
+  },
+  {
+    "No": "14",
+    "Hadiah": "Blender",
+    "Status": "0",
+    "Unit": "10",
+    "isBesar": "1"
+  },
+  {
+    "No": "15",
+    "Hadiah": "Charger Adaptor",
+    "Status": "0",
+    "Unit": "10",
+    "isBesar": "0"
+  },
+  {
+    "No": "16",
+    "Hadiah": "Headphone Soundcore",
+    "Status": "0",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "17",
+    "Hadiah": "CORKCICLE® 16oz",
+    "Status": "1",
+    "Unit": "15",
+    "isBesar": "1"
+  },
+  {
+    "No": "18",
+    "Hadiah": "Mixer",
+    "Status": "0",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "19",
+    "Hadiah": "TWS Soundcore",
+    "Status": "1",
+    "Unit": "15",
+    "isBesar": "1"
+  },
+  {
+    "No": "20",
+    "Hadiah": "Smart Watch Huawei",
+    "Status": "1",
+    "Unit": "10",
+    "isBesar": "1"
+  },
+  {
+    "No": "21",
+    "Hadiah": "Backpack",
+    "Status": "0",
+    "Unit": "11",
+    "isBesar": "1"
+  },
+  {
+    "No": "22",
+    "Hadiah": "Portable Vacuum Cleaner",
+    "Status": "1",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "23",
+    "Hadiah": "Kipas Angin",
+    "Status": "0",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "24",
+    "Hadiah": "Kompor Portable",
+    "Status": "0",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "25",
+    "Hadiah": "Coffee Maker",
+    "Status": "0",
+    "Unit": "5",
+    "isBesar": "1"
+  },
+  {
+    "No": "26",
+    "Hadiah": "Power Bank Mag Safe",
+    "Status": "0",
+    "Unit": "10",
+    "isBesar": "0"
+  },
+  {
+    "No": "27",
+    "Hadiah": "Setrika Uap",
+    "Status": "0",
+    "Unit": "10",
+    "isBesar": "1"
+  },
+  {
+    "No": "28",
+    "Hadiah": "Earphone Bone Conduction",
+    "Status": "0",
+    "Unit": "15",
+    "isBesar": "0"
+  },
+  {
+    "No": "29",
+    "Hadiah": "Soundbar Soundtech",
+    "Status": "1",
+    "Unit": "10",
+    "isBesar": "1"
+  },
+  {
+    "No": "30",
+    "Hadiah": "Yoga Mat",
+    "Status": "0",
+    "Unit": "10",
+    "isBesar": "0"
+  },
+  {
+    "No": "31",
+    "Hadiah": "Peralatan Makan Ecentio",
+    "Status": "0",
+    "Unit": "10",
+    "isBesar": "0"
+  },
+  {
+    "No": "32",
+    "Hadiah": "Juicer Portable",
+    "Status": "0",
+    "Unit": "15",
+    "isBesar": "0"
+  },
+  {
+    "No": "33",
+    "Hadiah": "Sodexo 200k",
+    "Status": "1",
+    "Unit": "20",
+    "isBesar": "1"
   },
   {
     "No": "34",
@@ -239,10 +239,10 @@
   },
   {
     "No": "35",
-    "Hadiah": "Sodexo 200k",
+    "Hadiah": "Indomaret 100K",
     "Status": "1",
     "Unit": "20",
-    "isBesar": "1"
+    "isBesar": "0"
   },
   {
     "No": "36",
