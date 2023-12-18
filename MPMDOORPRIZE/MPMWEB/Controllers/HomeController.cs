@@ -378,6 +378,111 @@ namespace MPMWEB.Controllers
         }
 
         [HttpPost]
+        public JsonResult GetPemanang_v2(string maxData, string isbesar)
+        {
+            try
+            {
+                //var data = Model._queryWeb.getPemanang(Convert.ToInt32(maxData));
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json"))
+                using (StreamReader r = new StreamReader(json_text))
+                {
+                    string json = r.ReadToEnd();
+                    List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(json);
+                    Random rnd = new Random();
+
+                    //List<RecordWeb> datafinal = (from a in items
+                    //                             where a.ABSEN == "1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
+                    //                             select new RecordWeb
+                    //                             {
+                    //                                 NPK = a.NPK,
+                    //                                 NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20) ,
+                    //                                  HADIAH = a.HADIAH,
+                    //                                  ISMULIA = a.ISMULIA
+                    //                              }).ToList();
+
+                    if (isbesar == "1")
+                    {
+
+                        // updated ABSEN 1 UNTUK UNDANGAN DAN ABSEN 2 UNTUK NON UNDANGAN
+                        List<RecordWeb> datafinal = (from a in items
+                                                     where a.ABSEN != "0" && a.ISMULIA=="1" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
+                                                     select new RecordWeb
+                                                     {
+                                                         NPK = a.NPK,
+                                                         NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                         HADIAH = a.HADIAH,
+                                                         ISMULIA = a.ISMULIA
+                                                     }).ToList();
+
+                        List<RecordWeb> data = datafinal.OrderBy(u => rnd.Next()).Take(Convert.ToInt32(maxData)).ToList();
+
+
+                        if (data == null || data.Count().Equals(0))
+                        {
+                            return Json(new
+                            {
+                                status = 0,
+                                message = "Data Not Found",
+                                data = new { }
+                            });
+                        }
+
+                        return Json(new
+                        {
+                            status = 1,
+                            message = "OK",
+                            data = data
+                        });
+
+                    } else
+                    {
+                        // updated ABSEN 1 UNTUK UNDANGAN DAN ABSEN 2 UNTUK NON UNDANGAN
+                        List<RecordWeb> datafinal = (from a in items
+                                                     where a.ABSEN != "0" && a.HADIAH == "0" && (a.KODEWARNA == "doorprize" || a.KODEWARNA == "doorprize, grandprize")
+                                                     select new RecordWeb
+                                                     {
+                                                         NPK = a.NPK,
+                                                         NAMA = a.NAMA.Length <= 20 ? a.NAMA : a.NAMA.Substring(0, 20),
+                                                         HADIAH = a.HADIAH,
+                                                         ISMULIA = a.ISMULIA
+                                                     }).ToList();
+
+                        List<RecordWeb> data = datafinal.OrderBy(u => rnd.Next()).Take(Convert.ToInt32(maxData)).ToList();
+
+
+                        if (data == null || data.Count().Equals(0))
+                        {
+                            return Json(new
+                            {
+                                status = 0,
+                                message = "Data Not Found",
+                                data = new { }
+                            });
+                        }
+
+                        return Json(new
+                        {
+                            status = 1,
+                            message = "OK",
+                            data = data
+                        });
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
+        [HttpPost]
         public JsonResult GetPemanangGR(string maxData)
         {
             try

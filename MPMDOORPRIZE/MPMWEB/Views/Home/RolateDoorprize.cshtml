@@ -73,7 +73,9 @@
                             myFunction()
                         });
 
-                    }, 2000)
+                    }, 4000)
+                } else {
+
                 }
             });
 
@@ -87,7 +89,7 @@
 
     function AniDice() {
         getPemanang()
-        MyVar = setInterval(rolldice, 5)
+        MyVar = setInterval(rolldice, 10)
 
     }
 
@@ -143,6 +145,8 @@
 
     }
     function setWin() {
+        console.log('setpmg:.', setPemanang)
+
         $.ajax({
             type: "POST",
             url: "/Home/setPemanang",
@@ -169,9 +173,9 @@
         console.log('isBesar.', isBesar)
         $.ajax({
             type: "POST",
-            url: "/Home/GetPemanang",
+            url: "/Home/GetPemanang_v2",
             contentType: "application/json; charset=utf-8",
-            data: '{"maxData":"' + data + '","maxData":"' + data + '"}',
+            data: '{"maxData":"' + data + '","maxData":"' + data + '","isbesar":"' + isBesar + '"}',
             dataType: "json",
             success: function (result, status, xhr) {
                 console.log(result);
@@ -186,12 +190,18 @@
                     console.log('arr_winner.', result.data)
 
                     // ISMULIA
-                    if (isBesar == "1") {
-                        arr_winner = arr_winner.filter(item => item.ISMULIA == "1")
-                    }
-                    for (var i = 0; i < result.data.length; i++) {
+                    //if (isBesar == "1") {
+                    //    arr_winner = arr_winner.filter(item => item.ISMULIA == "1")
+                    //}
+
+                    //var push_menang = arr_winner.map(({ NPK, NAMA }) => ({ NPK, NAMA }));
+                    //console.log('push_.', push_menang)
+                    //setPemanang = push_menang
+                    /*setPemanang.push(push_menang)*/
+                    for (var i = 0; i < arr_winner.length; i++) {
                         console.log(arr_winner[i])
                         setPemanang.push({ NPK: arr_winner[i].NPK, NAMA: arr_winner[i].NAMA });
+                        //Pemenang.push(arr_winner[i].NPK.toString().padStart(4, "0") + " - " + arr_winner[i].NAMA)
                         Pemenang.push(arr_winner[i].NPK.toString().padStart(4, "0") + " - " + arr_winner[i].NAMA)
 
                     }
