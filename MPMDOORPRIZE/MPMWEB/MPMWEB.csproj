@@ -204,6 +204,7 @@
     <Content Include="Views\Home\GrandPrize.cshtml" />
     <Content Include="Views\Home\MainMenu.cshtml" />
     <Content Include="Views\Home\RolateDoorprize.cshtml" />
+    <Content Include="Views\Home\Ambil2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

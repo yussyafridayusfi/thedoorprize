@@ -1,4 +1,33 @@
-[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Table Example with Filter</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+</head>
+<body>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Hadiah</th>
+                <th>Status</th>
+                <th>Unit</th>
+                <th>isBesar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table body will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            const data = 
+
+            [
   {
     "No": "1",
     "Hadiah": "Smart TV 42 inch",
@@ -252,3 +281,31 @@
     "isBesar": "1"
   }
 ]
+
+            const dataTable = $('#myTable').DataTable({
+                data: data,
+                columns: [
+                    { data: 'No' },
+                    { data: 'Hadiah' },
+                    { data: 'Status' },
+                    { data: 'Unit' },
+                    { data: 'isBesar' }
+                ],
+                initComplete: function () {
+                    // Create a search input for each column
+                    this.api().columns().every(function () {
+                        const column = this;
+                        const input = $(`<input type="text" placeholder="Search ${column.header().textContent}" />`)
+                            .appendTo($(column.header()).empty())
+                            .on('keyup change clear', function () {
+                                if (column.search() !== this.value) {
+                                    column.search(this.value).draw();
+                                }
+                            });
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

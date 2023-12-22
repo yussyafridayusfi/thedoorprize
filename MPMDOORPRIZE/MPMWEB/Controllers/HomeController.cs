@@ -29,6 +29,18 @@ namespace MPMWEB.Controllers
         {
             return View("Ambil");
         }
+        public ActionResult Ambil2()
+        {
+            return View("Ambil2");
+        }
+        public ActionResult Ambil3()
+        {
+            return View("Ambil3");
+        }
+        public ActionResult Ambil4()
+        {
+            return View("Ambil4");
+        }
         public ActionResult Export()
         {
             return View("Export");
@@ -199,6 +211,213 @@ namespace MPMWEB.Controllers
                 //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
                 System.IO.File.WriteAllText(json_out, output);
                 
+                return Json(new
+                {
+                    status = 1,
+                    message = "OK",
+                    data = getData
+                });
+            }
+
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
+        [HttpPost]
+        public JsonResult getHadiahWin2(string npk)
+        {
+            try
+            {
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                string djson = System.IO.File.ReadAllText(json_text);
+                dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
+                List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
+                string f = jsonObj[0].NPK;
+
+                List<JsonRec> getData = new List<JsonRec>();
+                for (var row = 0; row < items.Count(); row++)
+                {
+                    if (jsonObj[row].NPK == npk)
+                    {
+                        if (jsonObj[row].AMBILHADIAH == " ")
+                        {
+                            JsonRec Datanya = new JsonRec();
+                            Datanya.NPK = jsonObj[row].NPK;
+                            Datanya.NAMA = jsonObj[row].NAMA;
+                            string datahadiah = jsonObj[row].HADIAH;
+                            Datanya.HADIAH = getHadihnya(datahadiah);
+
+                            getData.Add(Datanya);
+
+                            jsonObj[row].AMBILHADIAH = DateTime.Now.ToString();
+                        }
+                        else
+                        {
+                            JsonRec Datanya = new JsonRec();
+                            Datanya.NPK = jsonObj[row].NPK;
+                            Datanya.NAMA = jsonObj[row].NAMA;
+                            Datanya.HADIAH = jsonObj[row].AMBILHADIAH;
+
+                            getData.Add(Datanya);
+                        }
+
+
+
+                    }
+                }
+
+
+                string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                System.IO.File.WriteAllText(json_out, output);
+
+                return Json(new
+                {
+                    status = 1,
+                    message = "OK",
+                    data = getData
+                });
+            }
+
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
+        [HttpPost]
+        public JsonResult getHadiahWin3(string npk)
+        {
+            try
+            {
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                string djson = System.IO.File.ReadAllText(json_text);
+                dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
+                List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
+                string f = jsonObj[0].NPK;
+
+                List<JsonRec> getData = new List<JsonRec>();
+                for (var row = 0; row < items.Count(); row++)
+                {
+                    if (jsonObj[row].NPK == npk)
+                    {
+                        if (jsonObj[row].AMBILHADIAH == " ")
+                        {
+                            JsonRec Datanya = new JsonRec();
+                            Datanya.NPK = jsonObj[row].NPK;
+                            Datanya.NAMA = jsonObj[row].NAMA;
+                            string datahadiah = jsonObj[row].HADIAH;
+                            Datanya.HADIAH = getHadihnya(datahadiah);
+
+                            getData.Add(Datanya);
+
+                            jsonObj[row].AMBILHADIAH = DateTime.Now.ToString();
+                        }
+                        else
+                        {
+                            JsonRec Datanya = new JsonRec();
+                            Datanya.NPK = jsonObj[row].NPK;
+                            Datanya.NAMA = jsonObj[row].NAMA;
+                            Datanya.HADIAH = jsonObj[row].AMBILHADIAH;
+
+                            getData.Add(Datanya);
+                        }
+
+
+
+                    }
+                }
+
+
+                string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                System.IO.File.WriteAllText(json_out, output);
+
+                return Json(new
+                {
+                    status = 1,
+                    message = "OK",
+                    data = getData
+                });
+            }
+
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    status = 0,
+                    message = e.Message,
+                    data = new { }
+                });
+            }
+        }
+
+        [HttpPost]
+        public JsonResult getHadiahWin4(string npk)
+        {
+            try
+            {
+                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
+                string djson = System.IO.File.ReadAllText(json_text);
+                dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(djson);
+                List<JsonRec> items = JsonConvert.DeserializeObject<List<JsonRec>>(djson);
+                string f = jsonObj[0].NPK;
+
+                List<JsonRec> getData = new List<JsonRec>();
+                for (var row = 0; row < items.Count(); row++)
+                {
+                    if (jsonObj[row].NPK == npk)
+                    {
+                        if (jsonObj[row].AMBILHADIAH == " ")
+                        {
+                            JsonRec Datanya = new JsonRec();
+                            Datanya.NPK = jsonObj[row].NPK;
+                            Datanya.NAMA = jsonObj[row].NAMA;
+                            string datahadiah = jsonObj[row].HADIAH;
+                            Datanya.HADIAH = getHadihnya(datahadiah);
+
+                            getData.Add(Datanya);
+
+                            jsonObj[row].AMBILHADIAH = DateTime.Now.ToString();
+                        }
+                        else
+                        {
+                            JsonRec Datanya = new JsonRec();
+                            Datanya.NPK = jsonObj[row].NPK;
+                            Datanya.NAMA = jsonObj[row].NAMA;
+                            Datanya.HADIAH = jsonObj[row].AMBILHADIAH;
+
+                            getData.Add(Datanya);
+                        }
+
+
+
+                    }
+                }
+
+
+                string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                var json_out = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
+                //System.IO.File.WriteAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json", output);
+                System.IO.File.WriteAllText(json_out, output);
+
                 return Json(new
                 {
                     status = 1,
