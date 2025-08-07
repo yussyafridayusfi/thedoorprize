@@ -1,0 +1,54 @@
+﻿@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+  ViewBag.Title = "Hadiah"; }
+<style>
+  #btnFilter {
+    width: 100%; /* Full width */
+    height: 35px; /* Custom height */
+  }
+</style>
+
+<h2><b>Data Hadiah Doorprize</b></h2>
+<hr />
+
+<div class="my-container">
+  <div class="dx-container">
+    <div class="row" style="padding-top:10px">
+
+      <div id="grid"></div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddAttachment" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">File</label>
+          <div class="col-md-9">
+            <input type="file" class="form-control" id="fileAttachment" />
+            <small id="errorFile" class="form-text text-danger d-none">File yang diupload salah.</small>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnSaveAttachment">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+@section scripts {
+  <script src="@Url.Content("~/Scripts/Hadiah.js")"></script>
+}

@@ -1,0 +1,38 @@
+﻿@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+  ViewBag.Title = "Peserta"; }
+<style>
+  #btnFilter {
+    width: 100%; /* Full width */
+    height: 35px; /* Custom height */
+  }
+</style>
+
+@*<h2><b>PESERTA DOORPRIZE</b></h2>*@
+<hr />
+
+<div class="my-container">
+  <div class="dx-container">
+    <div class="row" style="padding-top:10px">
+
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label">File</label>
+        <div class="col-md-9">
+          <input type="file" class="form-control" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="fileAttachment" />
+          <small id="errorFile" class="form-text text-danger d-none">File yang diupload salah.</small>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="btnSaveAttachment">Save</button>
+      
+      <div id="grid"></div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+@section scripts {
+  <script src="@Url.Content(" ~ /Scripts/Peserta.js")"></script>
+}

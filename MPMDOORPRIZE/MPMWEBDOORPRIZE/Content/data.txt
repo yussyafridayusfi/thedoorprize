@@ -1,0 +1,2924 @@
+﻿{
+    "MPM_DOORPRIZE_USER": [
+        {
+            "NPK": "0024",
+            "NAMA": "DWI RAHMA YUNITA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0027",
+            "NAMA": "ZULIANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0036",
+            "NAMA": "K HENDRATA RUSLIM",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0070",
+            "NAMA": "UPIK TRISNANINGTYAS",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0071",
+            "NAMA": "ERNIEK YULIATI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0101",
+            "NAMA": "I GEDE WAYAN SUKABUANA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0143",
+            "NAMA": "TRI PUTRI RENNY P",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0144",
+            "NAMA": "HATMARTO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0145",
+            "NAMA": "RUKANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0162",
+            "NAMA": "HAENY DWI RAHWATI FORA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0172",
+            "NAMA": "SELAMET HARIONO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0173",
+            "NAMA": "RIYANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0190",
+            "NAMA": "PUTRI DWI LESTARI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0194",
+            "NAMA": "NURSIAH AGUSTINA",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0195",
+            "NAMA": "EKO ENDAH SISPARWATI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0206",
+            "NAMA": "ENDANG SRI WAHYUNI",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0207",
+            "NAMA": "UNIK REKNO S",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0213",
+            "NAMA": "SLAMET HERIJONO",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0229",
+            "NAMA": "SUTRISNO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0282",
+            "NAMA": "HANOKO INGLIANI SOEGIHARTO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0351",
+            "NAMA": "ALBERTUS DWI LATKO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0353",
+            "NAMA": "AGOES TRI OETOMO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0364",
+            "NAMA": "RUDI WIHARTO SOECIPTO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0370",
+            "NAMA": "FRANKY JOZEF LATUPUTTY",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0373",
+            "NAMA": "NUR ALI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0417",
+            "NAMA": "ABDY RONOTANA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0426",
+            "NAMA": "DIMYATI HAMZAH",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0432",
+            "NAMA": "YUNI DWI ASTUTI",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0433",
+            "NAMA": "IWAN SAPUTRA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0451",
+            "NAMA": "RAHAYU HARDIANTI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0471",
+            "NAMA": "SUYATNO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0495",
+            "NAMA": "TJIO KIAN TIONG",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0549",
+            "NAMA": "MOCH CHOIRUL",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0558",
+            "NAMA": "SRI WAHYU HASTATI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0575",
+            "NAMA": "SUWITO MAWARWATI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "0598",
+            "NAMA": "FEBRIATI FATIMAH",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0642",
+            "NAMA": "MOHAMMAD BONDAN PRIYOADI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0643",
+            "NAMA": "EKO SURYO PRIANTO",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0654",
+            "NAMA": "SATYO PRAHNOWO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0655",
+            "NAMA": "NOELITA FEBRIANTY DIANA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0656",
+            "NAMA": "TONI SUMANTRI",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0666",
+            "NAMA": "HARI SUBAGIYO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0672",
+            "NAMA": "ABDULLOH ZAKARIA",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0675",
+            "NAMA": "SOCHIP",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0677",
+            "NAMA": "ELI RACHMAWATI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0678",
+            "NAMA": "MOCHAMAD AGUS SAFI I",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0680",
+            "NAMA": "MUSTAMAR",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0681",
+            "NAMA": "TRI SUHARTONO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0682",
+            "NAMA": "SUHARI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0690",
+            "NAMA": "CECILIA INDRIATI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0708",
+            "NAMA": "SUNTARI WANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0722",
+            "NAMA": "CHRISTINA ANGGRAINI TRI KAWURYAN",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0726",
+            "NAMA": "SUKOCO DWI PURWANTO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0743",
+            "NAMA": "TEGUH HARIYANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0826",
+            "NAMA": "NI NENGAH ARVIYANTHI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0828",
+            "NAMA": "SUPRIONO DWI NUGROHO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0833",
+            "NAMA": "AGOES SETYA BUDHI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0867",
+            "NAMA": "IRVIN SUPRIADI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0868",
+            "NAMA": "ACHMAD FAUZI WIDODO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0870",
+            "NAMA": "MUSLIMIN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0876",
+            "NAMA": "SLAMET MARIJADI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "0893",
+            "NAMA": "MUHAMMAD BASTHOMI TASLIMANUDDIN",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0900",
+            "NAMA": "KARDHIAN WIBAWANTO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0931",
+            "NAMA": "EKO ARUN NOVIYANTO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "0961",
+            "NAMA": "IWAN HARIYANTO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5017",
+            "NAMA": "ABDUR ROFIK",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5061",
+            "NAMA": "EKO WITONO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5135",
+            "NAMA": "JEFFRI LIMANTARA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5161",
+            "NAMA": "DONNY HERDIAN WIDIANTO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5195",
+            "NAMA": "RINO APRILLIANO SALIM",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5198",
+            "NAMA": "YUSRON ALWI HASAN",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5219",
+            "NAMA": "MOCH HUSNI TAMRIN",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5221",
+            "NAMA": "NUR AZIZAH",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5225",
+            "NAMA": "IBNI MUBARROK",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5234",
+            "NAMA": "BADRUL MUNIR",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5236",
+            "NAMA": "ERIEK ISNIANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5237",
+            "NAMA": "F X WIDIJANTO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5238",
+            "NAMA": "YUNUS ARDI PRIHANTO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5256",
+            "NAMA": "NAIM MUHDORI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5257",
+            "NAMA": "AGUS BUDIWANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5273",
+            "NAMA": "ANDRE PRAMANA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5305",
+            "NAMA": "THERESIA WIWIN KUSHENDRATI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5309",
+            "NAMA": "DENDY SEAN T",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "5319",
+            "NAMA": "RITA DJOHAR",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5320",
+            "NAMA": "WAHYU WIBISONO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5327",
+            "NAMA": "LENNY AGUSTINI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5333",
+            "NAMA": "RATNA TRI HARTATI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5378",
+            "NAMA": "ADI WICAKSONO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5380",
+            "NAMA": "MAC AGUSTE RADEN",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5392",
+            "NAMA": "ENDANG YUSTINI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5395",
+            "NAMA": "YOYON YULIANTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5400",
+            "NAMA": "NOVIANTO TRI WAHYUDI",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5407",
+            "NAMA": "HERU PRASETYO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5409",
+            "NAMA": "DODIK KUSWINARNO",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5416",
+            "NAMA": "CATUR WAHYU WIJAYA",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5433",
+            "NAMA": "ANDRIK SISWALUYO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5434",
+            "NAMA": "MOCHAMMAD GALUT K",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5464",
+            "NAMA": "TRI BUDI PRASETYO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5465",
+            "NAMA": "TRIYO SANTOSO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5466",
+            "NAMA": "MERRI NATANAEL",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5488",
+            "NAMA": "MARTIN",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5492",
+            "NAMA": "AGUS DWI PRASTYAWAN",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5500",
+            "NAMA": "ANGGIA DWI NUSWANTARI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5501",
+            "NAMA": "RUDI HARISTIAWAN",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP KEDIRI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5512",
+            "NAMA": "ARIE HARTANTO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5537",
+            "NAMA": "MOKHAMAD YUSYA ARIQ",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5548",
+            "NAMA": "SLAMET BUDI SANTOSO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5550",
+            "NAMA": "KARDINA AGUNG ARYANI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5551",
+            "NAMA": "VINENSIA KENANGA P",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5552",
+            "NAMA": "DYAH JATININGTYAS",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5564",
+            "NAMA": "DEKA OKTRISKORIAN",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5565",
+            "NAMA": "FADCHUR RACHMAN",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5598",
+            "NAMA": "C ADE KURNIAWAN",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5617",
+            "NAMA": "DIAH RIZKY KURNIAWATI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5619",
+            "NAMA": "SYAIFUL ARIF",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5647",
+            "NAMA": "BAYU AGUNA PUTRA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5648",
+            "NAMA": "NUGROHO ADIWIBOWO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5659",
+            "NAMA": "RUTH JUANITA YUWONO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5660",
+            "NAMA": "SULIANTO SUHONO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5663",
+            "NAMA": "BOBBY DERMAWAN",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP MADIUN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5664",
+            "NAMA": "IRAWANTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5682",
+            "NAMA": "FRENKY YULIUS HANDOKO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5683",
+            "NAMA": "WAHYU ISTIAWAN",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5684",
+            "NAMA": "DONNY SUTANTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5685",
+            "NAMA": "DEDE PURNAWAN",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5686",
+            "NAMA": "YANUAR ACHMAD HIDAYAT",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5733",
+            "NAMA": "MUHAMMAD IRWANSYAH",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5754",
+            "NAMA": "IBIT TRI GINANJAR",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5758",
+            "NAMA": "ABU YASID",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5764",
+            "NAMA": "JUKO SETIONO CANDRA",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5765",
+            "NAMA": "FARIZ HADI WIBOWO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5766",
+            "NAMA": "EDGAR HADIN",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5776",
+            "NAMA": "TAUFAN HARIYONO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5787",
+            "NAMA": "GALIH ENDARTI",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5788",
+            "NAMA": "ADHIKA SUBHAGA TRAHKASNO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5791",
+            "NAMA": "HIERONIMUS JUNICO FARETA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5812",
+            "NAMA": "MARLINA LARASATI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5817",
+            "NAMA": "LISTYA YUANITA",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "5836",
+            "NAMA": "MOCHAMAD ARSYAD",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5837",
+            "NAMA": "STEFANUS RONALD RISSI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5864",
+            "NAMA": "MOCH YASIN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5866",
+            "NAMA": "NATALIA EKA CAHYANI SARASWATI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5892",
+            "NAMA": "AGUNG ARIFIN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5904",
+            "NAMA": "SIGIT MEY ARDIANSYAH",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5926",
+            "NAMA": "FIZKY PRAMUDITYA M",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5960",
+            "NAMA": "ESTI INDRIASTUTI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5961",
+            "NAMA": "MOHAMMAD FIRMANSYAH",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5965",
+            "NAMA": "MOCH RIFA I",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5977",
+            "NAMA": "PROBO UTOMO",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5979",
+            "NAMA": "TEGUH DWI MAULADTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "5981",
+            "NAMA": "LINTANG CAHYANING K W",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6010",
+            "NAMA": "VERONIKA SULISTHIO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6144",
+            "NAMA": "YAHUDA EKO KRISTIYANTO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6148",
+            "NAMA": "ENDAR PONCO SUWORO WIGATI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6149",
+            "NAMA": "YENI INDRA MAYENI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6197",
+            "NAMA": "DIAN ANGGRAINI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6199",
+            "NAMA": "R ANDI SURYA KUSUMA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6202",
+            "NAMA": "SATRIYA ARIS PRATAMA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6246",
+            "NAMA": "BAGOS WIBISONO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6285",
+            "NAMA": "MACHFUD SYAMSUL ANAM",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6287",
+            "NAMA": "BUDI PRASETYO WIBOWO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6289",
+            "NAMA": "ERWINDA MUSLIM DEWANTORO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6291",
+            "NAMA": "NILA RAHAYU",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6299",
+            "NAMA": "MUHAMMAD ALI HASYMI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6300",
+            "NAMA": "FRESCA ARYANI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6301",
+            "NAMA": "ERICK TRISTANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6305",
+            "NAMA": "SIRRIL MUNA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6306",
+            "NAMA": "YUSTIAN ADHITAMA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6307",
+            "NAMA": "DYAH KUSUMA WIDASARI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6309",
+            "NAMA": "NUR FAUZIAH ARINI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "6333",
+            "NAMA": "NUR INDAH SUCI PURNAMASARI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "6336",
+            "NAMA": "BAGUS WAHYUDI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6354",
+            "NAMA": "DIAN AYU MAHARANI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6355",
+            "NAMA": "AGUSTIN WULANSARI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6389",
+            "NAMA": "RESI PERMANA FIDIANTO",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6390",
+            "NAMA": "TRI NOVAN SUSETYA",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6400",
+            "NAMA": "DWINANDA PRIA KHARISMA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6402",
+            "NAMA": "INDRI BUDIYATI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6403",
+            "NAMA": "RAHMADATUL HAFIFANDA",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6405",
+            "NAMA": "INTAN FRANSISKA DARMARANI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6414",
+            "NAMA": "VERA KASIANINGTYAS",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6544",
+            "NAMA": "SEPTI CHAMERAWATI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6545",
+            "NAMA": "WIDYA ROMDHANY",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6582",
+            "NAMA": "BAKTYA DRESTANTO KOSALA",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6583",
+            "NAMA": "ROHANA NINGTIYAS",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6584",
+            "NAMA": "HELMY AULIA ISMUNAHAR",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6585",
+            "NAMA": "ARIEF CHANDRA ANDOYO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6627",
+            "NAMA": "AGUS WIJAYA",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "6672",
+            "NAMA": "EDI SURYO",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6673",
+            "NAMA": "INDRA ARDIANSYAH",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6674",
+            "NAMA": "FEBRI FIRMANSYAH",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6675",
+            "NAMA": "TRIA DIAN NOVIANTI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6682",
+            "NAMA": "RIZKA MUSTIKA PUTRI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6683",
+            "NAMA": "SULISTIYOWATI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6719",
+            "NAMA": "IKE KRISDIANA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6749",
+            "NAMA": "APRILIA KUSUMA WARDANI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6751",
+            "NAMA": "MAESA KHARISMA OKTA ISLAMIYA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6769",
+            "NAMA": "YOSEF PAPUDI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6770",
+            "NAMA": "ARDINI PUSPITASARI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6800",
+            "NAMA": "SELLY INDRA RESTANTHY",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6801",
+            "NAMA": "DIMAS GHARA WIENAJI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6831",
+            "NAMA": "RA IDA WAHYU ESTI PURWANINGSIH",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6832",
+            "NAMA": "DEBORAH",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6846",
+            "NAMA": "SUKOTJO TUGINO",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "6885",
+            "NAMA": "ARISSYAH RINALDI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6914",
+            "NAMA": "RIZA ARKARI",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "6926",
+            "NAMA": "RIFKY HERU SUSILO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6927",
+            "NAMA": "HENDY FEBRIANTO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6928",
+            "NAMA": "ALPHONSUS KRISNA EFFENDI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6942",
+            "NAMA": "ALI DARMAWAN",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6943",
+            "NAMA": "ALFIAN ROSANDY",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6952",
+            "NAMA": "ANDRI WIJAYA",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6965",
+            "NAMA": "YANUAR ANGGA PRATIDINA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6969",
+            "NAMA": "RINO ARIF SATRIAWAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6977",
+            "NAMA": "FANDI INDRA KUSUMA",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6979",
+            "NAMA": "DIMAS SATRIA KELANA PUTRA",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6981",
+            "NAMA": "ADITYA BAGOES KURNIAWAN",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6982",
+            "NAMA": "ABD ROKHIM",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "6998",
+            "NAMA": "NURFIN ADITA MARIS",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7030",
+            "NAMA": "YANG KISVANDA KUSNADI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7075",
+            "NAMA": "HARI SETIAWAN",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7086",
+            "NAMA": "ADOLF MARIO P B BADILANGOE",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7105",
+            "NAMA": "ARI BUDIANTO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7107",
+            "NAMA": "ALVIKA REZALUTFIAH",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7108",
+            "NAMA": "PUTRI ARDIANI KUSUMA WARDHANI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7109",
+            "NAMA": "IRVAN",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7110",
+            "NAMA": "MOCHAMAD SALIS",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7112",
+            "NAMA": "YUDHA PRASETYA BAYU NUGRAHA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7128",
+            "NAMA": "ERIC IRWANTO YONATHAN",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7141",
+            "NAMA": "DARIS HENDRIAN AFFANDI",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7151",
+            "NAMA": "EKO PUJIANTO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7158",
+            "NAMA": "HERLITA EKA WIDIASRI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7186",
+            "NAMA": "FITRI APRILIA RAHMAWATI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7187",
+            "NAMA": "AHMAD SYIHABUDDIN JAILANI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7192",
+            "NAMA": "RISKI DWI PUTRO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7193",
+            "NAMA": "ERLIN SANDRIAN",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7194",
+            "NAMA": "LYDIA RAHARDJA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7195",
+            "NAMA": "DWI VENI SURYANTI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7197",
+            "NAMA": "AFGA RAFSAJANI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7218",
+            "NAMA": "LIGAR PRADIPTA",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7219",
+            "NAMA": "MUCHSIN",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7220",
+            "NAMA": "ESMU PRIYO YUWONO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7221",
+            "NAMA": "NATALIA WAHYU CHRISTANTI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7223",
+            "NAMA": "HARI WIDODO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "7238",
+            "NAMA": "DONY MEI KRISTIAWAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7239",
+            "NAMA": "TRI PURWANTONO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7240",
+            "NAMA": "SIGIT BUDIARTO",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7242",
+            "NAMA": "ADE YUDA SETIAWAN",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7251",
+            "NAMA": "JEFRY ARDIANSYAH",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7260",
+            "NAMA": "MEGA CHANDRARINI",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7273",
+            "NAMA": "ROSI AKBAR BHARA",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7274",
+            "NAMA": "AINUL YAKIN EFENDI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7275",
+            "NAMA": "NICHOLAUS ALFIANTO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7282",
+            "NAMA": "RISMA YUNITA HIDAYAT",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "7291",
+            "NAMA": "LESTARIYANTI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7320",
+            "NAMA": "VEGA RIZKY CANDRA RAMADANY",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7321",
+            "NAMA": "ARDYNEZA TRI NUGROHO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7336",
+            "NAMA": "MUSAFFA",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7338",
+            "NAMA": "MUHAMMAD JAMAL MUTTAQIN",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7339",
+            "NAMA": "FENDRIK ALAM PRIBADI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7353",
+            "NAMA": "GREGORIUS STANLEY PRATOMO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "7354",
+            "NAMA": "GHANY ALIM",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7355",
+            "NAMA": "BAGUS ADI SAPUTERA",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP JEMBER",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7360",
+            "NAMA": "RUDI SANTOSO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7362",
+            "NAMA": "NUR YAKHIN",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7364",
+            "NAMA": "ARIES RACHMANSYAH",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7368",
+            "NAMA": "CECILIA STEPHANIE",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7369",
+            "NAMA": "ILHAM BUDI SANTOSO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7370",
+            "NAMA": "MICHAEL STIEF FERNANDEZ T",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7387",
+            "NAMA": "ERLINA DAMAYANTI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP MADIUN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7388",
+            "NAMA": "HERU SUPRIANTO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7404",
+            "NAMA": "JOHANES ADITYA KURNIAWAN",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7406",
+            "NAMA": "IPNU SUHERMAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7413",
+            "NAMA": "YUDHISTIRA ARDI FEBRIANTONO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7445",
+            "NAMA": "DWI SAMTIAR",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7449",
+            "NAMA": "YESSY SAFITRI",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7479",
+            "NAMA": "YAHYA SUPRASTYO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7480",
+            "NAMA": "FEBRIAN WAHYUTAMA",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7498",
+            "NAMA": "HENDRIAWAN ISWIDODO",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7499",
+            "NAMA": "AHMAD BAHRUL SAMSUDIN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7517",
+            "NAMA": "JUN ISWANNATA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7525",
+            "NAMA": "M TAUFIQ AKBAR",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7559",
+            "NAMA": "ANAK AGUNG ADITYA DHARMA S",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7579",
+            "NAMA": "LIAUWNAD STEVEN",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7603",
+            "NAMA": "ALVIN TRIADI",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7604",
+            "NAMA": "DENY SETYAWAN",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7605",
+            "NAMA": "CHRISTANTO TIRTAMULIA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP MADIUN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7617",
+            "NAMA": "EVAN REINALDO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7618",
+            "NAMA": "ANTON CHANDRA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ABU-ABU"
+        },
+        {
+            "NPK": "7631",
+            "NAMA": "DAVID HARIYANTO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7653",
+            "NAMA": "DODI ROMANUS DUHA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7664",
+            "NAMA": "RIZKY SILVIA ROSIDA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7683",
+            "NAMA": "YOSIA EKA VICTORY",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP JEMBER",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7690",
+            "NAMA": "ANGGA IKRA NANDA SANTOSO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7692",
+            "NAMA": "IQBAL HASAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7693",
+            "NAMA": "ANDRIANUS LOIS",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7732",
+            "NAMA": "JULIO CHANDRA",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP KEDIRI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7733",
+            "NAMA": "AYU NOER KARTIKA SARI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7734",
+            "NAMA": "MUHAMMAD BENNY SISWANTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7735",
+            "NAMA": "ABDUL WAHED",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - GEDANGAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7755",
+            "NAMA": "IMAM SAIFUL",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7757",
+            "NAMA": "KUNTHI PUSPANINGTYAS",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7765",
+            "NAMA": "DENNY ALEXANDER",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7772",
+            "NAMA": "AZHAR BAHA INDIARSA",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7773",
+            "NAMA": "MUHAMMAD MUNIR",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7774",
+            "NAMA": "PUTRA DWIYANTO",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7775",
+            "NAMA": "CHRISTIAN BUDIANTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP TUBAN",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7789",
+            "NAMA": "MOHAMAD SULTON AMINUDIN",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7791",
+            "NAMA": "ANDY PUTRA SANTOSO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7799",
+            "NAMA": "REVIANO DWI HANDOKO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7800",
+            "NAMA": "ANGGIE SATRIYA PRADANA THALIB",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7802",
+            "NAMA": "RISKA YULIANINGRUM",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA MEPS SEDATI",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7803",
+            "NAMA": "ANGGA RIO YUPITER",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7823",
+            "NAMA": "YOGI RANDA ADIATMA",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7833",
+            "NAMA": "RYAN ANGGORO PUTRA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7847",
+            "NAMA": "AGATHA WIDYA KRISTIANTI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7848",
+            "NAMA": "RIZKYNATA ADAM SATRIA",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7849",
+            "NAMA": "SAMUEL ONGKO LIMANTORO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "ORANGE"
+        },
+        {
+            "NPK": "7876",
+            "NAMA": "IVANA OCTAVIA LUKITO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7886",
+            "NAMA": "AHMAD HILMY",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7887",
+            "NAMA": "HAMMURABI WISADONO",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7894",
+            "NAMA": "MARKUS HENDRA SETIAWAN",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MPM SURABAYA - REP MADIUN",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7895",
+            "NAMA": "CHRISTIAN ARDY PUSPANTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7896",
+            "NAMA": "YOHANES CANDRA",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7899",
+            "NAMA": "SITI UMMI KHOIRIYAH",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7916",
+            "NAMA": "OCTA WENDY TANURAHARDJA",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7917",
+            "NAMA": "I PUTU AGUNG ARSABUANA WIBAWA",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7918",
+            "NAMA": "KENNY HADINATA TJIPTO",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7919",
+            "NAMA": "DIDIK SUHARMOKO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7920",
+            "NAMA": "SHANDY CHRISTYANTO",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7929",
+            "NAMA": "IVAN WASISTHA PURUSA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7940",
+            "NAMA": "DARA NINGGAR",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7941",
+            "NAMA": "RAYMOND ANDREAS SOEBIJANTORO",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7942",
+            "NAMA": "KUSUMA NOVIA TABITA SITORUS",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7943",
+            "NAMA": "PUTU LAKSMI SRI ADIWANGSA",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7945",
+            "NAMA": "INDRA ODITYA PUTRA",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7946",
+            "NAMA": "M SYAHRUL ROMADHON",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7947",
+            "NAMA": "DWI HARID SETIADI",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7948",
+            "NAMA": "FRANI GALIH AGUNG SETYAWAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7949",
+            "NAMA": "HENDRIK MELKYANUS PATTINGNGALE",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA MEPS SEDATI",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7956",
+            "NAMA": "FADLI ANUGRAH EMAS",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7957",
+            "NAMA": "YULIUS WASIS KRISTYATMOKO",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7959",
+            "NAMA": "ANDHIKA SATRIYA PRATAMA",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7960",
+            "NAMA": "MOCHAMAD HADI FAHMI",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7989",
+            "NAMA": "ALDHO RISKI IRAWAN",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7990",
+            "NAMA": "CITRA AYU OKTAVIANI",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7991",
+            "NAMA": "WEKA SINGGIH WICAKSANA",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7992",
+            "NAMA": "ANDI LUKI ZARKASI",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7993",
+            "NAMA": "VIODEA FIRLII RAMADHANIAR",
+            "DIVISI": "HC3",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7994",
+            "NAMA": "MUSTAKIM ADI PURNAMA",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7995",
+            "NAMA": "STURMIUS JOVIAL BUDIMAN",
+            "DIVISI": "MSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7996",
+            "NAMA": "GABRIELLA RUTH FELITA",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7997",
+            "NAMA": "ANDREAS GUNAWAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "7998",
+            "NAMA": "GUSTAF BIMAS KUSTANDI",
+            "DIVISI": "CS",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "8016",
+            "NAMA": "CANDRA LAKSMANA GUNAWAN",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "8017",
+            "NAMA": "HABIB JAZULI",
+            "DIVISI": "MCD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "8020",
+            "NAMA": "RAKHMAN DANANJAYA",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "BIRU"
+        },
+        {
+            "NPK": "8028",
+            "NAMA": "YOGA GIAN PRAHARA",
+            "DIVISI": "HRGA",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8029",
+            "NAMA": "ELOK KUSUMA DEWI",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8030",
+            "NAMA": "ARIS JULIYONO",
+            "DIVISI": "TSD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8031",
+            "NAMA": "GALIH EKO PRAYOGO",
+            "DIVISI": "ACF",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8032",
+            "NAMA": "MOURENZA SARAH ANGGITA H",
+            "DIVISI": "BOD",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8033",
+            "NAMA": "MOCH ASROR",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8038",
+            "NAMA": "ERHANS TRIADI",
+            "DIVISI": "IT ",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA",
+            "KETENTUANWARNA": "PUTIH"
+        },
+        {
+            "NPK": "8040",
+            "NAMA": "HONGKY",
+            "DIVISI": "PART",
+            "COMPANYOFFICE": "MULIA SURABAYA",
+            "WORKLOCATION": "MULIA SURABAYA - SEDATI",
+            "KETENTUANWARNA": "PUTIH"
+        }
+    ]
+}

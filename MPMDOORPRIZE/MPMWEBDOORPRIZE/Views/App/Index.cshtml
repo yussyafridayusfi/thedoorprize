@@ -1,0 +1,66 @@
+﻿@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+  ViewBag.Title = "MainMenu Doorprize"; }
+<style>
+  #btnFilter {
+    width: 100%; /* Full width */
+    height: 35px; /* Custom height */
+  }
+</style>
+
+@*<h2><b>MPM DOORPRIZE</b></h2>*@
+<hr />
+
+<div class="my-container">
+  <div class="dx-container">
+    <div class="row" style="padding-top:10px">
+
+      <div class="col-md-6">
+
+        <div class="col-md-12 offset-md-12 divBorder"
+             style="height:50px;margin-bottom:5px;margin-right:5px;margin-left:7%; text-align:center;">
+          <a href="#" target="_blank" rel="noopener noreferrer"
+             style="text-decoration:none;color:black;font-size:30px;">
+            PESERTA
+          </a>
+        </div>
+        <div class="col-md-12 offset-md-12 divBorder"
+             style="height:50px;margin-bottom:5px;margin-right:5px;margin-left:7%; text-align:center;">
+          <a href="#" target="_blank" rel="noopener noreferrer"
+             style="text-decoration:none;color:black;font-size:30px;">
+            DOORPRIZE
+          </a>
+        </div>
+
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="col-md-12 offset-md-12 divBorder"
+             style="height:50px;margin-bottom:5px;margin-right:5px;margin-left:7%; text-align:center;">
+          <a href="" target="_blank" rel="noopener noreferrer"
+             style="text-decoration:none;color:black;font-size:30px;">
+            UPLOAD BACKGROUND APP
+          </a>
+        </div>
+        <div class="col-md-12 offset-md-12 divBorder"
+             style="height:50px;margin-bottom:5px;margin-right:5px;margin-left:7%; text-align:center;">
+          <a href="/App/Hadiah" target="_blank" rel="noopener noreferrer"
+             style="text-decoration:none;color:black;font-size:30px;">
+            HADIAH
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+@section scripts {
+  <script src="@Url.Content(" ~ /Scripts/App.js")"></script>
+}
