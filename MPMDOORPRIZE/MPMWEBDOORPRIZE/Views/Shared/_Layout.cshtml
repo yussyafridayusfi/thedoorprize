@@ -39,8 +39,9 @@
     <link rel='stylesheet' href='@Url.Content("~/Content/CSS/styles.css")' />
     <link rel='stylesheet' href='@Url.Content("~/Content/CSS/dx.material.custom-mpm.css")' />
 
+     <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
 
-    <style>
+     <style>
       html, body {
         /*background: url('../../Content/TEMPLATE-IFLIP.PNG') no-repeat center center fixed;*/
         -webkit-background-size: cover;
@@ -62,7 +63,15 @@
         box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
         color: #FFF5E1; /* Consistent soft cream text color */
       }
-    </style>
+
+      @*/* responsive: on small screens make two columns then one */
+      @media (max-width: 900px){
+        .hadiah-col{ flex-basis: calc(50% - 9px); }
+      }
+      @media (max-width: 540px){
+        .hadiah-col{ flex-basis: 100%; }
+      }*@
+     </style>
 
     <script>var base_url_home = window.location.protocol + "//" + window.location.host + '@Url.Content("~")';</script>
 </head>
@@ -79,8 +88,8 @@
 
     @Html.Partial("_Footer")
 
-
-    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+    <script src="~/Scripts/sweetalert2.js"></script>
+   
     <script src="@Url.Content("~/Scripts/bootstrap.bundle.min.js")"></script>
     <script src="@Url.Content("~/Scripts/dx.all.js")"></script>
     <script src="@Url.Content("~/Scripts/exceljs.min.js")"></script>

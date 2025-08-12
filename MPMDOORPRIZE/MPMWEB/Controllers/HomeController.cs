@@ -15,6 +15,11 @@ namespace MPMWEB.Controllers
 {
     public class HomeController : MPMController<ModelWebEx>
     {
+        // get path file location
+        public static string basePath = AppDomain.CurrentDomain.BaseDirectory;
+        public string jsonPathDataPeserta = Path.Combine(basePath, "Content", "data.json");
+        public string jsonPathHadiahPeserta = Path.Combine(basePath, "Content", "hadiah.json");
+
         public HomeController()
             : base()
         {
@@ -442,6 +447,10 @@ namespace MPMWEB.Controllers
         {
             try
             {
+
+                // get file location
+
+
                 var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\data.json";
                 //string djson = System.IO.File.ReadAllText("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\data.json");
                 string djson = System.IO.File.ReadAllText(json_text);
@@ -1000,7 +1009,8 @@ namespace MPMWEB.Controllers
             try
             {
                 //var data = Model._queryWeb.listHadiahDoorPrize();
-                var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+                //var json_text = @"D:\TheDoorprize\MPMDOORPRIZE\MPMWEB\Content\hadiah.json";
+                var json_text = jsonPathHadiahPeserta;
                 //using (StreamReader r = new StreamReader("D:\\PINDAHAN\\Project\\Panitia Penutupan\\WEB\\MPMDOORPRIZE\\MPMWEB\\Content\\hadiah.json"))
                 using (StreamReader r = new StreamReader(json_text))
                 {

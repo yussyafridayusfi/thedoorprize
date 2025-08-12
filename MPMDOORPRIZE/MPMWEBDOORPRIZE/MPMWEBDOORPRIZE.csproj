@@ -194,6 +194,7 @@
     <Content Include="Scripts\Hadiah.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\Peserta.js" />
+    <Content Include="Scripts\sweetalert2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,6 +268,7 @@
     <Content Include="Views\App\Peserta.cshtml" />
     <Content Include="Views\App\Hadiah.cshtml" />
     <Content Include="Scripts\templatehadiahdoorprize.xlsx" />
+    <Content Include="Scripts\templatepesertadoorprize.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MPMMODELWEB\MPMMODELWEB.csproj">

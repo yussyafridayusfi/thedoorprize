@@ -42,14 +42,14 @@ $(document).ready(function () {
                 const worksheet = workbook.Sheets[firstSheetName];
                 const jsonData = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
 
-                // Convert numeric strings to actual numbers
+                
                 const cleanedJson = jsonData.map(row => {
                   return {
-                    No: parseInt(row["No"]),
+                    No: row["No"],
                     Hadiah: row["Hadiah"],
-                    Status: parseInt(row["Status"]),
-                    Unit: parseInt(row["Unit"]),
-                    isBesar: parseInt(row["isBesar"])
+                    Status: row["Status"],
+                    Unit: row["Unit"],
+                    isBesar: row["isBesar"]
                   };
                 });
 
@@ -62,9 +62,27 @@ $(document).ready(function () {
                   body: JSON.stringify(cleanedJson)
                 })
                   .then(response => {
-                    if (response.ok) alert("Success!");
-                    else alert("Error saving file.");
+                    if (response.ok) {
+                      swal("Upload data hadiah berhasil!", {
+                        icon: "success"
+                      }).then((result) => {
+                        loadPanel.hide();
+                        location.reload()
+
+                      });
+                    }
+                    else {
+                      swal("Upload data hadiah gagal!", {
+                        icon: "error"
+                      }).then((result) => {
+                        loadPanel.hide();
+                        location.reload()
+
+                      });
+                    }
                   });
+
+                  window.location.reload()
               };
               reader.readAsArrayBuffer(fi);
 
@@ -92,7 +110,7 @@ function getHadiah() {
   console.log(base_url_home)
   $.ajax({
     type: "POST",
-    url: base_url + "GetHadiah",
+    url: base_url + "GetHadiahGrid",
     contentType: "application/json; charset=utf-8",
     dataType: "json",
     success: function (result, status, xhr) {
@@ -194,6 +212,12 @@ function ShowDataGrid(data) {
             }
           }
         },
+        {
+          name: "exportButton",
+          showText: "inMenu",
+          icon: "exportxlsx",
+          hint: "Export to Excel"
+        }
       ]
     },
     onExporting: function (e) {

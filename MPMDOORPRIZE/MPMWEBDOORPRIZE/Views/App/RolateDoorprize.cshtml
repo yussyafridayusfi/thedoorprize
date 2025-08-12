@@ -4,7 +4,111 @@
 <audio id="winnerSound" src="~/Content/winner-trumpet.mp3" preload="auto"></audio>
 <audio id="loadingSound" src="~/Content/drum-roll.mp3" preload="auto"></audio>
 
+<style>
+   :root{
+    --bg-page: #fbf4ec;        /* very light beige page bg */
+    --panel-bg: #f0e4d8;       /* panel inner bg */
+    --header-bg: #b36a33;      /* soft burnt orange header */
+    --accent-dark: #7a4a2b;    /* deep brown */
+    --card-bg: #fff6ef;        /* card background (soft) */
+    --label-bg: #c58852;       /* label (inner) brown/orange */
+    --shadow: rgba(0,0,0,0.12);
+  }
+
+  /* main panel */
+  #door {
+    background: linear-gradient(180deg,var(--panel-bg), #eedfc8);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px var(--shadow);
+    border: 1px solid rgba(122,74,43,0.06);
+  }
+
+  /* Prize name container */
+  #hadiahNama {
+    background: var(--header-bg);
+    color: #fff6ef;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-align: center; /* center text horizontally */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06) inset;
+    /* make it stretch edge-to-edge in its parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* spacing between HP tag and text */
+    width: 100%;
+  }
+
+  /* "HP" badge styling */
+  #hadiahNama .hp-badge {
+    background: var(--label-bg);
+    color: #fff6ef;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+
+  /* row wrapper used by JS */
+  .hadiah-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 14px;
+  }
+
+  /* card column (1/3 width) */
+  .hadiah-col {
+    flex: 1 1 calc(33.333% - 12px);
+    min-width: 180px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 6px 12px var(--shadow);
+    border: 1px solid rgba(122,74,43,0.06);
+  }
+
+  /* inner label — the visible winner label */
+  .divBorder {
+    background: linear-gradient(90deg, var(--label-bg), #b06b3b);
+    color: #fff6ef;
+    border-radius: 8px;
+    padding: 18px 12px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+  }
+
+  /* Header container */
+  .header {
+    display: block; /* remove flex or grid restrictions */
+    width: 100%;
+    background: #c17d4a; /* soft brown/orange */
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #fff6ef;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06) inset;
+  }
+
+</style>
+
 <script>
+    const base_url = `${base_url_home}App/`
+
     var clickier = 1;
     let states = {
         "START": 1,
@@ -124,34 +228,117 @@
         sethadiah();
     }
 
-    function sethadiah() {
+    //function sethadiah() {
 
-        console.log(Hadiah);
-        document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
-        if (Hadiah[0].jumlah < 10 && Hadiah[0].jumlah > 3) {
-            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
-                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-            }
-        } else if (Hadiah[0].jumlah < 3) {
-            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
-                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-            }
-        } else {
-            for (var i = 1; i <= Hadiah[0].jumlah; i++) {
-                $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-            }
+    //    console.log(Hadiah);
+    //    document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
+    //    if (Hadiah[0].jumlah < 10 && Hadiah[0].jumlah > 3) {
+    //        for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+    //            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+    //        }
+    //    } else if (Hadiah[0].jumlah < 3) {
+    //        for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+    //            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+    //        }
+    //    } else {
+    //        for (var i = 1; i <= Hadiah[0].jumlah; i++) {
+    //            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+    //        }
+    //    }
+
+
+    //}
+    //function sethadiah() {
+    //  console.log(Hadiah);
+    //  document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
+    //  $("#listPemenang").empty(); // clear existing
+
+    //  let jumlah = Hadiah[0].jumlah;
+    //  let perRow = 3;
+
+    //  for (let i = 1; i <= jumlah; i++) {
+    //    // Start a new row every 3 items
+    //    if ((i - 1) % perRow === 0) {
+    //      $("#listPemenang").append("<div class='row hadiah-row'></div>");
+    //    }
+
+    //    let cardHtml = `
+    //          <div class='col-md-4'>
+    //              <div class='card'>
+    //                  <div class='card-body'>
+    //                      <div class='divBorder text-center' style='height:80px;margin-bottom:10px'>
+    //                          <label id="npk${i}" class='col-md-12' style='font-size:30px;'>.........</label>
+    //                      </div>
+    //                  </div>
+    //              </div>
+    //          </div>
+    //      `;
+
+    //    // Append card to the last row
+    //    $("#listPemenang .hadiah-row:last").append(cardHtml);
+    //  }
+    //}
+
+
+    function sethadiah() {
+      console.log(Hadiah);
+      if (!Hadiah || Hadiah.length === 0) {
+        $("#hadiahNama").text("No prize");
+        $("#listPemenang").empty();
+        return;
+      }
+
+      document.getElementById("hadiahNama").innerHTML = Hadiah[0].nama;
+      $("#listPemenang").empty(); // clear existing
+
+      let jumlah = parseInt(Hadiah[0].jumlah) || 0;
+      const perRow = 3;
+      let rowContainer = null;
+
+      for (let i = 1; i <= jumlah; i++) {
+        // start new row every perRow items
+        if ((i - 1) % perRow === 0) {
+          rowContainer = $("<div>").addClass("hadiah-row");
+          $("#listPemenang").append(rowContainer);
         }
 
+        // create column/card
+        const col = $("<div>").addClass("hadiah-col");
+        const card = $("<div>").addClass("card");
+        const inner = $("<div>")
+          .addClass("divBorder")
+          .attr("id", "npk" + i)
+          .text(".........");
 
+        card.append(inner);
+        col.append(card);
+        rowContainer.append(col);
+      }
+
+      // if last row has less than perRow, optionally fill blank flex items for alignment
+      const lastRowCols = $("#listPemenang .hadiah-row").last().children().length;
+      if (lastRowCols > 0 && lastRowCols < perRow) {
+        const blanks = perRow - lastRowCols;
+        for (let b = 0; b < blanks; b++) {
+          $("<div>").addClass("hadiah-col").append($("<div>").addClass("card").css("visibility", "hidden")).appendTo($("#listPemenang .hadiah-row").last());
+        }
+      }
     }
+
+
+
+
     function setWin() {
         console.log('setpmg:.', setPemanang)
 
+        var dataKirim = JSON.stringify({ 'data': setPemanang, 'hadiah': Hadiah[0].id })
+        console.log('dataKirim,', dataKirim)
+
         $.ajax({
             type: "POST",
-            url: "/Home/setPemanang",
+            url: base_url + "setPemanang",
             contentType: "application/json; charset=utf-8",
-            data: JSON.stringify({ 'data': setPemanang, 'hadiah': Hadiah[0].id }),
+            data: dataKirim,
             dataType: "json",
             success: function (result, status, xhr) {
                 console.log(result);
@@ -173,7 +360,7 @@
         console.log('isBesar.', isBesar)
         $.ajax({
             type: "POST",
-            url: "/Home/GetPemanang_v2",
+            url: base_url +"GetPemanang_v2",
             contentType: "application/json; charset=utf-8",
             data: '{"maxData":"' + data + '","maxData":"' + data + '","isbesar":"' + isBesar + '"}',
             dataType: "json",
@@ -222,7 +409,7 @@
     function getHadiah() {
         $.ajax({
             type: "POST",
-            url: "/Home/GetHadiah",
+            url: base_url+"GetHadiah",
             contentType: "application/json; charset=utf-8",
             //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
             dataType: "json",
@@ -249,7 +436,7 @@
     function getData() {
         $.ajax({
             type: "POST",
-            url: "/Home/GetData",
+            url: base_url+"GetData",
             contentType: "application/json; charset=utf-8",
             //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
             dataType: "json",
@@ -297,7 +484,7 @@
 </script>
 
 <div id="door" class="divall" style="padding-top:10px;padding-bottom:10px">
-    <div class="w-75 p-3 divBorder text-center">
+    <div class="w-100 p-3 divBorder text-center header">
         <h1 id="hadiahNama"></h1>
     </div>
 

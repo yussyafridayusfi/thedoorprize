@@ -1,254 +1,58 @@
 [
   {
     "No": "1",
-    "Hadiah": "Smart TV 42 inch",
-    "Status": "1",
-    "Unit": "2",
-    "isBesar": "1"
-  },
-  {
-    "No": "2",
-    "Hadiah": "Nintendo Switch",
-    "Status": "1",
-    "Unit": "2",
-    "isBesar": "1"
-  },
-  {
-    "No": "3",
-    "Hadiah": "HP OPPO A78 5G",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "4",
-    "Hadiah": "Smart TV 32 inch",
-    "Status": "1",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "5",
-    "Hadiah": "HP Galaxy A14",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "6",
-    "Hadiah": "TV Digital 32 inch",
-    "Status": "1",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "7",
-    "Hadiah": "Instant Camera",
-    "Status": "1",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "8",
-    "Hadiah": "Air Cooler Tower",
-    "Status": "1",
-    "Unit": "2",
-    "isBesar": "1"
-  },
-  {
-    "No": "9",
-    "Hadiah": "Soundbar Xiaomi",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "10",
-    "Hadiah": "Lemari Container",
-    "Status": "1",
-    "Unit": "3",
-    "isBesar": "1"
-  },
-  {
-    "No": "11",
-    "Hadiah": "Smart Watch Amazfit",
-    "Status": "1",
-    "Unit": "15",
-    "isBesar": "1"
-  },
-  {
-    "No": "12",
-    "Hadiah": "CORKCICLE® 20oz",
+    "Hadiah": "MPM Wallet  Rp. 500.000,-",
     "Status": "1",
     "Unit": "4",
     "isBesar": "1"
   },
   {
-    "No": "13",
-    "Hadiah": "Rice Cooker",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "14",
-    "Hadiah": "Blender",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "15",
-    "Hadiah": "Charger Adaptor",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "16",
-    "Hadiah": "Headphone Soundcore",
+    "No": "2",
+    "Hadiah": "MPM Wallet  Rp. 200.000,-",
     "Status": "1",
     "Unit": "5",
     "isBesar": "1"
   },
   {
-    "No": "17",
-    "Hadiah": "CORKCICLE® 16oz",
+    "No": "3",
+    "Hadiah": "MPM Wallet  Rp. 100.000,-",
     "Status": "1",
     "Unit": "15",
     "isBesar": "1"
   },
   {
-    "No": "18",
-    "Hadiah": "Mixer",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "19",
-    "Hadiah": "TWS Soundcore",
-    "Status": "1",
-    "Unit": "15",
-    "isBesar": "1"
-  },
-  {
-    "No": "20",
-    "Hadiah": "Smart Watch Huawei",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "21",
-    "Hadiah": "Backpack",
-    "Status": "1",
-    "Unit": "11",
-    "isBesar": "1"
-  },
-  {
-    "No": "22",
-    "Hadiah": "Portable Vacuum Cleaner",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "23",
-    "Hadiah": "Kipas Angin",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "24",
-    "Hadiah": "Kompor Portable",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "25",
-    "Hadiah": "Coffee Maker",
-    "Status": "1",
-    "Unit": "5",
-    "isBesar": "1"
-  },
-  {
-    "No": "26",
-    "Hadiah": "Power Bank Mag Safe",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "27",
-    "Hadiah": "Setrika Uap",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "28",
-    "Hadiah": "Earphone Bone Conduction",
-    "Status": "1",
-    "Unit": "15",
-    "isBesar": "0"
-  },
-  {
-    "No": "29",
-    "Hadiah": "Soundbar Soundtech",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "1"
-  },
-  {
-    "No": "30",
-    "Hadiah": "Yoga Mat",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "31",
-    "Hadiah": "Peralatan Makan Ecentio",
-    "Status": "1",
-    "Unit": "10",
-    "isBesar": "0"
-  },
-  {
-    "No": "32",
-    "Hadiah": "Juicer Portable",
-    "Status": "1",
-    "Unit": "15",
-    "isBesar": "0"
-  },
-  {
-    "No": "33",
-    "Hadiah": "Sodexo 200k",
+    "No": "4",
+    "Hadiah": "MPM Wallet  Rp. 50.000,- I",
     "Status": "1",
     "Unit": "20",
     "isBesar": "1"
   },
   {
-    "No": "34",
-    "Hadiah": "Indomaret 200K",
+    "No": "5",
+    "Hadiah": "MPM Wallet  Rp. 50.000,- II",
     "Status": "1",
-    "Unit": "10",
+    "Unit": "20",
     "isBesar": "1"
   },
   {
-    "No": "35",
-    "Hadiah": "Indomaret 100K",
+    "No": "6",
+    "Hadiah": "MPM Wallet  Rp. 50.000,- III",
     "Status": "1",
-    "Unit": "20",
-    "isBesar": "0"
+    "Unit": "30",
+    "isBesar": "1"
   },
   {
-    "No": "36",
-    "Hadiah": "Hypermart 100K",
-    "Status": "1",
-    "Unit": "5",
+    "No": "7",
+    "Hadiah": "MPM Wallet  Rp. 50.000,- IV",
+    "Status": "0",
+    "Unit": "30",
+    "isBesar": "1"
+  },
+  {
+    "No": "8",
+    "Hadiah": "MPM Wallet  Rp. 50.000,- V",
+    "Status": "0",
+    "Unit": "30",
     "isBesar": "1"
   }
 ]

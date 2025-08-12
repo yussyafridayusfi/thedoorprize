@@ -4,377 +4,404 @@
 }
 
 <script>
-    var a = 9
-    var Hadiah = [];
-    var listpemenang_door = []
-    var all_datawinner = []
 
-    $(document).ready(function () {
-        //getAllData()
-        //getHadiah()
-        //getHadiah_v2()
-        //setTimeout(setid, 15000);
+  const base_url = `${base_url_home}App/`
 
-        getAllData()
-            .then(() => getHadiah())
-            .catch(error => {
-                // Handle error if getAllData() fails
-                console.error("Error:", error);
-            });
+  var a = 9
+  var Hadiah = [];
+  var listpemenang_door = []
+  var all_datawinner = []
 
-    });
+  $(document).ready(function () {
+    //getAllData()
+    //getHadiah()
+    //getHadiah_v2()
+    //setTimeout(setid, 15000);
+
+    getAllData()
+      .then(() => getHadiah())
+      .catch(error => {
+        // Handle error if getAllData() fails
+        console.error("Error:", error);
+      });
+
+  });
+  //function setid() {
+  //  if (a == 1) {
+  //    a = 9
+  //  } else {
+  //    a = a - 1;
+  //  }
+  //  getHadiah()
+  //  //getHadiah_v2()
+
+  //  //$("#set").text(a);
+  //  //setTimeout(setid, 15000);
+  //}
+
     function setid() {
-        if (a == 1) {
-            a = 9
+    if (a == 1) {
+      a = 9
+    } else {
+      a = a - 1;
+    }
+    getHadiah()
+    //getHadiah_v2()
+
+    //$("#set").text(a);
+    //setTimeout(setid, 15000);
+  }
+
+  function getHadiah() {
+    $.ajax({
+      type: "POST",
+      url: base_url + "GetHadiahDoor",
+      contentType: "application/json; charset=utf-8",
+      //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+      dataType: "json",
+      success: function (result, status, xhr) {
+        console.log(result);
+        if (result.status == "1") {
+          for (var i = 0; i < result.data.length; i++) {
+            Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
+          }
+
+          //getdata_winner()
+          displayUserData(a);
+          //displayUserData(a);
+          //sethadiah(a);
+          //sethadiah_v2(a);
+        }
+        else {
+          alert(result.message);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+      }
+    });
+  }
+
+  function getHadiah_v2() {
+    $.ajax({
+      type: "POST",
+      url: base_url + "GetHadiahDoor",
+      contentType: "application/json; charset=utf-8",
+      //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+      dataType: "json",
+      success: function (result, status, xhr) {
+        console.log(result);
+        const promises = [];
+
+        if (result.status == "1") {
+          for (var i = 0; i < result.data.length; i++) {
+            Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
+          }
+          //await getdata_winner()
+          ////displayUserData(a);
+          ////displayUserData(a);
+          ////sethadiah(a);
+          ////sethadiah_v2(a);
+          promises.push(performTasks());
+          Promise.all(promises).then(() => {
+            displayUserData(a);
+          }).catch((error) => {
+            console.error(error);
+          });
+        }
+        else {
+          alert(result.message);
+        }
+      },
+      error: function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+      }
+    });
+  }
+
+  function performTasks() {
+    return new Promise((resolve, reject) => {
+      //winner().then(() => {
+      getdata_winner().then(() => {
+        // Do other async tasks here if needed
+        resolve();
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  }
+
+  async function displayUserData(id) {
+    //const userDataContainer = document.getElementById('userData');
+    console.log('params.', id)
+    var nama = "";
+    $('.pemenang').empty();
+    for (var a = 0; a < Hadiah.length; a++) {
+      if (Hadiah[a].id == id) {
+        jumlah = Hadiah[a].jumlah;
+        nama = Hadiah[a].nama;
+      }
+    }
+    //console.log('jum-.', jumlah)
+    //console.log('nama-.', nama)
+    if (a <= 0) {
+      alert("Tidak ada hadiah tersisa");
+      return;
+    }
+    else if (nama == "") {
+      location.reload()
+    } else {
+      if (jumlah == 0) {
+        a = a - 1;
+        sethadiah(a);
+      } else {
+        console.log('here.')
+        document.getElementById("hadiahNama").innerHTML = nama;
+
+        const hadiah_data = [{
+          name: nama, total: jumlah, id: id
+        }]
+        console.log('hadiah_data.', hadiah_data)
+
+        console.log("all_winner.", all_datawinner)
+
+
+        //
+        for (const user of hadiah_data) {
+          //const userContainer = document.createElement('div');
+          //userContainer.textContent = `USER ${user.name}`;
+          //userDataContainer.appendChild(userContainer);
+          //const list_winner = listpemenang_door
+          //console.log('getmenang.', list_winner)
+
+          let remaining = user.total;
+          console.log('idhadiah.', user.id)
+
+          const hadiahIds = hadiah_data.map(item => item.id.toString());
+          const filterData = all_datawinner.filter(item => hadiahIds.includes(item.HADIAH));
+          console.log('Filtered data:', filterData);
+
+          var displayedCount = 0;
+          while (remaining > 0) {
+            const displayCount = Math.min(remaining, 5);
+            console.log('displayCount.', displayCount)
+            //const intervalData = document.createElement('div');
+            //userDataContainer.appendChild(intervalData);
+
+            for (let i = 0; i < displayCount; i++) {
+              //const dataElement = document.createElement('p');
+              //dataElement.textContent = `Data ${++displayedCount}`;
+              //intervalData.appendChild(dataElement);
+
+              $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:2px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:60px;'>............</label> </div></div></div>")
+              console.log('npk.', filterData[displayedCount])
+              if (filterData[displayedCount]) {
+                $("#npk" + i.toString()).text(
+                  filterData[displayedCount].NPK + " - " +
+                  filterData[displayedCount].NAMA.split(' ').slice(0, 2).join(' ')
+                );
+              }
+
+          /*    $("#npk" + i.toString()).text(filterData[displayedCount]?.NPK + " - " + filterData[displayedCount]?.NAMA.split(' ').slice(0, 2).join(' '));*/
+
+              displayedCount++;
+              remaining--;
+            }
+
+            await sleep(3000); //2000
+            $('.pemenang').empty();
+          }
+
+
+          setid()
+        }
+
+
+      }
+
+
+    }
+
+
+
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function getdata_winner() {
+    await winner();
+    //console.log(list_winner);
+
+  }
+
+  function getAllData() {
+    return new Promise((resolve, reject) => {
+
+      $.ajax({
+        type: "POST",
+        url: base_url + "GetDataHadiah_all",
+        contentType: "application/json; charset=utf-8",
+        //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+        dataType: "json",
+        success: function (result, status, xhr) {
+          console.log('res.', result);
+          if (result.status == "1") {
+            all_datawinner = result.data
+          } else {
+            alert(result.message);
+          }
+
+        },
+        error: function (xhr, status, error) {
+          console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+        }
+      });
+
+
+      setTimeout(() => {
+        // Resolve the promise to indicate successful completion
+        resolve();
+      }, 1000); // Simulating 2 seconds delay, replace this with your actual logic
+    });
+  }
+
+
+  function getAllData_old() {
+    $.ajax({
+      type: "POST",
+      url: base_url + "GetData",
+      contentType: "application/json; charset=utf-8",
+      //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
+      dataType: "json",
+      success: function (result, status, xhr) {
+        console.log('res.', result);
+        if (result.status == "1") {
+          all_datawinner = result.data
         } else {
-            a = a - 1;
+          alert(result.message);
         }
-        getHadiah()
-        //getHadiah_v2()
 
-        //$("#set").text(a);
-        //setTimeout(setid, 15000);
-    }
+      },
+      error: function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+      }
+    });
+  }
 
-    function getHadiah() {
-        $.ajax({
-            type: "POST",
-            url: "/Home/GetHadiahDoor",
-            contentType: "application/json; charset=utf-8",
-            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
-            dataType: "json",
-            success: function (result, status, xhr) {
-                console.log(result);
-                if (result.status == "1") {
-                    for (var i = 0; i < result.data.length; i++) {
-                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
-                    }
-
-                    //getdata_winner()
-                    displayUserData(a);
-                    //displayUserData(a);
-                    //sethadiah(a);
-                    //sethadiah_v2(a);
-                }
-                else {
-                    alert(result.message);
-                }
-            },
-            error: function (xhr, status, error) {
-                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+  function winner() {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        type: "POST",
+        url: base_url + "GetDataHadiah",
+        contentType: "application/json; charset=utf-8",
+        data: '{"hadiah":"' + a + '"}',
+        dataType: "json",
+        success: function (result, status, xhr) {
+          console.log(result);
+          listpemenang_door.push(result.data)
+          if (result.status == "1") {
+            var i = 1
+            for (var a = 0; a < result.data.length; a++) {
+              console.log(i + " = " + result.data[a].NPK + " - " + result.data[a].NAMA);
+              //$("#npk" + i.toString()).text(result.data[a].NPK + " - " + result.data[a].NAMA);
+              i++;
             }
-        });
-    }
+            //console.log(Pemenang);
+          } else {
+            alert(result.message);
+          }
 
-    function getHadiah_v2() {
-        $.ajax({
-            type: "POST",
-            url: "/Home/GetHadiahDoor",
-            contentType: "application/json; charset=utf-8",
-            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
-            dataType: "json",
-            success: function (result, status, xhr) {
-                console.log(result);
-                const promises = [];
-
-                if (result.status == "1") {
-                    for (var i = 0; i < result.data.length; i++) {
-                        Hadiah.push({ id: result.data[i].No, nama: result.data[i].Hadiah, jumlah: result.data[i].Unit })
-                    }
-                    //await getdata_winner()
-                    ////displayUserData(a);
-                    ////displayUserData(a);
-                    ////sethadiah(a);
-                    ////sethadiah_v2(a);
-                    promises.push(performTasks());
-                    Promise.all(promises).then(() => {
-                        displayUserData(a);
-                    }).catch((error) => {
-                        console.error(error);
-                    });
-                }
-                else {
-                    alert(result.message);
-                }
-            },
-            error: function (xhr, status, error) {
-                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-            }
-        });
-    }
-
-    function performTasks() {
-        return new Promise((resolve, reject) => {
-            //winner().then(() => {
-            getdata_winner().then(() => {
-                // Do other async tasks here if needed
-                resolve();
-            }).catch((error) => {
-                reject(error);
-            });
-        });
-    }
-
-    async function displayUserData(id) {
-        //const userDataContainer = document.getElementById('userData');
-        console.log('params.',id)
-        var nama = "";
-        $('.pemenang').empty();
-        for (var a = 0; a < Hadiah.length; a++) {
-            if (Hadiah[a].id == id) {
-                jumlah = Hadiah[a].jumlah;
-                nama = Hadiah[a].nama;
-            }
+        },
+        error: function (xhr, status, error) {
+          console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
         }
-        console.log('jum-.', jumlah)
-        console.log('nama-.', nama)
-        if (nama == "") {
-            location.reload()
+      });
+    });
+  }
+
+  function sethadiah(id) {
+    console.log('sethadiah-params.', id)
+    var jumlah = 0;
+    var nama = "";
+    $('.pemenang').empty();
+    for (var a = 0; a < Hadiah.length; a++) {
+      if (Hadiah[a].id == id) {
+        jumlah = Hadiah[a].jumlah;
+        nama = Hadiah[a].nama;
+      }
+    }
+    console.log('jum.', jumlah)
+    console.log('nama.', nama)
+    if (nama == "") {
+      location.reload()
+    } else {
+      if (jumlah == 0) {
+        a = a - 1;
+        sethadiah(a);
+      } else {
+        document.getElementById("hadiahNama").innerHTML = nama;
+        console.log("JUMLAH: ", jumlah)
+        if (jumlah < 10 && jumlah > 3) {
+          for (var i = 1; i <= jumlah; i++) {
+            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+            if (i == jumlah) {
+              getPemanang()
+            }
+          }
+        } else if (jumlah < 3) {
+          for (var i = 1; i <= jumlah; i++) {
+            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+            if (i == jumlah) {
+              getPemanang()
+            }
+          }
+
         } else {
-            if (jumlah == 0) {
-                a = a - 1;
-                sethadiah(a);
-            } else {
-                console.log('here.')
-                document.getElementById("hadiahNama").innerHTML = nama;
-
-                const hadiah_data = [{
-                    name: nama, total: jumlah, id:id
-                }]
-                console.log('hadiah_data.',hadiah_data)
-
-                console.log("all_winner.", all_datawinner)
-
-
-                //
-                for (const user of hadiah_data) {
-                    //const userContainer = document.createElement('div');
-                    //userContainer.textContent = `USER ${user.name}`;
-                    //userDataContainer.appendChild(userContainer);
-                    //const list_winner = listpemenang_door
-                    //console.log('getmenang.', list_winner)
-
-                    let remaining = user.total;
-                    console.log('idhadiah.', user.id)
-
-                    const hadiahIds = hadiah_data.map(item => item.id.toString());
-                    const filterData = all_datawinner.filter(item => hadiahIds.includes(item.HADIAH));
-                    console.log('Filtered data:', filterData);
-
-                    var displayedCount = 0;
-                    while (remaining > 0) {
-                        const displayCount = Math.min(remaining, 5);
-                        console.log('displayCount.',displayCount)
-                        //const intervalData = document.createElement('div');
-                        //userDataContainer.appendChild(intervalData);
-
-                        for (let i = 0; i < displayCount; i++) {
-                            //const dataElement = document.createElement('p');
-                            //dataElement.textContent = `Data ${++displayedCount}`;
-                            //intervalData.appendChild(dataElement);
-
-                            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:130px;margin-bottom:2px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:60px;'>............</label> </div></div></div>")
-                            console.log('npk.', filterData[displayedCount])
-                            $("#npk" + i.toString()).text(filterData[displayedCount]?.NPK + " - " + filterData[displayedCount]?.NAMA.split(' ').slice(0, 2).join(' '));
-
-                            displayedCount++;
-                            remaining--;
-                        }
-
-                        await sleep(3000); //2000
-                        $('.pemenang').empty();
-                    }
-
-
-                    setid()
-                }
-
-
+          for (var i = 1; i <= jumlah; i++) {
+            $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
+            if (i == jumlah) {
+              getPemanang()
             }
-
-
+          }
         }
-
+      }
 
 
     }
 
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
 
-    async function getdata_winner() {
-        await winner();
-        //console.log(list_winner);
-
-    }
-
-    function getAllData() {
-        return new Promise((resolve, reject) => {
-
-            $.ajax({
-                type: "POST",
-                url: "/Home/GetDataHadiah_all",
-                contentType: "application/json; charset=utf-8",
-                //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
-                dataType: "json",
-                success: function (result, status, xhr) {
-                    console.log('res.', result);
-                    if (result.status == "1") {
-                        all_datawinner = result.data
-                    } else {
-                        alert(result.message);
-                    }
-
-                },
-                error: function (xhr, status, error) {
-                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-                }
-            });
+  }
 
 
-            setTimeout(() => {
-                // Resolve the promise to indicate successful completion
-                resolve();
-            }, 1000); // Simulating 2 seconds delay, replace this with your actual logic
-        });
-    }
-
-
-    function getAllData_old() {
-        $.ajax({
-            type: "POST",
-            url: "/Home/GetData",
-            contentType: "application/json; charset=utf-8",
-            //data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}',
-            dataType: "json",
-            success: function (result, status, xhr) {
-                console.log('res.',result);
-                if (result.status == "1") {
-                    all_datawinner = result.data
-                } else {
-                    alert(result.message);
-                }
-
-            },
-            error: function (xhr, status, error) {
-                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-            }
-        });
-    }
-
-    function winner() {
-        return new Promise((resolve, reject) => {
-            $.ajax({
-                type: "POST",
-                url: "/Home/GetDataHadiah",
-                contentType: "application/json; charset=utf-8",
-                data: '{"hadiah":"' + a + '"}',
-                dataType: "json",
-                success: function (result, status, xhr) {
-                    console.log(result);
-                    listpemenang_door.push(result.data)
-                    if (result.status == "1") {
-                        var i = 1
-                        for (var a = 0; a < result.data.length; a++) {
-                            console.log(i + " = " + result.data[a].NPK + " - " + result.data[a].NAMA);
-                            //$("#npk" + i.toString()).text(result.data[a].NPK + " - " + result.data[a].NAMA);
-                            i++;
-                        }
-                        //console.log(Pemenang);
-                    } else {
-                        alert(result.message);
-                    }
-
-                },
-                error: function (xhr, status, error) {
-                    console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-                }
-            });
-        });
-    }
-
-    function sethadiah(id) {
-        console.log('sethadiah-params.',id)
-        var jumlah = 0;
-        var nama = "";
-        $('.pemenang').empty();
-        for (var a = 0; a < Hadiah.length; a++) {
-            if (Hadiah[a].id == id) {
-                jumlah = Hadiah[a].jumlah;
-                nama = Hadiah[a].nama;
-            }
-        }
-        console.log('jum.',jumlah)
-        console.log('nama.',nama)
-        if (nama == "") {
-            location.reload()
+  function getPemanang() {
+    $.ajax({
+      type: "POST",
+      url: base_url + "GetDataHadiah",
+      contentType: "application/json; charset=utf-8",
+      data: '{"hadiah":"' + a + '"}',
+      dataType: "json",
+      success: function (result, status, xhr) {
+        console.log(result);
+        if (result.status == "1") {
+          var i = 1
+          for (var a = 0; a < result.data.length; a++) {
+            console.log(i + " = " + result.data[a].NPK + " - " + result.data[a].NAMA);
+            $("#npk" + i.toString()).text(result.data[a].NPK + " - " + result.data[a].NAMA);
+            i++;
+          }
+          //console.log(Pemenang);
         } else {
-            if (jumlah == 0) {
-                a = a - 1;
-                sethadiah(a);
-            } else {
-                document.getElementById("hadiahNama").innerHTML = nama;
-                console.log("JUMLAH: ", jumlah)
-                if (jumlah < 10 && jumlah > 3) {
-                    for (var i = 1; i <= jumlah; i++) {
-                        $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-6 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-                        if (i == jumlah) {
-                            getPemanang()
-                        }
-                    }
-                } else if (jumlah < 3) {
-                    for (var i = 1; i <= jumlah; i++) {
-                        $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-12 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-                        if (i == jumlah) {
-                            getPemanang()
-                        }
-                    }
-
-                } else {
-                    for (var i = 1; i <= jumlah; i++) {
-                        $("#listPemenang").append("<div class='card'><div class='card-body'><div class='col-md-4 offset-md-4 divBorder text-center' style='height:80px;margin-bottom:10px' ><label id='" + "npk" + i + "' class='col-md-12' style='font-size:30px;'>.........</label> </div></div></div>")
-                        if (i == jumlah) {
-                            getPemanang()
-                        }
-                    }
-                }
-            }
-
-
+          alert(result.message);
         }
 
-
-    }
-
-
-    function getPemanang() {
-        $.ajax({
-            type: "POST",
-            url: "/Home/GetDataHadiah",
-            contentType: "application/json; charset=utf-8",
-            data: '{"hadiah":"' + a + '"}',
-            dataType: "json",
-            success: function (result, status, xhr) {
-                console.log(result);
-                if (result.status == "1") {
-                    var i = 1
-                    for (var a = 0; a < result.data.length; a++) {
-                        console.log(i + " = " + result.data[a].NPK + " - " + result.data[a].NAMA);
-                        $("#npk" + i.toString()).text(result.data[a].NPK + " - " + result.data[a].NAMA);
-                        i++;
-                    }
-                    //console.log(Pemenang);
-                } else {
-                    alert(result.message);
-                }
-
-            },
-            error: function (xhr, status, error) {
-                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
-            }
-        });
-    }
+      },
+      error: function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
+      }
+    });
+  }
 
 </script>
 
